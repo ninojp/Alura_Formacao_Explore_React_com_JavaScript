@@ -1,0 +1,31 @@
+# Curso Alura React: desenvolvendo com JavaScript
+
+## Uma bliblioteca declarativa
+
+### Aula 01: Apresentação - Video 1
+
+Nesta aula, Vinny Neves e Paulo Silveira introduzem o curso de React na Alura. O curso é voltado para desenvolvedores Front-End que já possuem conhecimento em DOM, JavaScript e CSS e desejam aprender React. O objetivo é criar uma aplicação completa para gerenciar colaboradores da Alura, desde o Terminal até o deploy na internet. Vinny será o professor e Paulo participará como aluno, trazendo conceitos do JavaScript. Durante o curso, eles utilizarão um layout do Figma e abordarão os conceitos principais do React, além de cobrar conhecimentos de JavaScript. O curso é focado no JavaScript, mas há uma formação em React com TypeScript disponível na Alura. No final, eles incentivam os alunos a publicarem o projeto no LinkedIn e/ou GitHub. O Organo será publicado na Versel e eles ensinarão como desenvolvê-lo do zero e disponibilizá-lo na internet. Há outras formações disponíveis na Alura para aprofundamento no assunto.
+
+### Aula 01: Olá mundo! - Video 2
+
+Nesta aula, Paulo e Vinicius introduzem o curso de React e falam sobre o uso do Figma no desenvolvimento Front-End. Eles explicam como criar um projeto React utilizando o comando "npx create-react-app" e mostram como iniciar o projeto com o comando "npm start". Também mencionam a importância dos componentes React e como o React mantém o servidor e o Front-End alinhados. É um bom ponto de partida para aprender React e desenvolver aplicações Front-End.
+
+### Aula 01: Primeiro componente: Banner - Video 3
+
+Nesta aula do curso "React: desenvolvendo com JavaScript", os instrutores Paulo e Vinícios explicam o conceito de componente no React, que é uma mistura de CSS, JavaScript e HTML organizada de forma mais eficiente. Eles mostram como criar o primeiro componente, o "Banner", utilizando JSX e como estilizá-lo com CSS. No final, eles incentivam os espectadores a personalizarem o projeto de acordo com suas preferências e publicá-lo em seus portfólios.
+
+### Aula 01: Explorando o projeto - Video 4
+
+Nesta aula de React, os instrutores Paulo e Vinicios discutem sobre a organização dos arquivos e pastas do projeto. Eles mostram quais arquivos podem ser removidos, como o "App.js", "App.css", "App.test.js", "logo.svg", "reportWebVitals" e "setupTest.js". Além disso, explicam a função de cada um deles. Os instrutores ressaltam a importância de entender os conceitos do React antes de avançar para etapas mais avançadas do desenvolvimento.
+
+### Aula 01: Campo de texto - Video 5
+
+Nesta aula do curso React: desenvolvendo com JavaScript, os instrutores Paulo e Vinicios discutem a importância de criar componentes reutilizáveis em um projeto React. Eles mostram como criar um componente de campo de texto utilizando arrow functions e exportando-o como uma constante. Também abordam a importância de nomear corretamente os componentes e como organizar os arquivos para facilitar a importação. Além disso, ensinam como estilizar o componente utilizando CSS e como passar parâmetros para personalizar o texto da label do campo de texto. A explicação sobre a passagem de parâmetros é deixada para o próximo vídeo.
+
+### Aula 01: Parâmetros de componente - Video 6
+
+Nesta aula, Paulo e Vinicios discutem sobre como fazer um componente de campo de texto em React receber parâmetros. Eles explicam que os componentes em React são funções e, portanto, é possível passar parâmetros para eles. Ao passar uma propriedade para o componente CampoTexto, eles mostram que é possível acessar essa propriedade através do objeto "props" que é implicitamente entregue pelo React. Eles também mostram como imprimir o valor da propriedade no HTML e como passar o valor da propriedade para o atributo "placeholder" do input. Além disso, eles explicam a convenção de utilizar o nome "props" para o objeto que contém as propriedades do componente. Por fim, eles mencionam que o próximo passo é encaixar todos os campos de texto dentro de um formulário.
+
+### Aula 01: Criando o Formulário - Video 7
+
+Nesta aula do curso de React, os instrutores discutem a criação de um formulário utilizando React. Eles mostram como criar um novo componente chamado "Formulario" e importar o arquivo CSS correspondente. Em seguida, eles estruturam o HTML do formulário e fazem a estilização, definindo tamanho, cor de fundo, bordas arredondadas, espaçamento e adicionando um efeito de sombra. Eles também mencionam a importância da negociação com os designers para encontrar soluções viáveis. Os próximos passos serão a criação de um botão para submeter os dados e a implementação de um campo de seleção para o campo "Time".
