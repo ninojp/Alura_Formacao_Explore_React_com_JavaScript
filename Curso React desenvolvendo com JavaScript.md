@@ -54,7 +54,7 @@ O mesmo componente, baseado em classes, seria:
 
 Além da sintaxe, existem diversas diferenças. Se você quiser ir mais fundo no conceito de componentes baseado em classes, a [documentação](https://pt-br.legacy.reactjs.org/docs/components-and-props.html)é a nossa melhor fonte.
 
-### Aula 01: Nessa aula:
+### Aula 01: Nessa aula
 
 Criamos um novo projeto React;
 Criamos componentes funcionais;
@@ -68,4 +68,37 @@ Analisamos os comandos disponíveis no package.json.
 
 Nesta aula, Paulo Silveira e Vinicios Neves discutem sobre o React, um framework reativo criado pelo Facebook. O React permite que a página reaja a mudanças nos dados do estado do componente, atualizando o DOM da HTML, tornando a página mais dinâmica. Ele facilita a escrita de interfaces de usuário, evitando a necessidade de escrever muito código em JavaScript puro e se preocupar com a atualização do DOM. O React também é utilizado em Single Page Applications, que são aplicações que rodam em uma única página. Paulo e Vinicios concordam que ainda há muito a ser feito no curso de React.
 
-### Aula 02: Um Framework Declarativo - Video 2
+### Aula 02: Lista dos times - Video 2
+
+Nesta aula, Paulo e Vinicios discutem sobre a implementação do componente "ListaSuspensa" no projeto do Figma. Eles explicam como criar esse componente, utilizando um arquivo "index.js" e um arquivo "ListaSuspensa.css". No "index.js", eles criam uma função que retorna uma div com uma label e um select, onde o select é preenchido com as options correspondentes aos itens passados como propriedade. Eles também explicam o uso do método "map" para percorrer a lista de itens e renderizar as options. Além disso, eles mencionam a importância de estilizar o select para que ele fique semelhante ao campo de texto. Assim, eles finalizam a implementação do componente "ListaSuspensa".
+
+### Aula 02: Criando o botão - Video 3
+
+Nesta aula, os instrutores discutiram sobre a criação de um botão no Figma e decidiram criar um componente chamado "Botao" para representar o botão no código. Eles mostraram como utilizar o componente "Botao" em outro componente chamado "Formulario" e estilizaram o botão adicionando classes CSS. Também mencionaram a possibilidade de passar elementos para dentro do componente "Botao" utilizando a propriedade "children".
+
+### Aula 02: Escutando eventos - Video 4
+
+Nesta aula, Paulo e Vinicios discutem sobre como fazer um botão reagir a um clique em uma aplicação React. Vinicios explica que, ao contrário do JavaScript vanilla, no React é mais simples. Basta utilizar a sintaxe onSubmit={aoSalvar} para vincular a função aoSalvar ao evento de submissão do formulário. Vinicios também menciona que é preferível ouvir o evento de submissão ao invés do evento de clique, pois assim é possível realizar a validação do formulário HTML. Ele mostra como utilizar a função aoSalvar para exibir uma mensagem no console quando o formulário for submetido. Vinicios também explica como evitar que a página seja recarregada ao submeter o formulário, utilizando o método event.preventDefault(). Por fim, ele menciona que no próximo vídeo eles irão abordar como capturar os valores digitados nos campos de input.
+
+### Aula 02: Para saber mais: eventos HTML
+
+No componente Formulario, nós aguardamos pelo evento onSubmit. Assim, podemos aproveitar a validação nativa do HTML dos inputs que são obrigatórios.
+
+Mas esse não é nem de longe o único evento disponível!
+
+[Aqui](https://developer.mozilla.org/en-US/docs/Web/Events), você vizualiza os eventos HTML disponíveis atualmente (em inglês).
+
+Mas fique atento que, no universo React, os eventos são nomeados com [camelCase](https://www.alura.com.br/artigos/convencoes-nomenclatura-camel-pascal-kebab-snake-case), logo: onclick vira onClick.
+
+Quer saber ainda mais? [Se liga aqui](https://pt-br.legacy.reactjs.org/docs/handling-events.html).
+
+### Aula 02: Nessa aula
+
+Aprendemos como passar props para um componente;
+Renderizamos listas com o .map;
+Trabalhamos com elementos aninhados usando a prop children;
+Ouvimos elementos disparados pelo DOM: o onSubmit do nosso form.
+
+## Aula 03: 
+
+### Aula 03:  - Video 1
