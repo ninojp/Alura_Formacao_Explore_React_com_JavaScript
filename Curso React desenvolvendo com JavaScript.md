@@ -99,6 +99,42 @@ Renderizamos listas com o .map;
 Trabalhamos com elementos aninhados usando a prop children;
 Ouvimos elementos disparados pelo DOM: o onSubmit do nosso form.
 
-## Aula 03: 
+## Aula 03: Interagindo com o Usuário
 
-### Aula 03:  - Video 1
+### Aula 03: Manipulando o input do usuário - Video 1
+
+Nesta aula, o professor Vinicios ensina como pegar os dados digitados em um campo de texto no React com JavaScript. Ele explica que no JavaScript vanilla seria necessário percorrer o DOM para encontrar o input e obter o valor digitado, mas no React o processo é diferente. O professor mostra como adicionar o atributo onChange ao input para chamar a função aoDigitado sempre que o valor for alterado. Em seguida, ele implementa a função aoDigitado, que recebe o evento de digitação como parâmetro e utiliza o evento.target.value para obter o valor digitado. O valor é armazenado em uma variável chamada valor e exibido no console. Para exibir o valor no campo de texto, é adicionado o atributo value ao input, que recebe a variável valor como valor. O professor destaca a importância de entender o ciclo de vida do React e a interação entre o JavaScript e o HTML. Com esse conhecimento, é possível criar formulários interativos e realizar ações com base nos dados digitados pelos usuários.
+
+### Aula 03: Controlando o estado - Video 2
+
+Nesta aula, Paulo e Vinicios discutem sobre o ciclo de vida e o poder do React, focando nos disparos de eventos, no gerenciamento do estado das variáveis e na associação do estado da variável interna com os componentes visuais. Eles introduzem o conceito de hooks, que são ganchos fornecidos pelo React para manter um estado dentro de uma função. O hook que eles utilizam é o useState, que retorna um valor e uma função setter. Eles explicam que, ao invés de utilizar a atribuição direta de valores, é necessário chamar a função setter para alterar o estado. Vinicios mostra exemplos de uso do useState para criar estados para campos de texto e um componente de ListaSuspensa. Eles também discutem a necessidade de elevar o estado em um formulário e diferentes abordagens para gerenciar o estado. Por fim, eles mostram como utilizar o useState e a função de alteração do estado para exibir os valores dos estados no console quando o formulário é submetido.
+
+### Aula 03: Cadastrando colaboradores - Video 3
+
+Nesta aula, Paulo e Vinicios discutem sobre a implementação de um formulário de cadastro de colaboradores em uma aplicação React. Eles mostram como utilizar hooks para armazenar os dados dos colaboradores em um estado separado do formulário e como passar funções como props entre componentes. Eles também abordam a necessidade de atualizar corretamente o estado com os novos dados cadastrados e mencionam a importância de compartilhar a lista de times entre os componentes.
+
+### Aula 03: Usando o estado
+
+Qual a diferença entre controlar uma variável com o useState e criar e atribuir normalmente uma let?
+
+Sempre que queremos que o componente reaja a alguma alteração no valor de uma variável e se renderize novamente, precisamos indicar isto utilizando o useState. Do contrário, o valor vai ser alterado mas o DOM não será atualizado.
+
+Para ir mais fundo nesse hook, [Veja aqui](https://pt-br.legacy.reactjs.org/docs/hooks-reference.html#functional-updates).
+
+### Aula 03: Para saber mais: Stateless VS Statefull
+
+React tem duas abordagens diferentes para lidar com inputs de formulários.
+
+Um elemento de input de formulário cujo valor é controlado pelo React é chamado de componente controlado (statefull em inglês). Quando o usuário insere dados em um componente controlado, o evento que manipula essa alteração é disparado e o seu código decide se o input é válido (ou seja, renderizado com o valor atualizado). Se você não re-renderizar o elemento de formulário, permanecerá inalterado.
+
+Um componente não controlado (stateless em inglês) funciona como um elemento de formulário fora do React. Quando um usuário insere dados em um campo de formulário (um input box, dropbox, etc), a informação atualizada é refletida sem necessidade do React fazer nada. No entanto, isso também significa que você não pode forçar o campo a ter um certo valor.
+
+### Aula 03: Nessa aula, você aprendeu como
+
+Controlar inputs utilizando value e onChange;
+Gerenciar o estado de um componente, utilizando o useState;
+Trabalhar com props que são funções.
+
+## Aula 04: Montando os Times
+
+### Aula 04: Criando o componente Time - Video 1
