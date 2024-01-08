@@ -138,3 +138,47 @@ Trabalhar com props que são funções.
 ## Aula 04: Montando os Times
 
 ### Aula 04: Criando o componente Time - Video 1
+
+Nesta aula, Paulo e Vinicios discutem a implementação do componente "Time" no Figma. Eles explicam que o objetivo é criar um componente dinâmico que exiba o nome de um time e suas cores correspondentes. Vinicios mostra o código inicial do componente e explica que o nome do time será recebido como uma propriedade (props) do componente. Eles também mostram como adicionar o título do time usando a tag <h3> e a propriedade props.nome. Além disso, eles mencionam a importância da equipe de design na definição dos estilos e a importância de ter habilidades em HTML e CSS na área de Front-End.
+
+### Aula 04: Elevando a lista de times - Video 2
+
+Nesta aula, Vinicios e Paulo discutem sobre a implementação do componente "Time" em um projeto React. Eles explicam que o componente "Time" é um exemplo de um "dumb component", ou seja, um componente sem inteligência, que apenas recebe props e exibe informações na tela. Vinicios ressalta que, apesar de serem componentes visuais simples, há vantagens em utilizá-los, como facilidade de teste e manutenção.
+
+Eles também discutem a criação de uma lista de times no arquivo "Formulario.js" e a necessidade de evitar duplicação de código. Vinicios propõe a criação de uma constante chamada "times", que será um array contendo os nomes dos times. Além disso, eles mostram como adicionar informações adicionais a cada time, como cores primárias e secundárias.
+
+Vinicios explica que é possível utilizar o método ".map" para renderizar um componente "Time" para cada item da lista de times. Eles também adicionam a propriedade "key" a cada elemento da lista para que o React possa controlar quando renderizar ou não um filho.
+
+Por fim, eles discutem a estilização do componente "Time" utilizando o estilo inline no arquivo "Time.js". Vinicios menciona que é possível passar um único objeto "time" como prop para o componente "Time" e acessar suas propriedades dentro do componente, mas ressalta que essa é uma opção de estilo de código com vantagens e desvantagens.
+
+### Aula 04: Refatorando código duplicado - Video 3
+
+Nesta aula, Paulo e Vinicios discutem sobre a implementação de uma funcionalidade em um formulário de cadastro de colaboradores. Eles percebem a necessidade de remover a lista de "times" do formulário e decidem resolver esse problema. Apesar de o VS Code apontar um erro, eles decidem salvar assim mesmo. Em seguida, eles discutem sobre como transformar a lista de objetos "times" em uma lista de strings contendo apenas os nomes desses objetos. Paulo sugere utilizar o método "map" para realizar essa transformação. Vinicios concorda e explica que optou por não mexer na interface dos outros componentes para evitar refatorar todo o código já escrito. Eles implementam a transformação utilizando o método "map" e ajustam o código em "Formulario" para utilizar a nova lista de nomes de times. Vinicios menciona que essa abordagem de "elevar o estado" foi feita após detectar a necessidade durante o desenvolvimento. Paulo comenta sobre a dificuldade de nomear variáveis na área de programação. Por fim, eles concluem que a próxima etapa é criar o componente visual e depois pensar no comportamento desejado.
+
+### Aula 04: Card de colaborador - Video 4
+
+Nesta aula, Paulo e Vinicios discutem sobre a criação dos cards dos colaboradores em um projeto utilizando React. Eles criam um componente chamado "Colaborador" que recebe informações como imagem, nome e cargo através de props. O componente é estruturado com uma div que envolve todo o card, contendo um bloco superior com a imagem do colaborador e um bloco inferior com o nome e o cargo. Vinicios menciona que é possível utilizar uma imagem do GitHub como src. Eles mostram como adicionar o card de colaborador dentro do componente "Time" e importar as classes de CSS correspondentes. Ainda é necessário trabalhar na dinamicidade do componente e na organização dos cards lado a lado.
+
+### Aula 04: Mapeando os colaboradores - Video 5
+
+Nesta aula, Paulo e Vinicios discutem sobre a implementação de cards dinâmicos em um formulário. Eles mostram como fazer os cards aparecerem dinamicamente com base no que é digitado no formulário e como adicionar esses cards a um time. Vinicios mostra como adicionar o código para renderizar os cards dos colaboradores dentro do componente "Time" e como fazer a passagem das propriedades nome, cargo e imagem para o componente "Colaborador". Eles também mostram como usar a desestruturação de objetos para simplificar o código do componente "Colaborador". Por fim, eles discutem sobre a necessidade de filtrar os colaboradores por time e mostram como usar o método "filter" para fazer isso.
+
+### Aula 04: Escondendo times vazios - Video 6
+
+Nesta aula, Paulo e Vinicios discutem sobre a implementação de um recurso no Figma, uma aplicação desenvolvida em React. Eles abordam dois detalhes específicos: não mostrar times sem colaboradores e limpar o formulário após adicionar um colaborador. Para resolver o primeiro problema, eles mostram duas formas de fazer a renderização condicional no React: usando a expressão props.colaboradores.length > 0 && ou o operador ternário ?. Em relação ao segundo problema, eles explicam que é necessário chamar as funções setNome(), setCargo(), setImagem() e setTime() com strings vazias '' para limpar os campos do formulário. Após implementarem essas soluções, eles testam no navegador e verificam que os times sem colaboradores não estão mais sendo mostrados e os dados do formulário são limpos após adicionar um colaborador.
+
+### Aula 04: Para saber mais: Prop drilling
+
+Prop drilling, em tradução livre, significa "vazamento de props", e acontece quando você passa uma ou mais props, do pai para o filho, o filho passa para o filho dele, e assim por diante. Lidar com esse prop drilling pode ser desafiador, pois em pouco tempo fica difícil para qualquer pessoa descobrir onde os dados são inicializados, atualizados e usados de fato.
+
+Quer saber mais? [Aqui](https://www.alura.com.br/artigos/prop-drilling-no-react-js) tem um artigo mega bacana sobre os desafios de se lidar com esse tipo de cenário.
+
+### Aula 04: Nessa aula, você aprendeu como
+
+Manipular e transformar arrays de objetos;
+Filtrar itens de um array;
+Renderização condicional.
+
+## Aula 05: Caça aos Bugs
+
+### Aula 05: Nem tudo são flores - Video 1
