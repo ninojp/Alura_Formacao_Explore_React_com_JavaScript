@@ -1,6 +1,6 @@
 # Curso Alura React: desenvolvendo com JavaScript
 
-## Uma bliblioteca declarativa
+## Aula 01: Uma bliblioteca declarativa
 
 ### Aula 01: Apresentação - Video 1
 
@@ -29,3 +29,43 @@ Nesta aula, Paulo e Vinicios discutem sobre como fazer um componente de campo de
 ### Aula 01: Criando o Formulário - Video 7
 
 Nesta aula do curso de React, os instrutores discutem a criação de um formulário utilizando React. Eles mostram como criar um novo componente chamado "Formulario" e importar o arquivo CSS correspondente. Em seguida, eles estruturam o HTML do formulário e fazem a estilização, definindo tamanho, cor de fundo, bordas arredondadas, espaçamento e adicionando um efeito de sombra. Eles também mencionam a importância da negociação com os designers para encontrar soluções viáveis. Os próximos passos serão a criação de um botão para submeter os dados e a implementação de um campo de seleção para o campo "Time".
+
+### Aula 01: Para saber mais: componentes funcionais
+
+Durante o curso, nós vamos trabalhar apenas com componentes funcionais. Essa é a forma mais simples de criar um componente React.
+
+Mas ela não é a única forma possível. Podemos criar componentes utilizando Classes do ES6.
+
+Vamos entender um pouco mais as diferenças?
+
+Aqui vai um componente funcional:
+
+>function BoasVindas(props) {
+  return <h1>Olá, {props.nome}</h1>;
+}
+
+O mesmo componente, baseado em classes, seria:
+
+>class BoasVindas extends React.Component {
+  render() {
+    return <h1>Olá, {this.props.nome}</h1>;
+  }
+}
+
+Além da sintaxe, existem diversas diferenças. Se você quiser ir mais fundo no conceito de componentes baseado em classes, a [documentação](https://pt-br.legacy.reactjs.org/docs/components-and-props.html)é a nossa melhor fonte.
+
+### Aula 01: Nessa aula:
+
+Criamos um novo projeto React;
+Criamos componentes funcionais;
+Estilizamos componentes com CSS;
+Analisamos as dependências do projeto;
+Analisamos os comandos disponíveis no package.json.
+
+## Aula 02: Trabalhando com Props
+
+### Aula 02: Um Framework Declarativo - Video 1
+
+Nesta aula, Paulo Silveira e Vinicios Neves discutem sobre o React, um framework reativo criado pelo Facebook. O React permite que a página reaja a mudanças nos dados do estado do componente, atualizando o DOM da HTML, tornando a página mais dinâmica. Ele facilita a escrita de interfaces de usuário, evitando a necessidade de escrever muito código em JavaScript puro e se preocupar com a atualização do DOM. O React também é utilizado em Single Page Applications, que são aplicações que rodam em uma única página. Paulo e Vinicios concordam que ainda há muito a ser feito no curso de React.
+
+### Aula 02: Um Framework Declarativo - Video 2
