@@ -8,6 +8,10 @@ Nesta aula, Vinny Neves e Paulo Silveira introduzem o curso de React na Alura. O
 
 ### Aula 01: Olá mundo! - Video 2
 
+> IMPORTANTE!, não se deve colocar dois elementos HTML SEPARADOS(um abaixo do outro)
+  Para se usar elementos separados deve-se 'ENVELOPAR', com uma div ou um container  
+  O React tem para isso o Fragment /Fragment ou <> </>
+
 Nesta aula, Paulo e Vinicius introduzem o curso de React e falam sobre o uso do Figma no desenvolvimento Front-End. Eles explicam como criar um projeto React utilizando o comando "npx create-react-app" e mostram como iniciar o projeto com o comando "npm start". Também mencionam a importância dos componentes React e como o React mantém o servidor e o Front-End alinhados. É um bom ponto de partida para aprender React e desenvolver aplicações Front-End.
 
 ### Aula 01: Primeiro componente: Banner - Video 3
@@ -182,3 +186,23 @@ Renderização condicional.
 ## Aula 05: Caça aos Bugs
 
 ### Aula 05: Nem tudo são flores - Video 1
+
+Nesta aula, o instrutor Vinicios aborda a resolução de bugs e mensagens de erro em uma aplicação React. Ele mostra como corrigir o erro de "key" em uma lista, remover logs desnecessários, corrigir um problema de digitação em um componente e adicionar a cor primária em um card de colaborador. Ao final, a aplicação fica sem bugs e erros no Console.
+
+### Aula 05: Depurando código - Video 2
+
+Nesta aula, o instrutor Vinicios fala sobre a depuração e entendimento de código em React. Ele destaca a utilização do Developer Tools do navegador para navegar linha a linha do código, utilizando a palavra-chave debugger. Além disso, ele aborda a importância de criar e exportar um único elemento HTML em cada componente, resolvendo problemas de erros de sintaxe com o uso de uma div ou um fragmento do React. O instrutor enfatiza a importância de interpretar e corrigir erros, e sugere abrir dúvidas no fórum em caso de dificuldades.
+
+### Aula 05: Publicando a aplicação - Video 3
+
+Nesta aula, o instrutor Vinicios explica como publicar o projeto "Organo" no GitHub e na plataforma Vercel. Ele mostra como conectar o repositório do GitHub ao projeto na Vercel e inicia o processo de deploy. Após alguns minutos, o projeto é publicado e Vinicios mostra uma prévia. Ele enfatiza a importância de os alunos publicarem suas próprias versões do projeto e os encoraja a marcar ele e o Paulo nas redes sociais para que possam ver e parabenizar pelo trabalho. Esta é a última aula do curso.
+
+### Aula 05: Nessa aula, você aprendeu como
+
+Ler e interpretar mensagens de erro;
+Corrigir erros;
+Depurar o seu código com o debugger.
+
+### Aula 05: Conclusão - Video 4
+
+Nesta aula, Paulo e Vinicios parabenizam os alunos que concluíram o curso e fizeram o projeto final. Eles destacam a importância de colocar o projeto no ar, personalizá-lo e adicionar novas features para consolidar o aprendizado. Vinicios menciona os conceitos aprendidos no curso, como estado, props e criação de componentes do zero. Paulo faz perguntas sobre componentes de calendário no React e o uso do TypeScript. Eles recomendam que os alunos se aprofundem no React antes de explorar outras áreas e mencionam as Imersões e a Formação do Next.js como oportunidades de aprofundamento. No final, eles parabenizam os alunos e convidam a participarem dos cursos da Alura e do Discord da plataforma.

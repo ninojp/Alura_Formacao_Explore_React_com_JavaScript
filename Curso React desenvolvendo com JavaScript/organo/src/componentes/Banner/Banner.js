@@ -16,8 +16,12 @@ export default Banner;
 // usado normalmente em COMPOSIÇÃO de componentes, para exportar apenas os convenientes e não expor todos globalmente
 export const Banner2 = () => {
     return (
+        // IMPORTANTE!, não se deve colocar dois elementos HTML SEPARADOS(um abaixo do outro)
+        // Para se usar elementos separados deve-se 'ENVELOPAR', com uma <div> ou um container <section>...
+        // O React tem para isso o <Fragment> elementos html... </Fragment> ou <> elementos html... </>  
         <header className='banner'>
             <img src='/imgs/banner.png' alt='Imagem do banner' />
         </header>
+
     );
 }
