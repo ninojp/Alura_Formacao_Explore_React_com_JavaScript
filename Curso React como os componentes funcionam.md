@@ -40,4 +40,30 @@ Como rodar um projeto.
 
 ## Aula 02: O Que são Componentes
 
-### Aula 02:  - Video 1
+### Aula 02: Biblioteca x Framework - Video 1
+
+Nesta aula, o instrutor explica como o projeto está estruturado e como fazer alterações nele. Ele mostra os componentes importados no arquivo "App.js" e explica a diferença entre bibliotecas e frameworks. O instrutor também menciona o uso do DOM real e do Virtual DOM, além de mostrar como o componente App retorna uma estrutura semelhante a HTML. Ele destaca o uso do .map() para renderizar cada colaborador dentro de um time. No próximo vídeo, serão abordadas novas funcionalidades para o projeto.
+
+### Aula 02: Criando aoDeletar - Video 2
+
+Nesta aula, o instrutor explica como adicionar a funcionalidade de deletar um colaborador em um componente chamado "Colaborador". Ele mostra como renderizar o componente dentro de um loop utilizando a função map() e adiciona um bloco de código dentro do loop para verificar se o componente está sendo renderizado corretamente. Em seguida, ele explica como passar a propriedade "aoDeletar" para o componente "Colaborador" e como receber essa propriedade no componente "Time". As propriedades são como encaixes entre os componentes, permitindo a comunicação entre eles.
+
+### Aula 02: Criando o botão deletar - Video 3
+
+Nesta aula, o instrutor explica como adicionar a funcionalidade de exclusão de colaboradores em um aplicativo React. Ele mostra como passar a função "deletarColaborador" como propriedade para o componente "Colaborador" e como essa função é chamada quando o botão "deletar" é clicado. O instrutor também demonstra boas práticas de organização de código e a importância de garantir que as propriedades sejam passadas corretamente entre os componentes.
+
+### Aula 02: Importando ícone de deletar - Video 4
+
+Nesta aula, o instrutor explica como adicionar um ícone de exclusão ao botão de deletar um colaborador em um aplicativo React. Ele utiliza a biblioteca React Icons para importar o ícone desejado no componente Colaborador. O instrutor também mostra como aumentar o tamanho do ícone e como adicionar a funcionalidade de deletar o colaborador ao clicar no ícone. Ele destaca a importância de utilizar as chaves no import para tornar o código mais semântico e fácil de ler. No final, o resultado é um botão de deletar com um ícone de exclusão maior e a função de deletar colaborador funcionando corretamente.
+
+### Aula 02: Nessa aula, você aprendeu
+
+Como criar uma nova prop;
+Como passar esta prop para inúmeros componentes;
+O que é uma closure e como utilizá-la a seu favor;
+Como instalar novas dependências na sua aplicação;
+Diferença entre export e export default.
+
+## Aula 03: O Que são Componentes
+
+### Aula 03: Biblioteca x Framework - Video 1
