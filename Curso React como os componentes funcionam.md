@@ -27,7 +27,17 @@ Com o clone, você copia o código para a sua máquina, porém o remote permanec
 fork  
 Aí que entra o fork! O fork faz uma cópia daquele repositório no seu Github! Ele não copia o código para a sua máquina, mas após esta cópia, você poderá fazer um clone do seu repositório (o repositório copiado via fork) e agora o remote estará apontando para o seu Github, não mais para o Github oficial!
 
-### Aula 01: Apresentação - Video 1
+### Aula 01: Instalando dependências - Video 3
 
+Nesta aula, o instrutor explica como importar um projeto do GitHub e instalar as dependências necessárias. Ele mostra como utilizar o Terminal no VSCode e o comando "npm start" para executar o projeto. No entanto, ocorre um erro relacionado ao "react-scripts". O instrutor mostra o arquivo "package.json" do projeto, onde estão as dependências. Ele explica que é necessário instalar todas as dependências para o projeto funcionar corretamente. O instrutor também menciona que o "npm" é o gerenciador de pacotes do Node e facilita a adição de dependências. Após a instalação, a pasta "node_module" é criada com todas as dependências. Por fim, o instrutor executa novamente o comando "npm start" e o projeto é exibido corretamente.
 
-### Aula 01: Apresentação - Video 1
+### Aula 01: Nessa aula, você aprendeu
+
+Como clonar um projeto;
+A diferença entre clone e fork;
+Como instalar dependências de um projeto;
+Como rodar um projeto.
+
+## Aula 02: O Que são Componentes
+
+### Aula 02:  - Video 1
