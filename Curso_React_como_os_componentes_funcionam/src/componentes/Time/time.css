@@ -1,4 +1,5 @@
 .time {
+    position: relative;
     text-align: center;
     padding: 32px;
     background-blend-mode: multiply;
@@ -17,4 +18,26 @@
     justify-content: space-around;
     margin-top: 32px;
     flex-wrap: wrap;
+}
+.input-cor{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    cursor: pointer;
+}
+.span-inputC{
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+.input-corF{
+    position: absolute;
+    top: 20px;
+    Left: 50px;
+    cursor: pointer;
+}
+.span-inputF{
+    position: absolute;
+    top: 25px;
+    Left: 100px;
 }

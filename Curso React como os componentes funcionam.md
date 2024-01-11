@@ -64,6 +64,34 @@ O que é uma closure e como utilizá-la a seu favor;
 Como instalar novas dependências na sua aplicação;
 Diferença entre export e export default.
 
-## Aula 03: O Que são Componentes
+## Aula 03: Como o React vê um componente
 
-### Aula 03: Biblioteca x Framework - Video 1
+### Aula 03: Criando input de cor - Video 1
+
+Nesta aula, o instrutor discute a implementação de uma funcionalidade em um projeto utilizando React. Ele mostra como adicionar um input de cor em um componente chamado "Time" e explica a diferença entre as propriedades className e class no React. O instrutor também ensina como criar uma classe CSS para o input de cor e torná-lo controlado, utilizando as propriedades value e onChange. Além disso, ele destaca a importância de utilizar o estado (State) para controlar a cor do time e mostra como transformar a constante "times" em um estado para refletir corretamente a mudança de cor no componente.
+
+### Aula 03: Criando o state times - Video 2
+
+Nesta aula, o instrutor aborda a necessidade de criar um State para lidar com mudanças em um componente React. Ele explica como transformar o time em um estado utilizando o useState do React. Além disso, ele mostra como criar uma função específica para mudar a cor do time e utiliza o método map para percorrer todos os times e atualizar a cor secundária do time selecionado. Por fim, ele mostra como utilizar o estado controlado pelo React para atualizar a cor dos cards do time ao selecionar uma cor no input.
+
+### Aula 03: Mudando o background - Video 3
+
+Nesta aula, o instrutor aborda a necessidade de alterar a cor de fundo da área dos times em um aplicativo React. Ele mostra como selecionar todas as ocorrências da corPrimaria e corSecundaria no código e deletá-las. Em seguida, ele explica como utilizar a propriedade mudarCorDoTime para alterar as cores dos times. Por fim, ele utiliza o pacote hex-to-rgba para alterar a opacidade do fundo dos times. O instrutor menciona que o React utiliza o Virtual DOM para atualizar apenas as partes específicas que foram alteradas, tornando o aplicativo mais performático.
+
+### Aula 03: Para saber mais: Virtual DOM
+
+Virtual DOM é algo vital dentro do React, e é uma das coisas que fez o React ser tão famoso.Você provavelmente deve ter percebido como o React é inteligente e com rapidez ele atualiza o DOM? Então, isto tem tudo a ver com Virtual DOM!
+
+Lembra que os componentes são vistos como objetos no React? O Virtual DOM armazena estes objetos, e quando algo muda dentro desta árvore de objetos, o React compara o DOM real com o que a gente quer que mude (que a gente chama de candidato) e atualiza apenas o que for mudado!
+
+Neste momento o React tem uma “cópia” da árvore antes do evento e o “candidato”, que é a árvore com as mudanças após o evento, e compara o que deve ser atualizado por causa do evento, e a partir daí ocorre as mudanças!
+
+### Aula 03: Nessa aula, você aprendeu
+
+O que é Virtual DOM;
+Como o React escuta uma mudança e porque precisamos de um state para isto;
+Diferença de imperatividade e declaratividade.
+
+## Aula 04: Criando Funcionalidades
+
+### Aula 04: Criando ids - Video 1
