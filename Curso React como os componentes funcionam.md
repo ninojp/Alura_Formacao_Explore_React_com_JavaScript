@@ -95,3 +95,47 @@ Diferença de imperatividade e declaratividade.
 ## Aula 04: Criando Funcionalidades
 
 ### Aula 04: Criando ids - Video 1
+
+Nesta aula, o professor aborda a necessidade de criar identificadores únicos para os times e colaboradores em um projeto React. Ele explica que o atributo "nome" não é único o suficiente e pode causar problemas no futuro. Para resolver esse problema, o professor sugere a utilização do pacote externo UUID, que gera identificadores únicos. Ele mostra como instalar o pacote através do NPM e como importá-lo no código. Em seguida, o professor ensina a utilizar o UUID para gerar identificadores únicos para os times e colaboradores, substituindo o atributo "nome" pelo "id". Ele também mostra como utilizar o UUID na função "mudarCorDoTime" para validar a mudança de cor do time. O professor explica que o React utiliza o conceito de "one way data binding", ou seja, a troca de informações entre componentes acontece apenas do componente-pai para o componente-filho. Ele justifica essa abordagem como sendo mais eficiente em termos de performance. Por fim, o professor ressalta a importância de compreender os conceitos abordados para finalizar a funcionalidade de "deletar" e aplicá-los na prática.
+
+> Alguns outros frameworks, como Angular por exemplo, utilizam o two way data binding, ou "ligação de mão-dupla entre dados", que literalmente significa a troca de informação entre componentes, também chamados de módulos.  
+> Porém o React não trabalha desta forma, e é one way data binding, ou "ligação de mão-única entre dados" em que só envia de pai para filho.
+
+### Aula 04: Deletando um colaborador - Video 2
+
+Nesta aula, o instrutor aborda a implementação da funcionalidade de deletar colaboradores em um aplicativo React. Ele explica como verificar se a lista de colaboradores é um estado (State) para poder alterá-la no navegador. Em seguida, mostra a função deletarColaborador() que, por enquanto, apenas exibe uma mensagem no console. O instrutor também mostra como os colaboradores são renderizados na tela, utilizando os componentes Time e Colaborador. Destaca que o componente Colaborador recebe uma propriedade aoDeletar, que será utilizada para deletar o colaborador quando o botão "deletar" for clicado. Mostra o código do componente Colaborador e explica que o onClick do botão "deletar" está chamando a função aoDeletar passando o id do colaborador como parâmetro. Em seguida, volta para o componente App e mostra como a função deletarColaborador() recebe o id como parâmetro e utiliza o setColaboradores() para filtrar a lista de colaboradores e excluir o colaborador com o id informado. Destaca a necessidade de utilizar uma arrow function no onClick do botão "deletar" para que a função aoDeletar seja executada apenas quando o botão for clicado. Por fim, mostra o resultado no navegador, onde é possível deletar os colaboradores individualmente.
+
+### Aula 04: Para saber mais, alternativas para passar parâmetros
+
+No vídeo anterior, tivemos que transformar um evento em uma arrow function para poder passar o 'id' do colaborador como parâmetro, mas por que precisamos fazer isto? não posso simplesmente fazer onClick={aoDeletar(id)}?
+
+No caso acima, o aoDeletar será executado assim que o componente renderizar (pode tentar!) e isto não é o que esperamos! O onClick espera uma função, e ele recebe a execução dessa função, por isto ele executa assim que renderizado!
+
+Para resolver este problema, temos duas formas mais comuns, com a arrow function ou criando uma função no seu componente!
+
+Arrow Function  
+const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
+    return (<AiFillCloseCircle size={25} className="deletar" onClick={() => aoDeletar(colaborador.id)} />)
+}
+Criando uma função  
+const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
+    function deletarColaborador() {
+      aoDeletar(colaborador.id);
+    }
+    return (<AiFillCloseCircle size={25} className="deletar" onClick={deletarColaborador} />)
+}
+
+### Aula 04: Criando um time - Video 3
+
+Nesta aula do curso "React: como os componentes funcionam", foram desenvolvidas duas features em um projeto. A primeira permite a mudança da cor do time de colaboradores, enquanto a segunda permite a exclusão dos colaboradores. Em seguida, foi trabalhado o desenvolvimento de uma nova feature para criar um novo time, aplicando os conceitos aprendidos anteriormente. No código apresentado, foram feitas alterações nos arquivos "App.js" e "index.js" do componente "Formulario" para adicionar o formulário de criação de um novo time. Também foi criada a função "cadastrarTime" para adicionar o novo time ao array de times existente. Ao criar um novo time e selecioná-lo ao adicionar um colaborador, o colaborador foi adicionado ao time corretamente.
+
+### Aula 04: Nessa aula, você aprendeu
+
+A diferença entre two-way data binding e one-way data binding;
+Por que o React utiliza one-way data binding;
+Por que utilizar id é importante no React.
+
+## Aula 05: 
+
+### Aula 05:  - Video 1
+
