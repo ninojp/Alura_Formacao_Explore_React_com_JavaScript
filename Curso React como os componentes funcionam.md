@@ -135,7 +135,90 @@ A diferença entre two-way data binding e one-way data binding;
 Por que o React utiliza one-way data binding;
 Por que utilizar id é importante no React.
 
-## Aula 05: 
+## Aula 05: Finalizando o Projeto
 
-### Aula 05:  - Video 1
+### Aula 05: Refatorando o formulário - Video 1
 
+Nesta aula, o instrutor finaliza o projeto e realiza algumas refatorações no formulário. Ele adiciona um espaçamento entre os formulários utilizando display: flex e gap: 20px. Também mostra como utilizar flex-wrap: wrap para que os formulários sejam exibidos um abaixo do outro quando a tela for redimensionada. Além disso, são adicionadas margens laterais aos formulários com margin: 80px 50px. O instrutor também refatora o componente "CampoTexto" para aceitar campos de texto e campos de cor, adicionando a propriedade type='color' no segundo campo do segundo formulário. Por fim, ajusta o tamanho do campo de cor no arquivo campo.css. A refatoração e a criação de componentes reutilizáveis são destacadas como importantes no desenvolvimento de projetos React.
+
+### Aula 05: Criando favorito - Video 2
+
+Nesta aula, o instrutor finaliza o projeto adicionando a funcionalidade de "Favoritar" no aplicativo. Ele mostra como adicionar um ícone de coração que representa o favorito ao lado do nome do colaborador em cada card. O instrutor também explica como atualizar o estado dos colaboradores quando o ícone de coração é clicado, permitindo favoritar e desfavoritar os colaboradores. Com essa implementação, o aplicativo fica mais dinâmico e interativo.
+
+### Aula 05: Para saber mais, renderização condicional
+
+No vídeo passado, precisamos criar um ternário para renderizar dois ícones de coração, um para favorito e um para não favorito, isto é chamado de conditional rendering, ou em português renderização condicional!
+
+Isto é muito comum e muito importante dentro do React, pois com isto você pode renderizar qualquer coisa baseada em algum estado criado
+
+Vamos ver alguns tipos de renderização condicional:
+
+Ternário
+O ternário é bem comum e é utilizado se precisamos de uma renderização baseada em if/else, a primeira parte sempre é se a variável é true, e a segunda é se a variável é false.
+> {condicional ? ‘a condicional é true!’ : ‘a condicional é false!’}
+
+Operador lógico
+Mas e se eu quiser renderizar apenas se for true? Para isto você pode utilizar o operador &&, que é o operador AND no Javascript, ou seja, só funcionará se a variável for true.
+> {condicao && outraCondicao && ‘todas as condições anteriores são true!’}
+
+if/else
+O if/else não é aceito dentro do return, mas você pode utilizar fora do return!
+
+>if(!estaLogado) {
+  return (
+    div>
+      você não está logado!
+    /div>
+  )
+} else {
+ return (
+    div>
+      você está logado!
+    /div>
+  )
+}
+OBS: neste caso você nem precisaria do else, pois o return de baixo só executaria se o if for false.
+
+Variável
+No if/else, você não poderá executar o return de baixo caso o if seja true, para resolver este problema você pode colocar o valor dentro de uma variável, e colocar esta variável dentro do return!
+> let logado;
+if(estaLogado) {
+  logado = ‘Olá, você está logado!’
+} else {
+  logado = ‘Olá, você não está logado! :(’
+}
+return (
+  div>
+        {logado}
+  /div>
+)
+
+Função
+Caso você queira fazer alguma comparação, poderá colocar esta condição dentro de uma função passando algum parâmetro!
+> function verificaLogado(logado) {
+  if(logado) {
+    return ‘Olá, você está logado!’
+}
+return ‘Olá, você não está logado! :(’
+}
+return (
+  div>
+    {verificaLogado(estaLogado)}
+  /div>
+)
+OBS: na função, o que aparecerá na tela é o return, então não esqueça de sempre ter um return na função, dentro e fora das condições!
+
+### Aula 05: Nessa aula, você aprendeu
+
+Como criar um ternário para renderizar de forma opcional;
+Como renderizar condicionais de outras formas;
+Como refatorar um componente sem atrapalhar a execução primária dele;
+A importância de se refatorar um componente em projetos React.
+
+### Aula 05: Conclusão - Video 3
+
+Nesta aula, finalizamos o projeto e concluímos o curso "React: como os componentes funcionam". Durante o curso, aprendemos a utilizar o React e seus componentes, entendendo o motivo pelo qual ele funciona dessa forma. Vimos que o React é uma biblioteca JavaScript para a criação de interfaces de usuário, que utiliza um modelo declarativo e one-way binding.
+
+Além disso, conhecemos o conceito de Virtual DOM, que é uma representação virtual da estrutura da página. Com o Virtual DOM, o React consegue fazer alterações precisas nos elementos da página sem a necessidade de atualizar toda a página, resultando em melhor performance e experiência mais fluida para o usuário.
+
+Uma das principais vantagens do React é sua capacidade de atualizar apenas as partes da página que realmente precisam ser alteradas, sem afetar o restante. Com o conhecimento adquirido, estaremos preparados para utilizar o React de forma eficiente e criar interfaces de usuário modernas e responsivas.

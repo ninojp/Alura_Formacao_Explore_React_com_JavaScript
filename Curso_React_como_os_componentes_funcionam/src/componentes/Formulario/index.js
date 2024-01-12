@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
+import Campo from '../Campo'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
 const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
-
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -17,30 +16,25 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
     const aoSubmeter = (evento) => {
         evento.preventDefault()
         console.log('form enviado', nome, cargo, imagem, time )
-        aoCadastrar({
-            nome,
-            cargo,
-            imagem,
-            time
-        })
+        aoCadastrar({ nome, cargo, imagem, time })
     }
     return (
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Digite seu nome '
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}/>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label='Cargo' 
                     placeholder='Digite seu cargo '
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}/>
-                <CampoTexto 
+                <Campo 
                     label='Imagem' 
                     placeholder='Informe o endereço da imagem '
                     aoAlterado={valor => setImagem(valor)}/>
@@ -57,20 +51,22 @@ const Formulario = ({aoCadastrar, times, cadastrarTime}) => {
                 cadastrarTime({nome: nomeTime, corPrimaria: corTimeF, corSecundaria: corTime});
             }}>
                 <h2>Preencha os dados para criar um novo Time.</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio
                     label='Nome Time'
                     placeholder='Digite o nome do Time'
                     valor={nomeTime}
                     aoAlterado={valor => setNomeTime(valor)}/>
-                <CampoTexto
+                <Campo
                     obrigatorio
+                    tipo='color'
                     label='Cor destaque' 
                     placeholder='Digite a cor Destaque time'
                     valor={corTime}
                     aoAlterado={valor => setCorTime(valor)}/>
-                <CampoTexto
+                <Campo
                     obrigatorio
+                    tipo='color'
                     label='Cor Fundo' 
                     placeholder='Digite a cor Fundo do time'
                     valor={corTimeF}

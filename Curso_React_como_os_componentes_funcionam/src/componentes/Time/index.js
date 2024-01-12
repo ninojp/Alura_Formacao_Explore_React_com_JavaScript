@@ -1,7 +1,7 @@
 import Colaborador from '../Colaborador'
 import './time.css'
 
-const Time = ({time, colaboradores, aoDeletar, mudarCor2, mudarCorF}) => {
+const Time = ({time, colaboradores, aoDeletar, mudarCor2, mudarCorF, aoFavoritar}) => {
     return (
         (colaboradores.length > 0) && <section className='time' style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: time.corPrimaria }}>
             <span className='span-inputC'>Cor do Colaborador</span>
@@ -11,7 +11,13 @@ const Time = ({time, colaboradores, aoDeletar, mudarCor2, mudarCorF}) => {
             <h3 style={{ borderColor: time.corSecundaria }}>{time.nome}</h3>
             <div className='colaboradores'>
                 {colaboradores.map((colaborador, indice) => {
-                    return (<Colaborador key={indice} colaborador={colaborador} corDeFundo={time.corSecundaria} aoDeletar={aoDeletar} />);
+                    return (<Colaborador 
+                                key={indice} 
+                                colaborador={colaborador} 
+                                corDeFundo={time.corSecundaria} 
+                                aoDeletar={aoDeletar}
+                                aoFavoritar={aoFavoritar} 
+                            />);
                 })}
             </div>
         </section>
