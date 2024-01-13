@@ -28,11 +28,32 @@
   background-color: #1d222e;
   min-height: 80vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #61dafb;
+  padding: 50px;
+}
+.trocar-nome{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: 50px;
+}
+.trocar-nome button{
+  max-width: 70px;
+  align-self: center;
+}
+.cep-digitado{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  padding: 50px;
+}
+.cep-digitado li{
+  list-style: none;
 }
 
 @keyframes App-logo-spin {
