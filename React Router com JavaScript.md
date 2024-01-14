@@ -14,3 +14,46 @@ O instrutor expressa sua empolgação em ensinar tudo isso e espera que os aluno
 
 ### Aula 01: Criando e preparando a aplicação - Video 2
 
+Nesta aula, o instrutor cria uma aplicação React para exibir a mensagem "Olá, Mundo". Ele utiliza o comando npx create-react-app ola-mundo para criar o projeto e faz algumas modificações nos arquivos index.js e index.css, adicionando código CSS personalizado e importando fontes externas do Google Fonts. Após corrigir alguns erros, ele verifica se a aplicação está funcionando corretamente no navegador. No final, a mensagem "Olá Mundo!" é exibida.
+
+### Aula 01: Alternando entre rotas com JS - Video 3
+
+Nesta aula, o instrutor discute como trabalhar com várias páginas em uma aplicação React, mesmo tendo apenas um arquivo HTML. Ele explica que, ao contrário de uma aplicação React, onde todas as páginas são renderizadas em um único arquivo HTML, no navegador podemos acessar diferentes páginas através da URL. No entanto, ao digitar diferentes rotas no navegador, a página sempre exibe o mesmo conteúdo.
+
+O instrutor mostra como acessar a propriedade pathname do objeto location do navegador, que contém a rota atual. Ele tem a ideia de criar uma variável pagina que armazena um JSX diferente dependendo da rota atual.
+
+Para implementar essa ideia, o instrutor faz algumas alterações no arquivo App.js. Ele substitui o elemento <h1> pelo JSX armazenado na variável pagina. Se a rota for igual a /, ele retorna um JSX com a mensagem "Olá Mundo!", caso contrário, retorna um JSX com a mensagem "Sobre mim...".
+
+O instrutor também menciona que é possível organizar melhor o projeto criando componentes separados para cada página. Ele cria uma pasta chamada paginas dentro da pasta src e dentro dela cria duas pastas: inicio e sobreMim. Em cada pasta, ele cria um arquivo index.js que exporta uma função que retorna um JSX com o conteúdo da página correspondente. Em seguida, ele importa esses componentes no arquivo App.js e os utiliza no lugar dos JSX anteriores.
+
+O instrutor ressalta que, embora seja possível fazer essa troca de elementos dependendo da rota usando JavaScript puro, isso pode se tornar difícil de manter e ler à medida que a aplicação cresce. Por isso, ele menciona que a biblioteca React Router Dom é uma solução mais adequada para lidar com rotas e páginas em uma aplicação React. Ele sugere explorar essa biblioteca no próximo vídeo e implementá-la no projeto.
+
+### Aula 01: Instalando o react-router-dom - Video 4
+
+Nesta aula, o instrutor ensina como utilizar a biblioteca React Router Dom para mostrar diferentes conteúdos na tela de acordo com a URL utilizando JavaScript puro. Ele mostra como instalar a biblioteca no projeto, reinicia o servidor da aplicação e adiciona o componente BrowserRouter no retorno do componente app. O instrutor explica que essa configuração é feita apenas uma vez no projeto e que o BrowserRouter permite utilizar outros componentes do React Router Dom para criar um sistema de rotas mais legível.
+
+### Aula 01: Criando o roteador - Video 5
+
+Nesta aula, o instrutor ensina como utilizar a biblioteca React Router Dom para criar rotas em um aplicativo React. Ele importa o componente BrowserRouter para configurar as rotas e o componente Routes como o roteador principal. Utilizando o componente Route, ele define as rotas do aplicativo, especificando o caminho da rota e o componente JSX a ser renderizado. Ele cria rotas para a página inicial e a página "Sobre mim", e também explica como criar uma rota curinga para exibir uma mensagem de "Página não encontrada". Essas funcionalidades permitem criar um aplicativo com várias rotas e navegação entre páginas. O próximo passo será implementar o design do aplicativo, começando pelo menu de navegação.
+
+### Aula 01: Para saber mais, documentação do react-router-dom
+
+Você acabou de iniciar seus aprendizados no react-router-dom, uma poderosa biblioteca que irá nos ajudar de diversas formas a construir nossa aplicação.
+
+Sempre que você finalizar uma aula, sinta-se livre para aprofundar seus conhecimentos na [documentação oficial do React Router 6](https://reactrouter.com/en/main). Ela também serve como excelente fonte de consulta. A versão 6 é a que utilizaremos durante esse curso, e assegure-se de que não está lendo as documentações de versões mais antigas, pois há diferenças no uso de determinados recursos.
+
+### Aula 01: Nessa aula, você aprendeu como
+
+Instalar o react-router-dom;
+
+Utilizamos o comando npm install react-router-dom@6 que pegamos da própria documentação para instalar a versão 6.
+Utilizar os componentes BrowserRouter, Routes e Route do react-router-dom;
+
+Dentro do BrowserRouter, conseguimos utilizar os outros componentes da biblioteca. O Routes alterna entre diferentes rotas e o Route renderiza um determinado componente (com o atributo element) em um determinado caminho (com o atributo path).
+Criar uma rota para um caminho que não existe.
+
+Adicionando uma Route com o path='*', podemos renderizar uma página de 404, caso a URL acessada não corresponda a nenhuma das outras rotas.
+
+## Aula 02: SPA com react-router-dom
+
+### Aula 02: Links do react-router-dom - Video 1
