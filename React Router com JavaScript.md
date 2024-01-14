@@ -57,3 +57,14 @@ Adicionando uma Route com o path='*', podemos renderizar uma página de 404, cas
 ## Aula 02: SPA com react-router-dom
 
 ### Aula 02: Links do react-router-dom - Video 1
+
+Nesta aula, o instrutor começa a implementar o design do Figma em um projeto utilizando o React Router Dom. Ele explica que o menu de navegação deve estar presente em todas as páginas da aplicação e que não deve ser colocado dentro dos componentes "inicio" ou "sobre mim", que são utilizados nas rotas. Em vez disso, o menu de navegação deve ser colocado fora do componente "Routes", dentro do componente "BrowserRouter". O instrutor cria um novo componente chamado "menu" e adiciona o texto "Menu de navegação" a ele. Ele também cria um arquivo CSS para estilizar o componente. Em seguida, o instrutor importa o componente "menu" no arquivo "App.js" e o coloca dentro do componente "BrowserRouter". Ele explica que, ao clicar nos links do menu, a página do navegador é recarregada devido ao comportamento padrão da tag "a" do HTML. No entanto, ele deseja que a troca entre as páginas seja feita de forma dinâmica, sem recarregar a página. Para isso, ele substitui as tags "a" por um componente especial do React Router Dom chamado "Link". Ele ajusta os atributos das tags "Link" e explica que o componente "Link" permite a troca dinâmica de páginas sem recarregar a página inteira. O instrutor destaca que essa abordagem está de acordo com o conceito de Single Page Application (SPA) e que o React Router Dom auxilia na criação de SPAs. Ele menciona que no próximo vídeo irá mostrar como adicionar o sublinhado aos links ativos no design do Figma.
+
+### Aula 02: Utilizando useLocation - Video 2
+
+Nesta aula, o instrutor mostra como utilizar o hook useLocation do React Router Dom para obter informações sobre a rota atual em um projeto React. Ele utiliza essa informação para adicionar estilos condicionais aos links do menu, destacando o link correspondente à rota atual. Além disso, o instrutor cria um novo componente chamado MenuLink para evitar repetição de código na estilização dos links. Ele também renomeia o arquivo App.js para routes.js, seguindo uma convenção de nomenclatura mais descritiva. O próximo passo será implementar um banner de apresentação nas várias páginas da aplicação.
+
+### Aula 02: Para saber mais: useLocation e hooks
+
+O React tem seus próprios hooks nativos, como useState e useEffect, mas é comum que bibliotecas feitas para o React forneçam mais hooks para nós utilizarmos. Foi exatamente o nosso caso, onde utilizamos o hook useLocation do react-router-dom. Você pode revisar como funcionam os [hooks do React](https://www.alura.com.br/artigos/react-hooks).
+
