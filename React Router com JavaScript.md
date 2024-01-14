@@ -68,3 +68,39 @@ Nesta aula, o instrutor mostra como utilizar o hook useLocation do React Router 
 
 O React tem seus próprios hooks nativos, como useState e useEffect, mas é comum que bibliotecas feitas para o React forneçam mais hooks para nós utilizarmos. Foi exatamente o nosso caso, onde utilizamos o hook useLocation do react-router-dom. Você pode revisar como funcionam os [hooks do React](https://www.alura.com.br/artigos/react-hooks).
 
+### Aula 02: Para saber mais: SPA e recursos nativos do JS
+
+Uma SPA (Single Page Application) é uma aplicação que acontece sempre na mesma página HTML, normalmente chamada de index.html. A “troca entre páginas” é feita puramente com o JS, ou por alguma ferramenta que abstrai o JS. No caso desse curso é a biblioteca react-router-dom, que no final das contas utiliza os próprios recursos do JS para realizar a navegação.
+
+Alguns dos recursos nativos do JS que o react-router-dom utiliza por debaixo dos panos são o window.history e o window.location. O objetivo da biblioteca é melhorar a experiência de criação de uma SPA, abstraindo esses recursos nativos para métodos e componentes mais intuitivos e manuteníveis do que seria com JS puro.
+
+### Aula 02: Para saber mais: componente NavLink
+
+No vídeo anterior, utilizamos o hook useLocation para obter a rota atual e conseguir destacar o link ativo do menu. Porém, há uma forma alternativa de resolver esse mesmo problema, utilizando o componente [NavLink do react-router-dom!](https://reactrouter.com/en/main/components/nav-link) Leia sobre ele na documentação, pois deixei um desafio para você na próxima atividade! Vamos lá?
+
+### Aula 02: Desenvolvendo Banner - Video 1
+
+Nesta aula, o instrutor continua desenvolvendo o projeto "Olá Mundo!" em React. Ele explica que a próxima parte a ser desenvolvida é o banner que aparece no topo das páginas, contendo o título "Olá, mundo!", um texto de apresentação e uma foto do instrutor. O instrutor menciona que esse banner aparece em quase todas as páginas da aplicação, exceto na página 404. Para resolver isso, ele sugere criar um componente chamado "banner" e importá-lo nas páginas iniciais. O instrutor também menciona que o banner possui algumas imagens que serão necessárias, que já estão disponíveis na pasta "assets". Ele mostra como criar o componente de banner, importá-lo na página inicial e fazer o JSX do banner. Após salvar os arquivos e fazer algumas correções nos estilos CSS, o instrutor verifica se o banner está sendo exibido corretamente no navegador.
+
+### Aula 02: Para saber mais: absolute imports
+
+Você sempre pode consultar a configuração dos absolute imports na [documentação](https://create-react-app.dev/docs/importing-a-component/#absolute-imports).
+
+### Aula 02: Nessa aula, você aprendeu como
+
+Diferenciar o comportamento de sites tradicionais e de SPAs;
+
+Sites tradicionais são compostos por várias páginas HTML, e uma requisição é realizada para o servidor do site sempre que queremos ir para uma nova página. Já as SPAs (Single Page Applications) são compostas por uma única página HTML, e seu conteúdo é alterado dinamicamente pelo JavaScript.
+Utilizar o componente Link do react-router-dom;
+
+Ele mantém o comportamento de uma SPA, impedindo que a página do navegador recarregue.
+Utilizar o hook useLocation;
+
+Com ele, podemos obter informações da rota que estamos atualmente.
+Utilizar o componente NavLink do react-router-dom.
+
+Com ele, temos acesso direto à informação do link estar ativo ou não.
+
+## Aula 03: 
+
+### Aula 03:  - Video 1
