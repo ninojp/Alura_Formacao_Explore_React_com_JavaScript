@@ -101,6 +101,64 @@ Utilizar o componente NavLink do react-router-dom.
 
 Com ele, temos acesso direto à informação do link estar ativo ou não.
 
-## Aula 03: 
+## Aula 03: Rotas Aninhadas
 
-### Aula 03:  - Video 1
+### Aula 03: Desenvolvendo Inicio - Video 1
+
+Nesta aula, o instrutor continua o desenvolvimento de um projeto chamado "Olá mundo!". Ele explica que já foi feita a parte do banner e agora ele quer finalizar a página de início. Após o banner, ele mostra que existem vários cards que representam os posts que a pessoa escreveu. Cada card possui uma imagem de capa do post e um título. O instrutor mostra como importar e utilizar arquivos de imagens e JSON no projeto, como criar componentes e como estilizar os elementos com CSS. Ele também demonstra como corrigir problemas de layout e como criar um componente de rodapé. Essas são habilidades importantes para o desenvolvimento de aplicações web com React.
+
+### Aula 03: Para saber mais: pacote SVGR
+
+A sintaxe import { ReactComponent as NomeDoComponente } from 'caminho_do_componente'; é possível devido ao pacote [SVGR](https://react-svgr.com/), que já vem por padrão em um projeto React. Esse pacote permite que utilizemos um SVG como um componente React, assim não precisamos utilizá-lo como uma tag img.
+
+### Aula 03: Utilizando rotas aninhadas - Video 2
+
+Nesta aula, o instrutor desenvolve o projeto "Olá, mundo!" e explica como reutilizar componentes para evitar repetição de código. Ele cria o componente "PaginaPadrao" que contém a estrutura comum a todas as páginas do projeto. Em seguida, utiliza o componente route do React Router Dom para criar rotas aninhadas, onde as rotas "início" e "sobre mim" se tornam rotas filhas da rota "página padrão". Isso evita a repetição de código. O instrutor também utiliza o componente outlet para renderizar o conteúdo das rotas dentro da página padrão. O próximo passo é desenvolver o conteúdo da rota "sobre mim" com base no design do Figma.
+
+### Aula 03: Para saber mais, rotas index e caminhos relativos
+
+Você viu que quando queremos reaproveitar partes da nossa aplicação em apenas algumas rotas em vez de todas, utilizamos o recurso de rotas aninhadas, que são rotas filhas de uma mesma rota pai. Você pode ver sobre isso na [documentação](https://reactrouter.com/en/main/start/overview#nested-routes).
+
+Aproveite também para conferir a documentação sobre [rotas index](https://reactrouter.com/en/main/start/concepts#index-routes).
+
+```JavaScript
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Activity />} />
+        <Route path="invoices" element={<Invoices />} />
+        <Route path="activity" element={<Activity />} />
+      </Route>
+    </Routes>
+  );
+}
+```
+
+Veja que há três rotas aninhadas de Layout. A primeira delas possui um atributo index em vez de um atributo path. Isso é o mesmo que dizer que o caminho desta rota é igual ao da rota pai, ou seja, nesse caso é a mesma coisa que um atributo path="/".
+
+As outras duas rotas têm caminhos que iniciam sem a /. Isso quer dizer que essas rotas serão relativas ao caminho da rota pai, e são equivalentes a "/invoices" e "/activity", respectivamente.
+
+### Aula 03: Desenvolvendo SobreMim - Video 3
+
+Nesta aula, o instrutor continua desenvolvendo o projeto "Olá, mundo!" e aborda a criação da página "Sobre mim". Ele mostra que há um componente de banner que já foi utilizado na página inicial e explica que deseja reutilizar essa estrutura na página "Sobre mim". Para resolver esse problema, o instrutor decide criar um novo componente chamado "PaginaPadrao" na pasta "componentes". Esse componente terá a estrutura básica da página, incluindo o banner e o conteúdo da rota. Em seguida, ele utiliza o componente Outlet do React Router Dom para renderizar o conteúdo das rotas dentro do componente "PaginaPadrao". O instrutor também explica que as rotas alinhadas são uma forma interessante de reutilizar uma estrutura de página para diferentes rotas. O próximo passo é desenvolver o conteúdo da rota "Sobre mim" com base no design apresentado no Figma.
+
+### Aula 03: Nessa aula, você aprendeu como
+
+Identificar quando utilizar rotas aninhadas;
+
+Colocamos as páginas Inicio e SobreMim como filhas de PaginaPadrao, para que apenas elas reaproveitassem a mesma estrutura. Não queríamos que o Banner aparecesse na página 404.
+Utilizar o componente Outlet;
+
+A rota que é pai de outras se responsabiliza por dizer onde elas serão renderizadas com o Outlet do react-router-dom.
+Utilizar o atributo index do Route;
+
+O index indica que o caminho da rota é igual ao da rota pai.
+Diferenciar caminhos relativos e absolutos.
+
+Caminhos absolutos iniciam com /, enquanto caminhos relativos iniciam sem a /, partindo do caminho da rota pai.
+
+## Aula 04: Rotas Dinâmicas
+
+### Aula 04: Utilizando useParams - Video 1
+
