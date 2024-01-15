@@ -6,6 +6,7 @@ import Rodape from 'componentes/Rodape/Rodape.js';
 import PaginaPadrao from 'componentes/PaginaPadrao/PaginaPadrao.js';
 import Post from 'Paginas/Post/Post.js';
 import PgNãoEncontrada from 'Paginas/PgNãoEncontrada/PgNãoEncontrada.js';
+import ScrollToTop from 'componentes/ScrollToTop/ScrollToTop.js';
 
 // console.log(window.location)
 // const pagina = window.location.pathname === '/'? <Inicio /> : <SobreMin />
@@ -13,13 +14,14 @@ import PgNãoEncontrada from 'Paginas/PgNãoEncontrada/PgNãoEncontrada.js';
 function AppRoutes() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Menu />
       <Routes>
         <Route path='/' element={<PaginaPadrao />} >
           <Route index element={<Inicio />} />
           <Route path='/sobremin' element={<SobreMin />} />
-          <Route path='/posts/:id' element={<Post />} />
         </Route>
+        <Route path="posts/:id/*" element={<Post />} />
         <Route path='*' element={<PgNãoEncontrada />} />
       </Routes>
       <Rodape />

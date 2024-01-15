@@ -198,6 +198,121 @@ Utilizar o hook useParams.
 
 Com ele, obtemos os parâmetros passados para uma rota dinâmica.
 
-## Aula 05: 
+## Aula 05: Finalizando o Projeto
 
-### Aula 05:  - Video 1
+### Aula 05: Utilizando useNavigate - Video 1
+
+Nesta aula, o instrutor finaliza a estilização de um botão de voltar na página 404 de um projeto em React. Ele cria um componente para o botão, mostra como importá-lo em outro componente chamado "PostCard" e como dinamizar o texto do botão utilizando a prop "children". O instrutor também explica como adicionar estilos CSS específicos para o botão no novo componente criado. Além disso, ele demonstra como reutilizar o mesmo componente de botão na página 404, alterando o texto e adicionando estilos específicos para o botão "Voltar". Ele utiliza o hook "useNavigate" do React Router Dom para implementar a funcionalidade de voltar para a página anterior, passando tanto uma string representando a rota quanto um número representando a quantidade de páginas a voltar como parâmetro para a função "navegar". O instrutor menciona que no próximo vídeo abordará como tratar a situação de um post não encontrado utilizando o componente de página não encontrada.
+
+### Aula 05: Para saber mais navegação no react-router-dom
+
+Você aprendeu que temos um bom controle da navegação do react-router-dom utilizando o hook useNavigate. Você sempre pode consultar como realizar navegação na [documentação](https://reactrouter.com/en/main/hooks/use-navigate).
+
+### Aula 05: Tratando Post não encontrado - Video 2
+
+Nesta aula, o instrutor discute sobre a reutilização de uma página de erro 404 em um projeto React. Ele mostra como mover a rota de post para fora da rota de página padrão, usando o componente "Routes" do React Router Dom para aninhar rotas. Dessa forma, o componente "PaginaPadrao" envolve o componente "PostModelo" e o banner é exibido corretamente. Essa é uma solução interessante e válida para o problema.
+
+### Aula 05: Para saber mais, Routes descendente
+
+No vídeo anterior, utilizamos um componente Routes dentro do componente Post, que já é uma rota dentro do Routes que é utilizado em routes.js. Este é o recurso de Routes descendente do react-router-dom, que é quando um componente Routes é utilizado dentro de outro.
+
+Aliás, se você abrir agora alguns dos posts do projeto no navegador (em http://localhost:3000/posts/1, por exemplo) e abrir o console, aparecerá um alerta como esse:
+
+Traduzindo o alerta, temos algo assim:
+
+> Você renderizou um `<Routes>` (ou chamou useRoutes()) descendente em "/posts/1", mas o caminho da rota pai não possui "*" ao final. Isso significa que se você criar rotas mais profundas, a rota pai não conseguirá renderizá-las.
+
+Por favor, altere o pai `<Route path="posts/:id">` para `<Route path="posts/:id/*">`.
+
+No nosso caso, esse alerta passou despercebido, pois estamos utilizando apenas uma rota dentro do Routes descendente que está em Post. Mas se ele tivesse uma rota com o caminho "/posts/:id/detalhes" (ou simplesmente "detalhes", relativo ao caminho da rota pai), essa rota não seria renderizada.
+
+Então, para evitar qualquer bug no futuro e seguir as boas práticas, vamos seguir o conselho do alerta, colocando um * ao final da rota do Post:
+
+`<Route path="posts/:id/*" element={<Post />} />`
+Dessa forma, o alerta do console irá sumir!
+
+### Aula 05: Para saber mais, solução alternativa com children
+
+No vídeo anterior, utilizamos um Routes descendente, para podermos utilizar um Route para PaginaPadrao e reutilizar seu Outlet. Porém, há outra abordagem para resolver esse problema, vamos conhecê-la?
+
+Para aplicá-la, você pode remover os Routes e Route que colocamos no componente de Post, deixando seu JSX do jeito que estava antes. Agora, vamos envolver diretamente o PostModelo por PaginaPadrao, deixando o JSX assim:
+
+```JSX
+<PaginaPadrao>
+    <PostModelo
+        fotoCapa={`/assets/posts/${post.id}/capa.png`}
+        titulo={post.titulo}
+    >
+        <div className="post-markdown-container">
+            <ReactMarkdown>
+                {post.texto}
+            </ReactMarkdown>
+        </div>
+    </PostModelo>
+</PaginaPadrao>
+```
+
+Porém, para que consigamos renderizar o JSX que passamos para PaginaPadrao, devemos utilizar o children do React. Assim, vamos para o index.js de PaginaPadrao e receber a prop children. E, logo abaixo de `<Outlet />`, escrevemos {children}. O código fica assim:
+
+```JSX
+export default function PaginaPadrao({ children }) {
+    return (
+        <main>
+            <Banner />
+
+            <Outlet />
+            {children}
+        </main>
+    )
+}
+```
+
+Ou seja, deixamos o componente PaginaPadrao mais reutilizável, podendo ser utilizado como rota pai ou diretamente como um componente pai. De uma forma ou de outra, PaginaPadrao irá renderizar o conteúdo ou em `<Outlet />` ou em {children}.
+
+Essa também é uma solução super válida e você pode escolher a que fizer mais sentido para você!
+
+### Aula 05: Desafio, implementando posts recomendados
+
+Implemente a parte que recomenda outros posts! No figma, ela aparece logo ao final de um post, assim:
+![Alt text](image.png)
+
+Você deve mostrar 4 cards de Posts. Reaproveite o componente PostCard! Além disso, lembre-se que você não deve mostrar o Post que está na página atual.
+
+[Opinião do instrutor](https://cursos.alura.com.br/course/React-desenvolvendo-react-router-javaScript/task/112291)
+
+### Aula 05: Para saber mais, links do desafio
+
+Consulte a [documentação do Scroll To Top](https://v5.reactrouter.com/web/guides/scroll-restoration/scroll-to-top). Essa documentação é da versão 5 do react-router-dom, mas a solução continua válida para a versão 6 que estamos utilizando.
+
+Para se aprofundar nos métodos JavaScript que usamos no Desafio, seguem os links da documentação da MDN:
+
+- [filter](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+- [sort](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+- [slice](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+### Aula 05: Para saber mais; subindo o projeto no GitHub
+
+No próximo vídeo, iremos publicar o Olá Mundo na Vercel. Para que você consiga fazer isso junto comigo, é necessário que você tenha uma conta no GitHub e um repositório com a versão final do Alura Cook. Caso precise de ajuda, [consulte esse Alura+](https://cursos.alura.com.br/extra/alura-mais/compartilhar-projeto-com-git-e-github-c42). Se quiser se aprofundar em Git e Github, confira o [curso Git e GitHub: repositório, commit e versões](https://cursos.alura.com.br/course/git-github-repositorio-commit-versoes).
+
+### Aula 05: Publicando o projeto - Video 3
+
+Nesta aula, o instrutor ensina como publicar um projeto chamado "Olá mundo!" utilizando o site da Vercel. Ele explica que é necessário ter uma conta no GitHub com o repositório da versão final do projeto. O instrutor mostra como fazer login na Vercel e criar um novo projeto, selecionando o repositório desejado. Em seguida, ele inicia o processo de deploy e explica que pode demorar um pouco. Após o término do deploy, ele mostra o link gerado para o projeto e encoraja o espectador a verificar se tudo está funcionando corretamente.
+
+### Aula 05: Nessa aula, você aprendeu como
+
+Componentizar um botão;
+
+Criamos o componente BotaoPrincipal, que recebe props que definem seus estilos.
+Utilizar o hook useNavigate;
+
+Podemos utilizá-lo para fazer navegações mais complexas, como voltar para a página anterior no navegador.
+Tratar o caso de post não encontrado;
+
+Utilizamos o componente NaoEncontrada para quando um post não era encontrado. Vimos duas possíveis soluções para reutilizar o componente PaginaPadrao apenas quando um post era encontrado. Uma delas é aproveitando o Outlet e adicionando os componentes Routes e Route dentro do componente Post; outra é adicionando {children} em PaginaPadrao e permitindo ele possa ser utilizado como um componente pai direto.
+Publicar o projeto!
+
+Você aprendeu a publicar seu projeto na Vercel para que o mundo possa vê-lo :)
+
+### Aula 05: Conclusão - Video 4
+
+Nesta aula de React Router DOM, aprendemos a finalizar o projeto e concluímos o curso. Durante o curso, exploramos diversas funcionalidades e recursos para construir uma Single Page Application (SPA) utilizando o React Router DOM. Aprendemos a criar rotas e páginas diferentes, utilizar rotas aninhadas e lidar com a página não encontrada. Também vimos como utilizar rotas dinâmicas, passando parâmetros na URL. Além disso, utilizamos os hooks useParams e useLocation para obter informações sobre a rota atual e estilizar a aplicação de acordo. Um desafio proposto foi a implementação de um componente de scroll to top. No final, o instrutor incentivou os alunos a compartilharem seus projetos e aprendizados nas redes sociais, além de fornecer feedback sobre o curso. A participação na comunidade através do Discord também foi encorajada. No geral, o curso foi uma ótima oportunidade de aprendizado e aprimoramento das habilidades em React Router DOM.
