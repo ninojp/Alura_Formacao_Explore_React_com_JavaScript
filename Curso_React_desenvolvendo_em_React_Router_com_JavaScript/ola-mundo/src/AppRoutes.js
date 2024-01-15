@@ -4,6 +4,8 @@ import SobreMin from "./Paginas/SobreMin/SobreMin.js";
 import Menu from './componentes/Menu/Menu.js';
 import Rodape from 'componentes/Rodape/Rodape.js';
 import PaginaPadrao from 'componentes/PaginaPadrao/PaginaPadrao.js';
+import Post from 'Paginas/Post/Post.js';
+import PgNãoEncontrada from 'Paginas/PgNãoEncontrada/PgNãoEncontrada.js';
 
 // console.log(window.location)
 // const pagina = window.location.pathname === '/'? <Inicio /> : <SobreMin />
@@ -16,8 +18,9 @@ function AppRoutes() {
         <Route path='/' element={<PaginaPadrao />} >
           <Route index element={<Inicio />} />
           <Route path='/sobremin' element={<SobreMin />} />
+          <Route path='/posts/:id' element={<Post />} />
         </Route>
-        <Route path='*' element={<div>Página não encontrada!</div>} />
+        <Route path='*' element={<PgNãoEncontrada />} />
       </Routes>
       <Rodape />
     </BrowserRouter>

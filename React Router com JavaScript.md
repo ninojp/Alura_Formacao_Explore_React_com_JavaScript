@@ -162,3 +162,42 @@ Caminhos absolutos iniciam com /, enquanto caminhos relativos iniciam sem a /, p
 
 ### Aula 04: Utilizando useParams - Video 1
 
+Nesta aula, o instrutor continua desenvolvendo o projeto "Olá mundo!" utilizando o React Router Dom. Ele renomeia um componente chamado "post" para "PostCard" para evitar conflitos de nomes. Em seguida, cria um novo componente chamado "post" para a rota da aplicação. Ele adiciona uma nova rota aninhada dentro da rota pai "PaginaPadrao" no arquivo "routes.js". O instrutor mostra como utilizar parâmetros de rota no React Router Dom, alterando o path da rota para "posts/:id". Ele utiliza o hook "useParams" para capturar o valor do parâmetro de rota no componente "post". Também mostra como transformar os postcards em links clicáveis, utilizando o componente "Link" do React Router Dom. Por fim, imprime o valor do ID na tela para verificar se está funcionando corretamente. Agora é possível utilizar as informações da URL para criar a página de post de acordo com o ID passado.
+
+### Aula 04: Dinamizando os dados do Post - Video 2
+
+Nesta aula, o instrutor ensina como utilizar os parâmetros da URL para buscar e exibir o post adequado em uma página de posts. Ele utiliza o método find do JavaScript para buscar o post com o ID correspondente ao parâmetro da URL, utilizando a igualdade restrita (===) para comparar o ID do post com o parâmetro da URL. O instrutor também mostra como montar o caminho da foto de capa do post utilizando uma template string e o ID do post. Por fim, ele destaca a vantagem de ter criado o componente PostModelo anteriormente, pois agora ele pode ser reutilizado para exibir o conteúdo dos posts de forma dinâmica.
+
+### Aula 04: Para saber mais, linguagem Markdown
+
+O markdown é uma linguagem de marcação, assim como o HTML. Inclusive, no projeto React que criamos, já vem um arquivo chamado README.md na raiz do projeto. A extensão .md indica que é um arquivo escrito em markdown.
+
+Você pode ler mais sobre essa linguagem no artigo [Markdown: como trabalhar com essa linguagem de markup?](https://www.alura.com.br/artigos/como-trabalhar-com-markdown)
+
+No Olá Mundo, guardamos os textos markdown no JSON, mas essa não é a melhor forma de trabalhar com o markdown, pois o JSON possui limitações, como não permitir quebra de linha nas strings (foi utilizado \n em vez de quebra de linha). Porém, os cenários ideais são um pouco mais avançados, envolvendo consumo de serviços externos. Então, apesar das limitações do JSON, ele é mais simples de utilizar e supre as necessidades do nosso projeto.
+
+Para melhor experiência de escrita, você pode escrever seus posts em markdown e depois passar para a string do JSON, mas se atente para substituir as quebras de linha por \n (e duas quebras de linha \n\n para um novo parágrafo), assim como já está sendo feito no posts.json.
+
+### Aula 04: Instalando React MarkDown - Video 3
+
+Nesta aula, o instrutor discute sobre a impressão de um texto em um arquivo a partir de um componente React. Ele menciona o uso da linguagem de marcação Markdown e introduz a biblioteca React Markdown, que permite transformar o texto escrito em Markdown em HTML dinâmico. O instrutor mostra como instalar e utilizar a biblioteca no código, além de explicar como estilizar o texto utilizando CSS. Ele destaca que é necessário criar uma div com uma classe específica ao redor do componente `<ReactMarkdown>` e mostra um código CSS que estiliza os elementos filhos dessa div. Por fim, o instrutor verifica se os estilos estão sendo aplicados corretamente no navegador.
+
+### Aula 04: Desenvolvendo NotFound - Video 4
+
+Nesta aula, o instrutor aborda o desenvolvimento de uma página de erro 404 utilizando o React Router. Ele explica como lidar com uma situação em que um ID inválido é inserido na URL de uma página de postagem, mostrando como exibir uma mensagem de "Post não encontrado" quando isso ocorre. Em seguida, o instrutor desenvolve o componente "NaoEncontrada", adicionando estilos CSS e elementos como título, parágrafos e um botão de voltar. Ele também importa uma imagem de um cachorro para utilizar no componente. Por fim, o instrutor mostra como importar o componente no arquivo de rotas e substituir a div existente pela importação do componente "NaoEncontrada".
+
+### Aula 04: Nessa aula, você aprendeu como
+
+Identificar quando utilizar rotas dinâmicas;
+
+Rotas dinâmicas são úteis quando queremos ter uma mesma estrutura de página e mudar seu conteúdo de acordo com alguma informação passada na URL. No nosso caso, passamos o id de um post pela URL, buscamos o post de acordo com o id e mostramos suas informações na tela.
+Utilizar os seletores de rotas dinâmicas para criar uma rota dinâmica;
+
+Utilizamos a sintaxe /caminho/:nomedoparametro no atributo path de uma Route.
+Utilizar o hook useParams.
+
+Com ele, obtemos os parâmetros passados para uma rota dinâmica.
+
+## Aula 05: 
+
+### Aula 05:  - Video 1
