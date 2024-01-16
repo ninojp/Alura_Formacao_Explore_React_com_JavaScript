@@ -27,7 +27,7 @@ Nesta aula, Vinicios e João discutem sobre a criação de um componente de fund
 
 ### Aula 01 - Normalizando o CSS - Video 4
 
-[Normalize.css](https://necolas.github.io/normalize.css/), este é o normalize mencionado no curso, mas nesta aula estaremos utilizando o normalize(reset css) modificado pelo professor. 
+[Normalize.css](https://necolas.github.io/normalize.css/), este é o normalize mencionado no curso, mas nesta aula estaremos utilizando o normalize(reset css) modificado pelo professor.
 
 Nesta aula, os instrutores discutem sobre como lidar com estilos globais dentro de aplicações React que utilizam Styled Components. Eles mostram como criar um componente de estilos globais utilizando a função createGlobalStyle do Styled Components. O objetivo dessa abordagem é garantir que os estilos globais sejam compartilhados entre todos os componentes styled da aplicação, evitando a necessidade de repetir o código de estilos em cada componente individualmente.
 
@@ -46,3 +46,46 @@ Utilizar o Vite para iniciar um projeto React;
 Instalar e implementar a biblioteca styled-components;
 Criar um fundo com gradiente;
 Normalizar o CSS com estilos globais.
+
+## Aula 02 - Componentes Iniciais e Fontes
+
+### Aula 02 - Cabeçalho - Video 1
+
+Nesta aula, os instrutores começam explicando a criação do primeiro componente visual do projeto, o "header". Eles mostram como estilizar o header utilizando o Styled Components, definindo margens, display flex e justify-content. Em seguida, adicionam a imagem da logomarca e explicam a importância de colocá-la na pasta "public". Por fim, desafiam os espectadores a criar o campo de texto à direita do header.
+
+### Aula 02 - Base da barra lateral - Video 2
+
+Nesta aula, os instrutores discutem a construção da barra lateral de um projeto chamado SpaceApp. Eles explicam que a barra lateral será fixa e estática, e que por enquanto não haverá animações ou alterações nela. O objetivo é criar a estrutura básica da barra lateral, utilizando tags HTML como aside, nav, ul, li e a. Eles mostram como criar um novo componente chamado BarraLateral e como inseri-lo no arquivo principal App.jsx. Em seguida, eles falam sobre a estilização da barra lateral, removendo os estilos padrões e aplicando estilos personalizados utilizando a biblioteca styled-components. Eles explicam como remover o sublinhado dos links e definir a largura da lista. Por fim, eles mencionam a necessidade de evoluir o item de lista, transformando-o em um componente separado.
+
+### Aula 02 - Estrutura do item de navegação - Video 3
+
+Nesta aula, Vinicios e João discutem e desenvolvem o componente "ItemNavegacao" para a barra lateral do aplicativo Space App. Eles explicam a importância de diferenciar os estados ativo e inativo dos itens de navegação e mostram como programar e estilizar corretamente esse componente. Eles também mencionam a necessidade de adicionar os ícones ao projeto e explicam como fazer isso.
+
+### Aula 02 - Importando as fontes do projeto #1 - Video 4
+
+Nesta aula, os instrutores discutem sobre a aplicação de estilos aos itens de uma lista de navegação em um projeto de desenvolvimento utilizando o styled-components. Eles abordam propriedades como font-size, line-height, margin-bottom, cursor e color, além de mostrar como alinhar elementos verticalmente utilizando display: flex e align-items: center. Também é mencionada a importação das fontes do projeto, que devem estar presentes no diretório do projeto e serem importadas nos estilos globais.
+
+### Aula 02 - Importando as fontes do projeto #2 - Video 5
+
+Nesta aula, os instrutores ensinam como importar fontes em um projeto utilizando CSS, React e styled-components. Eles mostram como utilizar a propriedade @font-face no arquivo index.jsx dos estilos globais para importar as fontes desejadas. Também explicam como declarar a font-family no CSS, utilizando a sintaxe local() para referenciar a fonte localmente e a URL da fonte importada. Além disso, mencionam a importância de utilizar diferentes formas de passar a fonte para garantir um fallback adequado. Por fim, é proposto um desafio para importar uma imagem de banner e combiná-la com o styled-components.
+
+### Aula 02 - Para saber mais: fontes e suas possíveis extensões
+
+TrueType Font (TTF): É um formato de fonte amplamente utilizado em sistemas operacionais Windows e Mac. É compatível com a maioria dos programas e oferece suporte a recursos avançados, como kerning e hinting.
+
+OpenType Font (OTF): É um formato de fonte desenvolvido pela Adobe e pela Microsoft, que combina os recursos do TrueType e do formato PostScript. O OpenType oferece suporte a recursos avançados, como ligaturas, glifos alternativos e fontes com múltiplos idiomas.
+
+PostScript Font (PS): É um formato de fonte desenvolvido pela Adobe. As fontes PostScript são amplamente utilizadas em impressoras e gráficos profissionais. Elas são baseadas em vetores e fornecem alta qualidade de impressão.
+
+Web Open Font Format (WOFF): É um formato de fonte especialmente projetado para uso na web. O WOFF comprime as fontes para um tamanho menor, o que resulta em tempos de carregamento mais rápidos para páginas da web. O WOFF2 é uma versão mais recente e eficiente do WOFF.
+
+### Aula 02 - Nessa aula, você aprendeu como`:`
+
+Criar e estilizar o componente cabeçalho;
+Estruturar a barra lateral;
+Criar um item de lista que recebe um texto e uma imagem;
+Importar fontes e defini-las como padrão.
+
+## Aula 03 - Criando a Galeria
+
+### Aula 03 -  - Video 1
