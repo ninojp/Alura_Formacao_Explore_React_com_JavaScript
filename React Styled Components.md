@@ -88,4 +88,32 @@ Importar fontes e defini-las como padrão.
 
 ## Aula 03 - Criando a Galeria
 
-### Aula 03 -  - Video 1
+### Aula 03 - Montando o layout desktop - Video 1
+
+Nesta aula, os instrutores discutem sobre a estrutura e o layout do projeto SpaceApp. Eles utilizam propriedades CSS como "position", "max-width", "margin", "display: flex", "gap", "flex-direction" e "flex-grow" para posicionar os elementos de forma fluida e responsiva. Eles também mencionam a importância de criar contêineres e evitar a codificação rígida. No final, eles ajustam o tamanho do banner e mencionam que é possível controlar o fluxo do "flex" utilizando outras propriedades.
+
+### Aula 03 - Estruturando a galeria - Video 2
+
+Nesta aula, os instrutores discutem a importância da criação de contêineres para posicionar corretamente os elementos de um projeto. Eles mostram como utilizar o styled-components para estilizar componentes e criar componentes reutilizáveis. Além disso, eles demonstram como personalizar propriedades como o alinhamento do título. No final, mencionam que o próximo passo será tratar as tags e adicionar os filtros das imagens no futuro.
+
+### Aula 03 - Lidando com as tags - Video 3
+
+Nesta aula, os instrutores João Vitor Pereira e Vinicios Neves discutem sobre a configuração das tags em um aplicativo chamado SpaceApp. Eles explicam que estão trabalhando com arquivos estáticos, mais especificamente um arquivo JSON chamado "tags.json". Esse arquivo contém um array de objetos, onde cada objeto representa uma tag com um ID e um título. Vinicios mostra como importar o arquivo JSON no código do aplicativo e como renderizar as tags na tela utilizando o método map(). Eles também mencionam que os arquivos estáticos não são modificados dinamicamente e que é necessário realizar um novo deploy da aplicação caso haja alguma mudança. O próximo passo será estilizar as tags de acordo com o layout do aplicativo no Figma, utilizando o Styled Components.
+
+### Aula 03 - Importando fotos - Video 4
+
+Nesta aula, os instrutores discutiram sobre a adição de imagens em um projeto chamado Space App. Eles explicaram que as imagens são armazenadas em um arquivo JSON e que é necessário ter cuidado ao manipulá-las. Os instrutores mostraram como importar as fotos do arquivo JSON e como utilizar o useState para gerenciar o estado das fotos. Em seguida, eles mostraram como passar as fotos para o componente Galeria e como renderizar os títulos das fotos. Também mencionaram a criação do componente Imagem, que representa uma imagem da galeria.
+
+### Aula 03 - Para saber mais: responsividade com styled-components
+
+Sabemos que um requisito fundamental na hora de criar uma aplicação web é a responsividade. Essa capacidade de uma aplicação se adaptar automaticamente a diferentes tamanhos de tela e dispositivos, proporciona uma experiência de usuário otimizada em cada um deles. Então, aqui vai um spoiler de como utilizar o styled-components de forma responsiva:
+
+Utilizando Media Queries:
+Você pode utilizar as Media Queries do CSS dentro do styled-components para aplicar estilos específicos para diferentes tamanhos de tela. Através da interpolação, você pode definir as regras de estilo para cada Media Query de forma responsiva.
+
+### Aula 03 - Nessa aula, você aprendeu como:
+
+Montar um layout desktop;
+Estruturar o código de uma galeria de fotos com Flexbox;
+Trabalhar com tags dinamicamente;
+Importar fotos de um arquivo estático .json.
