@@ -117,3 +117,24 @@ Montar um layout desktop;
 Estruturar o código de uma galeria de fotos com Flexbox;
 Trabalhar com tags dinamicamente;
 Importar fotos de um arquivo estático .json.
+
+## Aula 04 - Um Modal de Zoom
+
+### Aula 04 - Um diálogo para a todos governar - Video 1
+
+Nesta aula, Vinicios e João Vitor discutem sobre a implementação de uma modal de zoom em um aplicativo chamado Space App. Eles explicam a importância de utilizar os elementos corretos da HTML, consultam a documentação do Mozilla como referência, mostram como transformar o exemplo da documentação em um componente React e trazem a modal para o arquivo principal do aplicativo.
+
+### Aula 04 - O estado da modal - Video 2
+
+Nesta aula, os instrutores discutem sobre como transferir uma modal do HTML para o código React e como gerenciar o estado dela. Eles utilizam o estado do React chamado "fotoSelecionada" para associar o estado da modal a uma imagem selecionada para zoom. Também adicionam um evento "aoZoomSolicitado" na galeria e na imagem para selecionar a imagem e fazer com que a galeria indique a foto selecionada. Por fim, mencionam a técnica do "Prop Drilling" para passar props de um componente para outro e afirmam que o tratamento de seleção de imagem está funcionando corretamente.
+
+### Aula 04 - Fundo com opacidade - Video 3
+
+Nesta aula, os instrutores discutem sobre a implementação de uma interface modal em um aplicativo. Eles mostram como abrir e fechar a modal, passar propriedades para o componente de imagem e resolver um erro relacionado à leitura de propriedades nulas. Em seguida, eles começam a estilizar a modal, criando um overlay com opacidade reduzida e posicionando corretamente o diálogo. Eles também explicam a importância do overlay como uma camada de bloqueio e utilizam o posicionamento fixo para garantir que o diálogo fique sobreposto à página. Além disso, eles propõem um desafio para estilizar a imagem e a barra de populares do aplicativo.
+
+### Aula 04 - Nessa aula, você aprendeu como:
+
+Criar uma modal com o elemento Dialog;
+Trabalhar com eventos de seleção;
+Posicionar elementos de forma fixa e definir opacidade com rgba;
+Criar um estado que representa o elemento selecionado.

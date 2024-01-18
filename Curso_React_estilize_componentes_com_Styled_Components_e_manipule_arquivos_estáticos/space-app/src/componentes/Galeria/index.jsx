@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import {styled} from "styled-components";
 import Titulo from "../Titulo"
 import Tags from "./Tags";
 import Populares from "./Populares";
@@ -6,22 +6,32 @@ import Imagem from "./Imagem";
 
 const GaleriaContainer = styled.div`
     display: flex;
+    gap: 24px;
 `;
 const SessaoFluida = styled.section`
     flex-grow: 1;
 `;
+const ImagensContainer = styled.section`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+`;
 
-const Galeria = ({fotos=[]}) => {
+const Galeria = ({fotos=[], aoFotoSelecionada}) => {
     return (
         <>
             <Tags />
             <GaleriaContainer >
                 <SessaoFluida>
                     <Titulo>Navegue Pela Galeria</Titulo>
-                    <Imagem />
-
-                    {/* {fotos.map(foto => foto.titulo )} */}
-                    
+                    <ImagensContainer>
+                        {fotos.map(foto => <Imagem 
+                            aoZoomSolicitado={aoFotoSelecionada}
+                            key={foto.id} 
+                            foto={foto} />)
+                        }
+                    </ImagensContainer>
                 </SessaoFluida>
                 <Populares />
             </GaleriaContainer>
