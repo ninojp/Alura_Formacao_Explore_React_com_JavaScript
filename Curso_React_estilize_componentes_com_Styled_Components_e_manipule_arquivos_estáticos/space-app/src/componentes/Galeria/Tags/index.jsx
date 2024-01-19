@@ -41,12 +41,12 @@ const BtnTags = styled.button`
 
 `;
 
-const Tags = () => {
+const Tags = ({setTag}) => {
     return (
         <ContainerTags>
             <TagTitulo>Busque Por Tags</TagTitulo>
             <ContainerBtnTags>
-                {tags.map(tag => <BtnTags key={tag.id}> {tag.titulo} </BtnTags>)}
+                {tags.map(tag => <BtnTags key={tag.id} onClick={() => setTag(tag.tag)}> {tag.titulo} </BtnTags>)}
             </ContainerBtnTags>
         </ContainerTags>
     );

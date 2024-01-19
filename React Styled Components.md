@@ -138,3 +138,45 @@ Criar uma modal com o elemento Dialog;
 Trabalhar com eventos de seleção;
 Posicionar elementos de forma fixa e definir opacidade com rgba;
 Criar um estado que representa o elemento selecionado.
+
+## Aula 05 - Favoritando as Imagens
+
+### Aula 05 - Hora de favoritar - Video 1
+
+Nesta aula, João e Vinicios discutem sobre a implementação da funcionalidade de alternância de favoritos em uma galeria de imagens. Eles explicam que é necessário implementar um método chamado "aoAlternarFavorito" que receberá a foto como parâmetro. Eles mostram como passar essa função para os componentes da galeria e da imagem, para que a alternância de favoritos possa ser acionada. Além disso, eles explicam que o componente App é responsável pelo controle do estado da aplicação e todas as propriedades e verificações precisam originar-se dele. No final, eles corrigem um erro no código para obter a foto correta ao alternar o favorito.
+
+### Aula 05 - Alternando o favoritismo - Video 2
+
+Nesta aula, os instrutores discutem a implementação do método que controla o favoritismo das fotos em um aplicativo. Eles explicam passo a passo como realizar essa implementação, mostrando trechos de código e explicando a lógica por trás de cada etapa. Primeiro, eles mostram o trecho de código onde é definido o método aoAlternarFavorito, responsável por alternar o favoritismo de uma foto. Em seguida, eles explicam como atualizar a propriedade favorita de cada foto utilizando o método .map. Eles também mostram como implementar a atualização do ícone de favorito na interface do aplicativo. Por fim, eles mencionam um bug a ser corrigido relacionado à manutenção do estado das fotos.
+
+### Aula 05 - Caça aos bugs - Video 3
+
+Nesta aula, João e Vinicios discutem um problema relacionado à cor do console em um aplicativo. Eles identificam que a função aoAlternarFavorito não está sendo chamada corretamente ao clicar na imagem. Para resolver isso, eles propõem verificar no modal se o método está passando a propriedade correta para o componente de imagem. Eles também identificam que a imagem selecionada não está sendo atualizada corretamente e resolvem esse problema adicionando uma verificação no aoAlternarFavorito para atualizar o estado apenas se o "id" da foto for igual à foto selecionada. Eles mencionam alternativas para controlar o estado de forma diferente e recomendam que os espectadores pesquisem mais sobre essas opções. Por fim, eles mencionam os próximos desafios do projeto e encorajam os espectadores a compartilharem suas soluções nas redes sociais e no Discord.
+
+### Aula 05 - Para saber mais: useState e useEffect
+
+useState
+O useState é usado para adicionar estado aos componentes funcionais do React. Você pode usar essa função para criar uma variável de estado e uma função para atualizá-la. Por exemplo, você pode criar um contador em um componente e atualizá-lo quando um botão for clicado.
+
+useEffect
+Já o useEffect é usado para executar ações extras em um componente funcional. Por exemplo, você pode usá-lo para buscar dados de uma API assim que o componente for exibido na tela. É como um bloco de código que é executado automaticamente em determinados momentos.
+
+Artigo [React Hooks: o que é e como funcionam?](https://www.alura.com.br/artigos/react-hooks)
+Alura+ [Hooks do React: useState](https://cursos.alura.com.br/extra/alura-mais/hooks-do-react-usestate-c1530)
+
+### Aula 05 - Filtrando tudo
+
+Você está desenvolvendo uma aplicação React que exibe uma lista de produtos e deseja implementar a funcionalidade de filtro. Para isso, você decide utilizar os métodos map() e useEffect(). Qual é a finalidade desses métodos no contexto do filtro de produtos?
+
+O método map() é usado para renderizar os elementos da lista de produtos, enquanto o useEffect() é usado para aplicar o filtro nos produtos quando ocorrerem mudanças no estado do filtro.
+
+### Aula 05 - Nessa aula, você aprendeu como:
+
+Corrigir bugs implementando a validação baseada no zoom da foto;
+Implementar um map que compara dois parâmetros da foto;
+Criar método de alternar favorito;
+Aplicar método na galeria e na modal.
+
+### Aula 05 - Conclusão - Video 3
+
+Nesta aula, João e Vinicios parabenizam o aluno pela conclusão do curso e pelo término do projeto do Space App, uma galeria de imagens relacionadas ao espaço. Eles discutem sobre as tecnologias e conceitos utilizados, como a criação do projeto com Vite, a incorporação do Styled Components para estilizar os componentes, a criação de uma galeria de componentes atraentes e uma modal de estilos para expandir imagens e adicionar favoritos. Além disso, eles exploraram a manipulação de arquivos estáticos, trabalhando com imagens e arquivos JSON, e integraram essas técnicas com o estado do React. Eles também mencionam a importância de utilizar componentes semânticos do HTML, como o elemento dialog, na criação de uma modal personalizada. Após a conclusão do projeto, eles compartilham o Space App com o mundo utilizando o GitHub e a Vercel para publicá-lo de forma gratuita. Eles desafiam o aluno a criar sua própria versão do aplicativo e compartilhá-la nas redes sociais. Por fim, eles agradecem ao aluno e se despedem.
