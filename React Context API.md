@@ -48,7 +48,71 @@ Funciona a Context API do React.
 A Context API ajuda a evitar o problema de prop drilling em suas aplicações.
 Criar um contexto usando a Context API e como compartilhar ele por meio do Provider.
 
-## Aula 02 - Entendendo a Context API
+## Aula 02 - Explorando a Context API
 
-### Aula 02 - Apresentação - Video
+### Aula 02 - Compartilhando o contexto - Video 1
 
+Nesta aula, foi apresentada a Context API do React, uma alternativa para evitar o "prop drilling" em uma aplicação. Foi mostrado como criar um contexto utilizando a função createContext() do React e como definir o contexto em um local da aplicação que envolva o maior número de componentes possível. Também foi explicado como importar manualmente o Provider do contexto e como os componentes que são envolvidos pelo Provider têm acesso aos valores dos estados e funções definidos no contexto. Por fim, foi mencionado que os próximos passos serão definir os primeiros estados da aplicação dentro do contexto.
+
+### Aula 02 - Lidando com estados - Video 2
+
+Nesta aula, o instrutor explica como limpar o componente App.jsx, removendo os estados e funções que eram passados como props para as páginas Home e CarrinhoProvider. Em seguida, ele mostra como utilizar o BrowserRouter do React Router DOM para rotear as páginas e compartilhar o contexto com elas. O instrutor menciona que essa abordagem está relacionada ao princípio do SOLID, especificamente o princípio da responsabilidade única. Ele também menciona a ordem em que os componentes CarrinhoProvider e BrowserRouter devem ser utilizados. O instrutor mostra como definir os estados dentro do arquivo CarrinhoContext.jsx, utilizando o hook useState do React, e como compartilhar esses estados utilizando o Provider. Ele também mostra como consumir esses estados em outros componentes, removendo as props que eram passadas anteriormente. O instrutor menciona que os erros que surgirem serão abordados na próxima aula.
+
+### Aula 02 - Consumindo o contexto - Video 3
+
+Nesta aula, o instrutor aborda a correção de erros em um projeto React. Ele mostra como consumir um contexto em componentes, utilizando o hook useContext do React para recuperar os estados do contexto. Além disso, é ensinado como criar uma função para adicionar produtos ao carrinho, verificando se o produto já está no carrinho e incrementando a quantidade caso necessário. Também é mencionado que no próximo vídeo serão abordados erros relacionados aos componentes CarrinhoSuspenso e ListaProdutosCarrinho. Essas informações são úteis para solucionar problemas comuns em projetos React e utilizar o contexto para compartilhar estados entre componentes.
+
+### Aula 02 - Resolvendo bugs - Video 4
+
+Nesta aula, o instrutor aborda o problema do "Prop Drilling" durante a migração de uma aplicação. Ele mostra como remover as props não utilizadas em determinados componentes, utilizando o contexto para acessar o estado carrinho. Após algumas correções manuais, a aplicação passa a funcionar corretamente, exibindo os produtos no carrinho suspenso. O instrutor destaca o uso do contexto para recuperar o estado carrinho e a função adicionarProduto, eliminando a necessidade de passar props entre componentes. A função adicionarProduto será abordada nos próximos vídeos.
+
+### Aula 02 - Para saber mais: Provider e Consumer
+
+Você já ouviu falar em um jogo chamado Cities: Skylines? Um jogo de construção de cidades. Conforme sua cidade cresce, você deve cuidar dos prédios, distritos, linhas de transporte público, pistas e tudo o que for construído.
+
+Agora Imagine, O Context API é como um centro de controle de tráfego, tornando a comunicação entre bairros mais suave e organizada.
+
+Para compartilhar as informações do tráfego a gente cria um contexto com o createContext(). Este método cria um contexto e retorna dois componentes: o Provider e o Consumer. O Provider é como construir uma central de informações de tráfego no centro da cidade:
+
+Para que as regiões da cidade possam acessar essa informação, usamos o Consumer. É como se cada rua tivesse uma tela que mostra a situação do tráfego:
+
+Em termos teóricos, o createContext retorna um objeto com dois componentes: o Provider e o Consumer. O Provider é usado para envolver a parte da aplicação que fornece os dados, enquanto o Consumer é utilizado nos componentes que precisam acessar esses dados.
+
+Agora, vimos que podemos usar o hook useContext nos componentes que precisam acessar esses dados. Imagine que o useContext é como um rádio para cada rua, sintonizado na frequência da central de informações de tráfego (Provider). Ambos servem para acessar o contexto, mas o useContext é mais conciso e pode tornar o código mais limpo, especialmente se tivermos muitas ruas para equipar. O Consumer pode criar um código mais aninhado, enquanto que o useContext não.
+
+Em resumo, escolher entre o Consumer e o useContext depende do contexto (sem trocadilhos). Se a legibilidade é crucial, o useContext pode ser a escolha mais elegante, enquanto o Consumer é uma opção mais explícita em casos onde a clareza é prioritária.
+
+Se você quiser se aprofundar mais no uso do useContext() eu recomendo que você acesse a [documentação do próprio React](https://react.dev/reference/react/useContext).
+
+### Aula 02 - Para saber mais: SOLID no React
+
+Primeiro que SOLID é um conceito de POO (Programação Orientada a Objetos) muito forte em linguagens orientadas a Objetos como Java e C#. Cada letra da sigla SOLID é a inicial de um dos princípio que regem a POO, para criarmos um código mais consistente, limpo e saudável a longo prazo. Se liga:
+
+S — Single Responsiblity Principle (Princípio da responsabilidade única)
+O — Open-Closed Principle (Princípio Aberto-Fechado)
+L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+I — Interface Segregation Principle (Princípio da Segregação da Interface)
+D — Dependency Inversion Principle (Princípio da inversão da dependência)
+
+Calma que o nosso dev de boina favorito, Vinicius Neves, fez uma série de artigos em um blog muito popular na comunidade explicando cada princípio e como eles podem ser adaptados e usados no Front-end, principalmente em aplicações React. Confere aí:
+
+[Princípio da responsabilidade única](https://marcosviniciosneves.medium.com/solid-em-react-entendendo-o-single-responsibility-principle-srp-4a2028b35c41)
+[Princípio Aberto-Fechado](https://marcosviniciosneves.medium.com/solid-em-react-princ%C3%ADpio-do-aberto-fechado-ocp-dc7bdbfbc62c)
+[Princípio da substituição de Liskov](https://marcosviniciosneves.medium.com/solid-em-react-de-olho-na-substitui%C3%A7%C3%A3o-de-liskov-180c9a3e9877)
+[Princípio da Segregação da Interface](https://marcosviniciosneves.medium.com/solid-em-react-o-princ%C3%ADpio-da-segrega%C3%A7%C3%A3o-de-interface-979954315998)
+[Princípio da inversão da dependência](https://marcosviniciosneves.medium.com/solid-em-react-explorando-a-invers%C3%A3o-de-depend%C3%AAncia-145131bb0ad6)
+
+### Aula 02 - O que aprendemos?
+
+Nessa aula, você aprendeu como:
+
+Envolver os componentes e páginas com o Contexto de sua aplicação.
+Aplicar um dos princípios do SOLID em suas aplicações React.
+Criar e compartilhar os estados de dentro de seu contexto para fora dele através da prop value do Provider.
+Consumir os estados de sua aplicação fora do contexto em outros componentes e páginas com o uso do hook useContext().
+Criar a função de adicionarProduto ao carrinho.
+Debugar seu código através de erros no console e entendeu mais um pouco sobre como a prop drilling é um grande problema.
+
+## Aula 03 - Explorando a Context API
+
+### Aula 03 - Compartilhando o contexto - Video 1
