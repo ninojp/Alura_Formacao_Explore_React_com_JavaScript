@@ -220,6 +220,134 @@ Utilizar o displayName do CarrinhoContext para dar um nome para o seu contexto e
 Calcular o valor total dos produtos e a quantidade de produtos no carrinho usando o método reduce do JavaScript.
 Consumir os estados de valorTotal e quantidade nos nossos componentes.
 
-## Aula 05 - 
+## Aula 05 - Melhorando o Contexto com useReducer
 
-### Aula 05 -  - Video 1
+### Aula 05 - Otimizando performance com useMemo - Video 1
+
+Nesta aula, o instrutor finaliza a refatoração da aplicação, corrigindo o "Prop Drilling" com o uso do contexto da Context API. Em seguida, ele identifica um problema de performance no código e utiliza o hook useMemo para otimizar o cálculo do valor total e quantidade total de produtos no carrinho. O useMemo só recalcula o valor quando o estado do carrinho muda. O instrutor também remove o array de dependências do useEffect, já que o useMemo controlará isso. Ele verifica no navegador se as alterações são refletidas corretamente. No próximo vídeo, serão abordadas outras formas de melhorar o código, principalmente a lógica do contexto.
+
+### Aula 05 - Utilizando o useReducer - Video 2
+
+Nesta aula, aprendemos sobre a utilização do hook useReducer() no React para lidar com estados complexos em aplicações maiores. O useReducer() é recomendado pela documentação do React em conjunto com a Context API para controlar a lógica de atualização de estado de um componente. Através da implementação do useReducer() em um contexto de carrinho de compras, substituímos o uso do useState() por essa nova abordagem. O useReducer() recebe uma função redutora e um estado inicial, retornando um estado e uma função dispatch que funciona como o setState(). A função redutora é responsável por manipular os estados e realizar as ações necessárias, como adicionar ou remover produtos do carrinho. Compartilhamos o estado e a função dispatch através do Context API.
+
+### Aula 05 - Criando a função redutora - Video 3
+
+Nesta aula, o instrutor ensina como utilizar o useReducer() no React para lidar com a lógica e os estados de um componente de forma personalizável. Ele mostra como criar a função redutora carrinhoReducer() que é responsável por adicionar, remover e atualizar a quantidade de produtos no carrinho. O instrutor explica como utilizar as constantes ADD_PRODUTO, REMOVE_PRODUTO e UPDATE_QUANTIDADE para definir os casos do switch case. Ele também destaca a importância de organizar os reducers em uma estrutura de pastas e menciona que é possível ter vários reducers na aplicação, cada um lidando com um estado específico.
+
+### Aula 05 - Refatorando o hook useCarrinhoContext - Video 4
+
+Nesta aula, o instrutor explica como utilizar o dispatch do useReducer para manipular o estado dentro de um hook personalizado. Ele mostra como importar as constantes do carrinhoReducer e criar as funções addProdutoAction, removeProdutoAction e updateQuantidadeAction. Em seguida, ele utiliza o dispatch dentro das funções adicionarProduto, removerProduto e removerProdutoCarrinho. O instrutor também mostra como mover a lógica do useMemo e do useEffect para o provedor do contexto. Por fim, ele apresenta o código completo do CarrinhoContext e do carrinhoReducer. No geral, a aula ensina como utilizar o useReducer e o carrinhoReducer para adicionar, remover e atualizar produtos no carrinho.
+
+### Aula 05 - Filtro de pesquisa com useMemo
+
+Você é o responsável pelo desenvolvimento de uma nova funcionalidade na loja online de roupas Meteora. A funcionalidade consiste em um filtro de pesquisa que permite aos clientes pesquisar roupas por tamanho, cor e preço. No entanto, você percebeu que a performance do filtro de pesquisa está lenta. Para otimizar a performance, você decide usar a função useMemo do React.
+
+```JavaScript
+    const filteredItems = useMemo(() => {
+      return items.filter(
+        (item) =>
+          item.size === selectedSize &&
+          item.color === selectedColor &&
+          item.price <= selectedPrice
+      );
+    }, [selectedSize, selectedColor, selectedPrice]);
+```
+
+A função useMemo é usada para memorizar o resultado de uma função de alto custo computacional. Nesse caso, a função de filtragem é memorizada e só é recalculada quando selectedSize, selectedColor ou selectedPrice mudam.
+
+### Aula 05 - Funcionamento do useReducer
+
+No desenvolvimento do e-commerce da loja de roupas Meteora, você está utilizando o useReducer do React para gerenciar o estado global do carrinho de compras. O trecho de código abaixo é responsável por isso:
+
+```JavaScript
+const [carrinho, dispatch] = useReducer(carrinhoReducer, estadoInicial);
+```
+
+A função carrinhoReducer é chamada com o estado atual e a ação enviada.
+
+Quando dispatch é chamada, ela envia uma ação para a função reducer (carrinhoReducer no nosso caso), que recebe o estado atual e a ação enviada como argumentos.
+
+### Aula 05 - Para saber mais: hook useMemo()
+
+Usar o useMemo é como ter uma lista organizada de ingredientes já preparados que você pode reutilizar sempre que precisar, economizando tempo e garantindo eficiência na cozinha. Vamos compreender o funcionamento do useMemo com um exemplo de código
+
+```JavaScript
+import React, { useMemo } from 'react';
+const Prato = ({ ingredientes }) => {
+// Problema: Preparar os ingredientes toda vez, mesmo que não seja necessário
+const prepararIngredientes = (ingredientes) => {
+console.log('Preparando ingredientes...');
+// Lógica intensiva de preparo
+return ingredientes.join(', ');
+};
+// Solução: Use o useMemo para memoizar o resultado da função prepararIngredientes
+const ingredientesPreparados = useMemo(() => prepararIngredientes(ingredientes), [ingredientes]);
+return (
+<div>
+<p>Ingredientes preparados: {ingredientesPreparados}</p>
+</div>
+);
+};
+```
+
+Componente Prato:
+O componente Prato recebe um array de ingredientes como propriedade.
+Existe uma função prepararIngredientes que simula uma lógica intensiva de preparo, unindo os ingredientes em uma string.
+Utilização do useMemo:
+O useMemo é aplicado para memoizar o resultado da função prepararIngredientes. Isso significa que, se os ingredientes não mudarem entre as renderizações, o valor memoizado será reutilizado em vez de recalculado.
+No exemplo, o useMemo recebe a função () => prepararIngredientes(ingredientes) e a dependência [ingredientes]. Isso indica que o resultado deve ser memoizado apenas quando os ingredientes mudarem.
+Quando os ingredientes de um prato mudam, o useMemo garante que a função prepararIngredientes seja chamada apenas se os ingredientes realmente mudarem.
+Isso é evidenciado pelo console.log na função prepararIngredientes. Se os ingredientes não mudarem, a mensagem "Preparando ingredientes..." não será exibida, indicando que a função foi memoizada.
+No mundo do React, o useMemo é um hook que memoiza, ou armazena em memória, o resultado de uma função para evitar recálculos desnecessários. Ele é especialmente útil em situações em que o cálculo de um valor é intensivo e pode ser reutilizado, economizando assim recursos de computação.
+
+Acesse a [documentação do React](https://react.dev/reference/react/useMemo) onde fala sobre o useMemo. Lá você poderá ver novos exemplos e uma explicação mais profunda sobre este hook.
+
+### Aula 05 - Para saber mais: hook useReducer()
+
+```JavaScript
+import React, { useReducer } from 'react';
+const JogoDeRPG = () => {
+  // Usando o useReducer para gerenciar o estado do jogo
+  const [estadoJogo, dispatch] = useReducer(mestreDeJogo, {
+    posicaoPersonagem: [0, 0],
+    tesouroEncontrado: false,
+  });
+  // Exemplo de ação: Movimentar o personagem
+  const moverPersonagem = (novaPosicao) => {
+    dispatch({ type: 'MOVIMENTO_PERSONAGEM', novaPosicao });
+  };
+  // Exemplo de ação: Encontrar um tesouro
+  const encontrarTesouro = () => {
+    dispatch({ type: 'ENCONTRAR_TESOURO' });
+  };
+  return (
+    <div>
+      <p>Posição do Personagem: {JSON.stringify(estadoJogo.posicaoPersonagem)}</p>
+      <p>Tesouro Encontrado: {estadoJogo.tesouroEncontrado ? 'Sim' : 'Não'}</p>
+      <button onClick={() => moverPersonagem([1, 1])}>Mover o Personagem</button>
+      <button onClick={encontrarTesouro}>Encontrar Tesouro</button>
+    </div>
+  );
+};
+export default JogoDeRPG;
+```
+
+Utilização do useReducer:
+const [estadoJogo, dispatch] = useReducer(mestreDeJogo, { posicaoPersonagem: [0, 0], tesouroEncontrado: false }); : Nesta linha a gente usa a função redutora no useReducer. E no segundo parâmetro do hook passamos um estado inicial, que é a posição e se ele encontrou o tesouro ou não.
+estadoJogo é o estado atual do jogo, e dispatch é como enviar uma ação para o mestre de jogo. O dispatch dispara uma das ações de mover o personagem ou achar o tesouro.
+Ações:
+moverPersonagem e encontrarTesouro são ações que influenciam a história do jogo. Por exemplo, moverPersonagem([1, 1]) faz o personagem se mover para uma nova posição. Essas ações são passadas como um objeto que contém um type e um payload. O type é o tipo de ação e o payload é o dado daquele estado que vamos alterar ou não.
+Renderização:
+A interface do usuário reflete o estado do jogo. Clicar nos botões realiza ações que afetam a história, tornando o jogo mais emocionante.
+Este é um exemplo simples de como o useReducer funciona e como ele serve para que você consiga utilizar uma lógica personalizada para manipular seus estados. Também é possível notar a importância do useReducer principalmente se o seu estado escalar para uma lógica complexa. Essa lógica complexa será muito bem gerenciada na função redutora e acionada com o tipo e os dados corretos.
+
+Consultar a [documentação do useReducer](https://react.dev/reference/react/useReducer) clicando neste link.
+
+### Aula 05 - Nessa aula, você aprendeu como`:`
+
+Resolver um problema de performance na sua aplicação usando o hook useMemo. Com o hook useMemo podemos armazenar em cache cálculos e atualizá-los com uma nova renderização apenas se os dados mudarem.
+Utilizar o hook useReducer para ampliar a utilização do contexto em sua aplicação. Com o useReducer podemos ter uma lógica de estado personalizada. Se você estiver acompanhando várias partes do estado que dependem de lógica complexa o useReducer pode ser útil.
+
+### Aula 05 - Conclusão - Video
+
+Nesta aula, o instrutor parabeniza os alunos por concluírem o curso e expressa sua felicidade em compartilhar conhecimento com eles. Ele menciona que eles lidaram com o problema de "Prop Drilling" em uma aplicação complicada e resolveram utilizando a Context API do React. O instrutor explica que eles criaram um contexto para compartilhar os estados globais da aplicação e também criaram um hook customizado para lidar com a lógica complexa do carrinho de compras. Além disso, eles utilizaram o Reducer para gerenciar os estados dentro do contexto. O instrutor desafia os alunos a construírem funcionalidades mais complexas e sugere adicionar outros contextos, como de pagamento ou de login. Ele incentiva os alunos a compartilharem seus projetos nas redes sociais e no LinkedIn, marcando os perfis da Alura e do instrutor. Por fim, o instrutor parabeniza novamente os alunos e espera vê-los no próximo curso.
