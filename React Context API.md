@@ -113,6 +113,72 @@ Consumir os estados de sua aplicação fora do contexto em outros componentes e 
 Criar a função de adicionarProduto ao carrinho.
 Debugar seu código através de erros no console e entendeu mais um pouco sobre como a prop drilling é um grande problema.
 
-## Aula 03 - Explorando a Context API
+## Aula 03 - Criando Funções do Carrinho API
 
-### Aula 03 - Compartilhando o contexto - Video 1
+### Aula 03 - Criando um hook customizado - Video 1
+
+Nesta aula, aprendemos como criar um hook customizado no React. Um hook customizado é uma forma de reaproveitar lógicas complexas em diferentes componentes da nossa aplicação. Para criar um hook customizado, criamos um novo arquivo na pasta "hooks" chamado "useCarrinhoContext.js". Dentro desse arquivo, importamos o hook useContext do React e o CarrinhoContext que criamos anteriormente. Em seguida, definimos a função useCarrinhoContext que utiliza o useContext para acessar o carrinho e a função setCarrinho do CarrinhoContext. Também adicionamos a função adicionarProduto que já havíamos criado anteriormente. Por fim, exportamos as informações do carrinho, a função setCarrinho e a função adicionarProduto para que possam ser consumidas por outros componentes. Com o hook customizado criado, podemos agora utilizá-lo nos componentes que precisam das funcionalidades de adicionar e remover produtos do carrinho.
+
+### Aula 03 - Melhorando a lógica das funções - Video 2
+
+Nesta aula, o instrutor ensina como adicionar e remover produtos em um carrinho de compras em um aplicativo utilizando a Context API do React. Ele mostra como importar o hook useCarrinhoContext no componente de produtos e utiliza a função adicionarProduto para adicionar produtos ao carrinho. O instrutor identifica um problema na função adicionarProduto e na função removerProduto e decide abstrair essa lógica para uma nova função chamada mudarQuantidade. Ele utiliza o método map para percorrer o carrinho e alterar a quantidade do produto desejado. Após implementar essa nova função, ele verifica no navegador se as funções de adicionar e remover produto estão funcionando corretamente. Em resumo, nesta aula aprendemos como adicionar e remover produtos em um carrinho de compras e corrigir problemas relacionados à duplicação de produtos.
+
+### Aula 03 - Utilizando o hook customizado - Video 3
+
+Nesta aula, o instrutor discute um problema ao adicionar produtos em um carrinho suspenso em uma aplicação. Ele explica que as funções necessárias não estavam sendo utilizadas corretamente e que é preciso recuperá-las de um hook customizado. O instrutor mostra o código do componente ItemCarrinhoSuspenso e explica que as funções adicionarProduto e removerProduto serão recuperadas do hook useCarrinhoContext. Ele faz a modificação no código, corrige um erro na função mudarQuantidade e testa novamente a adição de produtos no carrinho suspenso. O instrutor menciona que a função para remover produtos do carrinho será abordada no próximo vídeo.
+
+### Aula 03 - Deletando produtos - Video 4
+
+Nesta aula do curso "React: gerencie estados globalmente com Context API", o instrutor aborda a implementação da função de remover produtos do carrinho de compras em um aplicativo utilizando React e Context API. Ele explica como criar a função removerProdutoCarrinho(), que utiliza o método filter() para criar uma nova lista de produtos do carrinho, excluindo o produto com o ID especificado. A função é exportada para que outros componentes possam utilizá-la. No componente ItemCarrinhoSuspenso, a função é importada juntamente com as funções adicionarProduto e removerProduto. O instrutor demonstra o funcionamento da função no aplicativo, onde ao clicar no ícone de lixeira ao lado de um item, o item é removido do carrinho e a atualização é refletida automaticamente. Ele também menciona que ainda falta implementar a exibição do valor total e da quantidade total de produtos no carrinho, que será abordado na próxima aula.
+
+### Aula 03 - Para saber mais: contextos aninhados
+
+Exemplo Biblioteca...  
+Às vezes, a biblioteca precisa compartilhar informações globais, como a política de empréstimo, enquanto cada prateleira precisa saber sobre informações específicas dos livros que contém. Usar um único contexto para tudo pode tornar o código confuso e menos modular.
+
+Aqui, o Livro tem acesso tanto às informações globais da biblioteca quanto às informações específicas da prateleira onde está localizado. Essa abordagem modulariza o código, facilitando a manutenção e compreensão.
+
+Só que para que o nosso componente Book conheça o contexto da Biblioteca e o contexto de Prateleira ele deve estar envolvo nos componentes que provem esses contextos da seguinte maneira:
+
+```jsx
+function App() {
+  return (
+    <BibliotecaProvider>
+      <PrateleiraProvider>
+        <Book/>
+      </PrateleiraProvider>
+    </BibliotecaProvider>
+  );
+}
+```
+
+Note que os contextos da nossa aplicação estão aninhados, e para eu conhecer o contexto de prateleira eu devo conhecer também o de biblioteca, já que ele é mais geral/global.
+
+Quando usar contextos aninhados:
+Quando há diferentes níveis de hierarquia: Use contextos aninhados quando a hierarquia dos componentes reflete a necessidade de compartilhar dados em diferentes níveis de escopo.
+Quando existem dados globais e locais: Se você tem dados que são relevantes para toda a aplicação (global) e dados mais específicos para certas partes (local), contextos aninhados oferecem uma maneira organizada de gerenciar essas informações.
+Em resumo, usar contextos aninhados no React com a Context API é uma prática eficaz para lidar com diferentes níveis de escopo de dados em sua aplicação, proporcionando organização e modularidade. Isso é especialmente útil quando você tem informações globais e locais que precisam ser compartilhadas entre diferentes partes do seu aplicativo.
+
+Se quiser se aprofundar mais nesse assunto, recomendo ler a antiga [documentação do React](https://pt-br.legacy.reactjs.org/docs/context.html#consuming-multiple-contexts) sobre Contextos Aninhados.
+
+### Aula 03 - Para saber mais: quando criar hooks customizados?
+
+Quando usar Hooks Customizados:
+Quando a lógica é reutilizável: Use Hooks Customizados quando tiver lógica específica que pode ser compartilhada entre vários componentes. Isso promove a reutilização de código.
+Quando você precisa de mais controle: Se a lógica envolve estados, efeitos ou outras funcionalidades complexas, os Hooks Customizados oferecem maior controle e modularidade.
+Quando você quer manter seus componentes simples: Use Hooks Customizados para manter seus componentes mais limpos e focados, delegando lógica específica para funções especializadas.
+Em resumo, use Hooks Customizados no React quando precisar encapsular e reutilizar lógica específica em diferentes partes da sua aplicação. Eles são como ferramentas especializadas que facilitam a gestão de funcionalidades específicas, tornando seu código mais limpo, modular e fácil de manter. Se quiser saber mais, já sabe onde mergulhar né? A [documentação do React](https://react.dev/learn/reusing-logic-with-custom-hooks#) tá repleta de exemplos, casos de uso e mais conceitos sobre hooks customizados.
+
+### Aula 03 - Nessa aula, você aprendeu como`:`
+
+Criar um hook customizado para isolar a lógica complexa das funções que manipulam o estado do carrinho.
+Criar as funções de remover e deletar produtos no carrinho. E ainda descobriu como refatorar seu código isolando ainda mais as responsabilidades ao criar a função de mudarQuantidade.
+
+## Aula 04 - Exibindo total e quantidade no Carrinho API
+
+### Aula 04 - React Context Dev Tools - Video 1
+
+Nesta aula, o instrutor aborda a implementação de funcionalidades relacionadas ao carrinho de compras em uma aplicação chamada Meteora. Ele apresenta a extensão React Context DevTools, que permite visualizar os contextos da aplicação, os estados definidos e a lógica. O instrutor mostra como adicionar a extensão ao navegador e como utilizá-la para visualizar o contexto do carrinho. Além disso, ele explica como personalizar o nome do contexto do carrinho no código da aplicação. Com a extensão, é possível ver os dados do carrinho, como ID, título, descrição, preço e quantidade dos produtos. O instrutor também demonstra como adicionar um novo produto ao carrinho e como a extensão já mostra a atualização da quantidade de itens. No próximo vídeo, será abordada a criação dos estados de quantidade e valor total para exibir essas informações dentro do carrinho e na página de carrinho.
+
+### Aula 04 - Adicionando dois novos estados - Video 2
+
