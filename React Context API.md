@@ -182,3 +182,44 @@ Nesta aula, o instrutor aborda a implementação de funcionalidades relacionadas
 
 ### Aula 04 - Adicionando dois novos estados - Video 2
 
+Nesta aula, aprendemos sobre o React Context DevTools e como utilizá-lo para depurar o contexto de uma aplicação. Também vimos como criar estados para representar a quantidade e o valor total dos produtos no carrinho, e como compartilhar essas informações para que outros componentes possam utilizá-las.
+
+### Aula 04 - Calculando quantidade e valor total - Video 3
+
+Nesta aula, o instrutor ensina como utilizar o método reduce do JavaScript para calcular a quantidade total e o valor total de produtos em um carrinho de compras. Ele utiliza o useEffect para adicionar um efeito colateral sempre que o estado do carrinho mudar. Dentro do useEffect, ele utiliza o método reduce para transformar os elementos do array do carrinho em um único valor. Ele cria uma função redutora que recebe um acumulador e um produto, e retorna um objeto contendo a quantidade temporária e o total temporário. Em seguida, ele atualiza os estados de quantidade e valor total utilizando as funções setQuantidade e setValorTotal. O carrinho é adicionado como uma dependência do useEffect para que o efeito seja acionado sempre que o carrinho for alterado.
+
+### Aula 04 - Atualizando os componentes - Video 4
+
+Nesta aula, o instrutor discute sobre como compartilhar informações do carrinho de compras com toda a aplicação utilizando a Context API do React. Ele mostra como atualizar os componentes para utilizar o contexto personalizado, substituindo o uso do useContext pelo useCarrinhoContext(). Além disso, ele menciona a importância de passar as informações do carrinho para outros componentes, como o carrinho suspenso, a barra de navegação e o botão do carrinho. O instrutor também destaca que a página do carrinho ainda precisa ser corrigida para utilizar o contexto. Na próxima aula, será explorado se é possível melhorar o código do contexto utilizando recursos do React.
+
+### Aula 04 - Para saber mais: entendendo o Reduce
+
+Agora, vamos entender como o método reduce funciona no contexto da linguagem JavaScript. O reduce é uma função de array que permite reduzir uma matriz (array) a um único valor. Ele opera em cada elemento do array, acumulando um resultado à medida que percorre a lista.
+
+Vamos ilustrar isso com um exemplo prático:
+
+```JavaScript
+// Contexto: Caixas de produtos
+const caixaDeProdutos = [10, 20, 30, 40];
+// Problema: Calcular o valor total dos produtos
+const valorTotal = caixaDeProdutos.reduce((acumulador, valorAtual) => {
+  return acumulador + valorAtual;
+}, 0);
+// Solução: Usar o método reduce para calcular o valor total de forma eficiente
+console.log("O valor total dos produtos é: " + valorTotal);
+```
+
+Neste exemplo, o reduce soma todos os valores da caixa de produtos, proporcionando um resultado único: o valor total. Assim, o método reduce simplifica a tarefa de processar grandes conjuntos de dados.
+
+ E se você quiser mergulhar mais fundo nessa função vou deixar a [documentação dela nesse link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) para você acessar quando quiser.
+
+### Aula 04 - Nessa aula, você aprendeu como`:`
+
+Instalar e utilizar a extensão React Context Dev Tools para visualizar os estados nos contextos de sua aplicação.
+Utilizar o displayName do CarrinhoContext para dar um nome para o seu contexto e visualizar ele no navegador por meio da extensão React Context Dev Tools.
+Calcular o valor total dos produtos e a quantidade de produtos no carrinho usando o método reduce do JavaScript.
+Consumir os estados de valorTotal e quantidade nos nossos componentes.
+
+## Aula 05 - 
+
+### Aula 05 -  - Video 1
