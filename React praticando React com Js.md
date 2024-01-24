@@ -100,6 +100,50 @@ Compartilhar informações entre componentes com props e children;
 Importar dados de um arquivo json;
 Usar o método .map para listar componentes.
 
-## Aula 03 - 
+## Aula 03 - Definindo Contextos
 
-### Aula 03 -  - Video 1
+### Aula 03 - Contextos - Video 1
+
+Nesta aula, o instrutor discute a criação de um contexto no React para compartilhar dados entre componentes. Ele mostra como criar o contexto utilizando a função createContext() e o hook useState(). O contexto é aplicado nas páginas adicionando o FavoritosProvider entre as tags `<Container>` e `<Routes>` no arquivo routes.js. O instrutor menciona que é necessário adicionar as informações desejadas ao FavoritosProvider para utilizar o contexto. A próxima etapa será implementar a função de favoritar.
+
+### Aula 03 - Hook personalizado - Video 2
+
+Nesta aula, o instrutor explica como criar um contexto de Favoritos para compartilhar dados entre a página inicial e a página de favoritos. Ele mostra a implementação de um hook personalizado que utiliza o useContext() para acessar o contexto de Favoritos e retornar os valores do estado favorito e da função setFavorito. Em seguida, é explicada a função adicionarFavorito() que verifica se um favorito já existe na lista e adiciona ou remove o favorito de acordo com essa verificação. O instrutor também menciona a utilização da extensão "React Context DevTool" para visualizar o contexto criado. No próximo vídeo, será implementada a função de favoritar nos cards.
+
+### Aula 03 - Para saber mais: contextualizando contexts
+
+Segundo a [documentação do React](https://legacy.reactjs.org/docs/context.html), o Context (em português, contexto) fornece uma maneira de passar dados pela árvore de componentes sem ter que passar props manualmente em todos os níveis.
+
+Geralmente, quando estamos desenvolvendo um projeto em React, os dados são passados de por meio de props, de componente pai para filho.
+
+Resumidamente, o contexto fornece uma maneira de compartilhar valores como esses entre componentes sem ter que passar explicitamente um prop por todos os níveis da árvore.
+
+Você pode visualizar a aplicação de Contexts em outro projeto React no Alura da Juliana Negreiros [Conhecendo o Context API do React](https://cursos.alura.com.br/extra/alura-mais/conhecendo-o-context-api-do-react-c46) e no curso [React: gerenciamento de estados globais com ContextAPI](https://cursos.alura.com.br/course/react-context-estados-globais-contextapi) do Luiz Fernando.
+
+### Aula 03 - Favoritar - Video 3
+
+Nesta aula, o instrutor explica como implementar a função de favoritar e desfavoritar em um componente chamado "Card". Para isso, é necessário importar o hook "useFavoritoContext" de um contexto externo chamado "Favoritos". Em seguida, são criadas constantes para armazenar a lista de favoritos e a função responsável por adicionar um item aos favoritos. A função de favoritar é adicionada ao ícone de favoritar, e ao clicar nele, a função é ativada passando os parâmetros necessários. Para indicar visualmente se um card está favoritado ou não, é utilizado um ícone que muda de acordo com o status do card. No próximo vídeo, será ensinado como listar dinamicamente os itens presentes na lista de favoritos.
+
+### Aula 03 - Lista de favoritos - Video 4
+
+Nesta aula, o instrutor explica como listar os filmes favoritos na página inicial de um projeto utilizando o React. Ele mostra como adicionar a variável favorito que utiliza a função useFavoritoContext() do arquivo de contexto. Em seguida, é feito o mapeamento dessa lista de favoritos e a renderização de cada item utilizando o componente Card. Além disso, o instrutor menciona a funcionalidade de reprodução de vídeos, que será abordada posteriormente.
+
+### Aula 03 - Para saber mais: Hooks
+
+O que é um Hook?
+Um Hook (em português, gancho) é uma função especial que te permite utilizar recursos do React. Você pode detectar um hook pelo início de seu nome, em que aparece o termo use.
+
+Por exemplo, o useState é um Hook que te permite adicionar um estado a um componente de função. Esse hook é inicializado com duas variáveis: a primeira, que é o valor atual do estado, e a segunda que atualiza o valor.
+
+Esta sintaxe com colchetes é chamada de “atribuição via desestruturação”. Com isso, estamos criando duas variáveis ao mesmo tempo, a favoritos e a setFavoritos., onde favoritos é definido para o primeiro valor retornado por useState, e setFavoritos é o segundo.
+
+Você pode aprofundar ainda mais seu conhecimento sobre o hook useState com o instrutor Vinny Neves no [Alura Hooks do React: useState](https://cursos.alura.com.br/extra/alura-mais/hooks-do-react-usestate-c1530).
+
+### Aula 03 - Nessa aula, você aprendeu como`:`
+
+Criar contextos através da ContextAPI com o createContext;
+Permitir o uso de contextos nos elementos com o Provider e useContext;
+Construir hooks personalizados;
+Procurar valores dentro de um array com o método some;
+Remover itens de um array com o método splice e auxílio do indexOf;
+Instalar e usar a extensão React Context DevTool.

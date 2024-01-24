@@ -2,9 +2,10 @@ import { Card } from "/src/components/Card/Card";
 import { Banner } from "/src/components/Banner/Banner";
 import { Container } from "/src/components/Container/Container";
 import { Titulo } from "/src/components/Titulo/Titulo";
-import videos from "/src/json/db.json";
+import { useFavoritoContext } from "/src/contexto/FavoritosProvider";
 
 export const Favoritos = () => {
+    const {favorito} = useFavoritoContext();
     return (
         <>
             <Banner imagem='favoritos' />
@@ -13,7 +14,7 @@ export const Favoritos = () => {
                 <h1>Páginas de Vídeos Favoritos!</h1>
             </Titulo>
             <Container>
-                {videos.map((video) => (<Card {...video} key={video.id} />))}
+                {favorito.map((fav) => (<Card {...fav} key={fav.id} />))}
             </Container>
         </>
     );

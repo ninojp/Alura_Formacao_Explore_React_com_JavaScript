@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import iconeFavoritar from "./favorite_outline.png";
+import iconeDesFavoritar from "./favorite_outline.png";
+import iconeFavoritar from "./favorite.png";
+import { useFavoritoContext } from "/src/contexto/FavoritosProvider";
 
 const CardContainer = styled.article`
   display: flex;
@@ -22,12 +24,19 @@ const ImgFavoritarCard = styled.img`
     width: 25px;
 `;
 
-export const Card = ({id, capa, titulo}) => {
+export const Card = ({id, titulo, capa}) => {
+    const {favorito, adicionarFavorito} = useFavoritoContext();
+    const ehFavorito = favorito.some((fav) => fav.id === id);
+    const iconeFav = ehFavorito ? iconeFavoritar : iconeDesFavoritar;
     return (
         <CardContainer>
             <ImgCard src={capa} alt={titulo} />
             <H2Card>{titulo}</H2Card>
-            <ImgFavoritarCard src={iconeFavoritar} alt="Icone de Favoritar" />
+            <ImgFavoritarCard 
+                src={iconeFav}
+                alt="Icone de Favoritar"
+                onClick={() => {adicionarFavorito({id, titulo, capa})}}
+            />
         </CardContainer>
     );
 };
