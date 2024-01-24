@@ -6,12 +6,11 @@ const RodapeStyled = styled.footer`
     align-items: center;
     min-height: 80px;
     background-color: var(--preto);
-    border: 1px dotted var(--cinza);
-        h2{
-            color: var(--cinza);
-            font-size: 18px;
-            font-weight: 400;
-        }
+    h2{
+        color: var(--cinza);
+        font-size: 18px;
+        font-weight: 400;
+    }
 `;
 
 export const Rodape = () => {

@@ -54,6 +54,52 @@ Criar componentes (Cabecalho e CabecalhoLink);
 Estilizar componentes com módulo CSS;
 Praticar a criação de componentes (Rodapé).
 
-## Aula 02 - 
+## Aula 02 - Criando Componentes
 
-### Aula 02 -  - Video 1
+### Aula 02 - Banner - Video 1
+
+Nesta aula, o instrutor ensina como criar um banner em um projeto utilizando o VSCode. Ele explica passo a passo como criar a estrutura do banner, importar estilos CSS, criar a função Banner e adicionar uma div com a classe capa. Além disso, ele mostra como definir a imagem de fundo dinamicamente e como passar a propriedade imagem para o Banner. O instrutor também explica como definir o tamanho do banner no arquivo Banner.module.css. No final, ele menciona que a próxima etapa será trabalhar com o título abaixo do banner.
+
+### Aula 02 - Título - Video 2
+
+Nesta aula, o instrutor ensina como criar um componente de título para ser utilizado em todas as páginas do projeto. O componente de título é criado como um arquivo separado, com um arquivo CSS para estilização e um arquivo JavaScript para a lógica do componente. O componente recebe um parâmetro chamado "children", que permite que o conteúdo do título seja passado como um elemento filho. Isso torna o componente mais flexível, pois permite que o título seja um elemento HTML, como um h1, h2, etc. O instrutor mostra um exemplo de como utilizar o componente de título na página inicial do projeto, importando-o e passando o título desejado como um elemento filho. Em seguida, ele mostra como estilizar o componente de título, acessando o arquivo CSS correspondente e definindo as propriedades de estilo desejadas. Ao final, o instrutor mostra o resultado no navegador, onde o título é exibido com o estilo definido. A próxima etapa do projeto será trabalhar com os cards.
+
+### Aula 02 - Cards - Video 3
+
+Nesta aula, o professor ensinou como criar componentes de "cards" utilizando o React. Ele mostrou como criar a estrutura do componente, importar imagens e estilizar os elementos. O componente "Card" recebe as propriedades "id", "titulo" e "capa" e exibe uma imagem, um título e um ícone de coração. O professor também explicou como utilizar o componente no arquivo principal e aplicar estilos adicionais. No próximo trecho do vídeo, será ensinado como exibir os cards dinamicamente com as imagens corretas dos filmes.
+
+### Aula 02 - Para saber mais: propriedades dos componentes
+
+O que são props?
+Props são propriedades de uma classe ou função JavaScript que podem ser passados aos seus componentes filhos. É possível enviar como “prop” diferentes tipos de dados e até mesmo outros componentes. É fundamental na criação de componentes por ser o meio de comunicação entre eles.
+
+Mas perceba que enviamos propriedades de duas maneiras diferentes. A segunda maneira, onde inserimos o texto do componente título, é chamada de props.children.
+
+O que é props.children?
+A props.children (propriedade filha) é uma propriedade especial do React que contém qualquer elemento filho definido no componente. Ela é usada para exibir o que você inclui entre as tags de abertura e fechamento ao chamar um componente.
+
+A [documentação do React](https://legacy.reactjs.org/docs/composition-vs-inheritance.html) diz que você pode usar props.children em componentes que são genéricos, que não tem filhos pré-determinados, flexibilizando o uso do componente. Podemos ver no nosso `<Titulo>` que dependendo de onde ele for usado você pode definir como `<h1>`, `<h2>`, `<h3>`, entre outros.
+
+### Aula 02 - Lista dinâmica - Video 4
+
+Nesta aula, o instrutor explica como adicionar os filmes disponíveis no projeto à página do Cine Tag. Primeiro, é feita a conexão entre o arquivo e o db.json. Em seguida, é feita a renderização dos cartões na página usando o método map() para percorrer a lista de vídeos e criar um Card para cada um deles. É necessário adicionar uma key para cada elemento renderizado dentro do map(). Para posicionar os cartões corretamente na página, é adicionada uma classe .container no arquivo de estilos Inicio.module.css, que define o display como flex e o justify-content como space-around. Assim, os cartões são exibidos lado a lado na página, de acordo com o que está definido no arquivo JSON.
+
+### Aula 02 - Nova rota - Video 5
+
+Nesta aula, o instrutor ensina como ajustar a largura dos cards de uma página de "Favoritos" de acordo com o projeto do Figma. Ele mostra como alterar o valor da propriedade "width" no arquivo "Card.module.css" para que os cards tenham a largura correta. Em seguida, ele explica como criar a página de "Favoritos" dentro da pasta "src > pages", criando um novo arquivo "index.js" e um "Favoritos.module.css". O instrutor mostra o código necessário para criar a estrutura básica da página, importando os estilos e exportando o componente "Favoritos". Em seguida, ele adiciona uma nova rota para acessar essa página no arquivo "routes.js", utilizando a tag "Route" do React Router. O instrutor também explica como remover o cabeçalho e o rodapé da página inicial e adicioná-los no arquivo "routes.js" para que sejam exibidos em todas as páginas. Além disso, ele mostra como criar um componente "Container" para centralizar e adicionar espaçamento aos elementos das páginas. Por fim, o instrutor desafia os espectadores a aplicarem os conhecimentos ensinados até o momento, como adicionar o banner, o título e criar a seção de cards na página de "Favoritos".
+
+### Aula 02 - Resolução do desafio - Video 6
+
+Nesta aula, o instrutor mostra como criar a página de "Favoritos" em um projeto utilizando o React. São inseridos os componentes Banner, Titulo e Card no arquivo index.js. O componente Banner recebe um atributo imagem com o valor 'favoritos'. O componente Titulo é utilizado para inserir um título principal na página. É criada uma section com a classe styles.container para conter os elementos da página. Dentro dessa section, é utilizado o componente Card para exibir um card com dados fictícios. O código é salvo e o servidor local é aberto para visualizar os resultados. O instrutor destaca a facilidade de criar páginas utilizando componentes no React, evitando repetição de código e facilitando a manutenção.
+
+### Aula 02 - Nessa aula, você aprendeu como`:`
+
+Criar novos componentes;
+Construir novas rotas;
+Compartilhar informações entre componentes com props e children;
+Importar dados de um arquivo json;
+Usar o método .map para listar componentes.
+
+## Aula 03 - 
+
+### Aula 03 -  - Video 1
