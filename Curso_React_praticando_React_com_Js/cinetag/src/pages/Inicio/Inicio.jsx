@@ -2,9 +2,10 @@ import { Banner } from "/src/components/Banner/Banner";
 import { Titulo } from "/src/components/Titulo/Titulo";
 // import bannergroundImage from '/public/imagens/banner-home.png';
 import { Card } from "/src/components/Card/Card";
-import videos from "/src/json/db.json";
+// import videos from "/src/json/db.json";
 // import styled from "styled-components";
 import { Container } from "/src/components/Container/Container";
+import { useEffect, useState } from "react";
 
 // const ContainerCard = styled.section`
 //     display: flex;
@@ -13,9 +14,16 @@ import { Container } from "/src/components/Container/Container";
 // `;
 
 export const Inicio = () => {
-    {/* <Banner backgroundImage={bannergroundImage} /> */}
+    const [videos, setVideos] = useState([]);
+    useEffect(() => {
+        fetch("https://my-json-server.typicode.com/ninojp/Alura_Formacao_Explore_React_com_JavaScript/videos")
+        .then(resposta => resposta.json())
+        .then(dados => {setVideos(dados)})
+    }, []);
+    
     return (
         <>
+            {/* <Banner backgroundImage={bannergroundImage} /> */}
             <Banner imagem='home' />
             {/* Aqui o ELEMENTO h1+texto é passado como CHILDREN e não como PROPs, dentro do componente */}
             <Titulo>

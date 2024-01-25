@@ -188,3 +188,29 @@ Construir rotas aninhadas.
 
 ### Aula 05 - My Json Server - Vídeo 1
 
+Nesta aula, aprendemos a externalizar os dados do projeto, considerando a situação em que pessoas não desenvolvedoras serão responsáveis por adicionar vídeos à página inicial. Para isso, criamos um arquivo db.json com os dados dos vídeos, como ID, título, capa e link. Em seguida, criamos um repositório no GitHub e fizemos o upload desse arquivo. Utilizamos o site My JSON Server para criar uma API fake online, onde podemos acessar os recursos disponíveis, incluindo o array "videos" e o db.json. No próximo vídeo, aprenderemos a codificar a requisição GET para substituir o db.json no projeto.
+
+> O site usado para mockar uma API externa foi [My JSON Server](https://my-json-server.typicode.com/)
+
+### Aula 05 - useEffect - Vídeo 2
+
+Nesta aula, o instrutor aborda a criação de uma requisição para acessar os valores de uma API externa. É utilizado o hook useEffect para realizar a requisição para a API e atualizar o estado de vídeos. A requisição é feita utilizando o método fetch e a URL da API é obtida do arquivo "videos". Os dados de retorno são convertidos para json e enviados para o setVideos para atualização do estado. Também é mencionado que é possível enviar um parâmetro para o useEffect para controlar quando a atualização da página deve ocorrer. No próximo vídeo serão abordados parâmetros de pesquisa através da URL da API.
+
+### Aula 05 - Fetch com parâmetros - Vídeo 3
+
+Nesta aula, o instrutor mostra como utilizar uma API externa para carregar um vídeo específico no player da página. Ele utiliza o hook useEffect para fazer uma requisição à API, passando o parâmetro id obtido através do useParams(). Após o fetch, é utilizado o método .then() para transformar a resposta em formato JSON e definir o valor da variável video utilizando o setVideo(). Caso o vídeo não seja encontrado, é retornado o componente NaoEncontrada. Caso contrário, é renderizado o player com o vídeo encontrado. O instrutor também menciona que agora o projeto está consumindo dados externos e que é possível remover o import do arquivo db.json e excluir a pasta "json" sem causar problemas no código.
+
+### Aula 05 - Deploy - Vídeo 4
+
+Nesta aula, o instrutor discute sobre como compartilhar um projeto após a conclusão da codificação. Ele sugere fazer o deploy do projeto na Vercel e ressalta a importância de ter o projeto no GitHub. O instrutor orienta os passos para fazer o deploy na Vercel, como fazer o login com o GitHub, importar o repositório do GitHub, aguardar o processo de deploy e obter o link do projeto na Vercel. Ele incentiva o compartilhamento do link nas redes sociais e sugere marcar o instrutor e a Alura para que possam ver o progresso do aluno. Por fim, o instrutor parabeniza o aluno pela conclusão do projeto e se despede.
+
+### Aula 05 - Nessa aula, você aprendeu como`:`
+
+Fazer upload de um protótipo de API no Github;
+Hospedar o protótipo de API no My Json Server;
+Consumir APIs com o FetchAPI;
+Executar o deploy do projeto.
+
+### Aula 05 - Conclusão - Vídeo 4
+
+Nesta aula do curso "React: praticando React com Js", a instrutora Mônica Mazzochi Hillman desenvolveu o projeto Cine Tag. Foram construídos vários componentes e estilizados, além de mostrar como consumir uma API externa e listar os vídeos. Foi criado um contexto para o estado global de favoritos, permitindo que os vídeos sejam favoritados e exibidos na página "Meus Favoritos". Também foi criada uma rota dinâmica para carregar o player do vídeo com o respectivo ID. A instrutora incentiva os estudantes a fazerem os desafios propostos, compartilharem seus resultados nas redes sociais e avaliarem o curso ao final. Além disso, menciona a comunidade ativa no Discord e a possibilidade de participar de outros cursos da Alura.
