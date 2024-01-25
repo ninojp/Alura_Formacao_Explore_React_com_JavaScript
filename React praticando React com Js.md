@@ -147,3 +147,41 @@ Construir hooks personalizados;
 Procurar valores dentro de um array com o método some;
 Remover itens de um array com o método splice e auxílio do indexOf;
 Instalar e usar a extensão React Context DevTool.
+
+## Aula 04 - Evoluindo as Rotas
+
+### Aula 04 - Rota dinâmica - Vídeo 1
+
+Nesta aula, o instrutor ensina como criar a página do player em um projeto React. Ele explica como estruturar o arquivo index.js da página, importando os componentes Banner e Titulo. Além disso, ele mostra como criar uma rota para a página do player no arquivo routes.js e utiliza o hook useParams para obter o parâmetro da URL e filtrar a lista de vídeos. O instrutor também ensina como incorporar um vídeo do YouTube na página do player, tornando-o dinâmico de acordo com o vídeo selecionado. Ele faz ajustes no estilo do vídeo e utiliza o componente Link do React Router para criar links dinâmicos nos cards da página inicial. Por fim, ele menciona a criação de mensagens de erro para casos específicos.
+
+### Aula 04 - Para saber mais: useParams
+
+O hook useParams é um hook da biblioteca react-router-dom, e segundo sua [documentação](https://reactrouter.com/en/main/hooks/use-params), ele retorna um objeto de valores/chaves que foram passados como parâmetros dinâmicos da URL atual. Para usá-lo, inicialmente, precisamos construir uma rota:
+
+`<Route path="videos/:id/" element={<Player />} />`
+
+No exemplo acima, o parâmetro enviado é o id, que é uma rota reservada por causa do : na frente. Com o parâmetro dentro da URL, o roteador React não corresponderá literalmente à rota acima. Agora, corresponderá dinamicamente a páginas com o padrão “videos/:id”, sendo o id o valor que você quiser inserir, como: “videos/1”.
+
+Para imprimir o conteúdo da página basta realizar a validação de captar esse valor de id e comparar com o que deve ser mostrado. No projeto CineTag recolhemos o id da URL através do hook useParams e pedimos para imprimir as informações referentes ao vídeo que possui aquele id.
+
+### Aula 04 - Página de erro - Vídeo 2
+
+Nesta aula, o instrutor abordou a criação de uma página de aviso para lidar com URLs inexistentes em um projeto React. Foi mostrado como criar uma nova pasta chamada "NaoEncontrada" dentro da pasta "pages" e dentro dela, criar dois arquivos: "index.js" e "NaoEncontrada.module.css". No arquivo "index.js", foi criada uma função chamada "NaoEncontrada" que retorna um JSX contendo uma section com um título e um parágrafo informando que o conteúdo não foi encontrado. Em seguida, foi mostrado como adicionar uma rota para essa página no arquivo "routes.js" usando o elemento Route com o path "*", que é um seletor universal. Foi feito um teste para verificar se a página de aviso é exibida corretamente ao acessar uma URL inexistente. Também foi mostrado como adicionar uma condicional no arquivo "index.js" do componente Player para exibir a página de aviso quando um vídeo inexistente for acessado. No próximo vídeo, será feita uma limpeza no arquivo "routes.js" para que ele atue apenas com as rotas.
+
+### Aula 04 - Rotas aninhadas - Vídeo 3
+
+Nesta aula, aprendemos a evoluir as rotas em um projeto React. O instrutor ensinou como criar uma página base que contém elementos comuns presentes em várias rotas do projeto. Para isso, criamos uma nova pasta chamada "PaginaBase" dentro da pasta "pages" e dentro dessa pasta, criamos o arquivo index.js que contém a função PaginaBase(). Essa função retorna a estrutura da página base, que é composta por um elemento `<main>`. Dentro do `<main>`, adicionamos os componentes `<Cabecalho />`, `<FavoritosProvider>`, `<Container>`, `<Outlet />` e `<Rodape />`. Em seguida, configuramos as rotas no arquivo routes.js, utilizando o componente `<BrowserRouter>` para envolver as rotas. Definimos a rota pai `<Route path="/" element={<PaginaBase />}>` que contém as rotas filhas que serão renderizadas dentro do `<Outlet />`. Por fim, fizemos uma limpeza no projeto, removendo importações e trechos de código desnecessários, e verificamos que as rotas estão funcionando corretamente no navegador.
+
+### Aula 04 - Para saber mais: Nested Routes
+
+[Nested Routes](https://reactrouter.com/en/v6.3.0/getting-started/overview#nested-routes) (em português, rotas aninhadas) é um recurso do React Router que auxilia na criação do projeto, evitando códigos de layout duplicados e complicados. Com ele, você acopla componentes que se repetem entre as páginas em uma rota, levando em conta alguma parte da URL que é repetida entre todas elas.
+
+### Aula 04 - Nessa aula, você aprendeu como`:`
+
+Criar rotas dinâmicas;
+Enviar parâmetros via URL;
+Receber parâmetros com o hook useParams;
+Planejar rotas para URLs não existentes;
+Construir rotas aninhadas.
+
+

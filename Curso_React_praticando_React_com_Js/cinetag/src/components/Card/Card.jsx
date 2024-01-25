@@ -2,6 +2,8 @@ import styled from "styled-components";
 import iconeDesFavoritar from "./favorite_outline.png";
 import iconeFavoritar from "./favorite.png";
 import { useFavoritoContext } from "/src/contexto/FavoritosProvider";
+import { Link } from "react-router-dom";
+import style from "./card.module.css";
 
 const CardContainer = styled.article`
   display: flex;
@@ -30,11 +32,11 @@ export const Card = ({id, titulo, capa}) => {
     const iconeFav = ehFavorito ? iconeFavoritar : iconeDesFavoritar;
     return (
         <CardContainer>
-            <ImgCard src={capa} alt={titulo} />
-            <H2Card>{titulo}</H2Card>
-            <ImgFavoritarCard 
-                src={iconeFav}
-                alt="Icone de Favoritar"
+            <Link to={`/${id}`} className={style.linkStyle}>
+                <ImgCard src={capa} alt={titulo} />
+                <H2Card>{titulo}</H2Card>
+            </Link>
+            <ImgFavoritarCard src={iconeFav} alt="Icone de Favoritar"
                 onClick={() => {adicionarFavorito({id, titulo, capa})}}
             />
         </CardContainer>
