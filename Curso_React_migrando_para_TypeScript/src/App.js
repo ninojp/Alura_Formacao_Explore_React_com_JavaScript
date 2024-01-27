@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// Se caso não fosse um EXPORT DEFAULT la no Banner, teria que usar {Banner}
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';

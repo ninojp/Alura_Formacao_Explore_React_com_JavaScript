@@ -6,7 +6,7 @@ interface BannerProps{
     // Aqui o ? ponto de interrogação é para indicar que a PROPs é opcional
     textoAlternativo?: string
 }
-export const Banner = ({enderecoImagem, textoAlternativo}:BannerProps) => {
+const Banner = ({enderecoImagem, textoAlternativo}:BannerProps) => {
     return (
         <header className="banner">
             {/* <img src="/imagens/banner.png" alt="O banner principal da página do Organo"/> */}

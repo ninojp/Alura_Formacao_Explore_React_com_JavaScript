@@ -1,5 +1,7 @@
 # Alura Curso React: migrando para TypeScript
 
+>Já dizia o Linus Torvalds, falar é fácil… eu quero ver é código!
+
 ## Aula 01 - TypeScript
 
 ## Aula 01 - Apresentação - Vídeo 1
@@ -63,6 +65,42 @@ Gerar o tsconfig.json a partir do script npx;
 Aplicar as configurações do jsx;
 Diferenciar arquivos js, jsx, ts e tsx.
 
-## Aula 02 - 
+## Aula 02 - Migração Controlada
 
-## Aula 02 -  - Vídeo 1
+## Aula 02 - Migrar o Banner - Vídeo 1
+
+Nesta aula do curso "React: migrando para TypeScript", os instrutores Paulo e Vinicios discutem sobre a importação e exportação de componentes no React utilizando TypeScript. Eles explicam a diferença entre export const e export default e como isso afeta a forma como os componentes são importados em outros arquivos. Além disso, eles destacam a importância de entender os mecanismos do React e os módulos de JavaScript. Também abordam a migração de campos de texto para TypeScript, mostrando como renomear arquivos e criar interfaces para tipar as propriedades dos componentes. No geral, a aula enfatiza a importância de dominar o React e aprofundar os conhecimentos em JavaScript para um desenvolvimento mais eficiente e livre de erros.
+
+## Aula 02 - Conhecendo tipos diferentes - Vídeo 2
+
+Nesta aula do curso "React: migrando para TypeScript", os instrutores discutem sobre a tipagem no TypeScript em um projeto React. Eles mostram como tipar diferentes propriedades de um componente chamado CampoTexto, como a propriedade aoAlterado, placeholder, label, valor e obrigatorio. Além disso, eles explicam como resolver erros relacionados ao uso do React e do TypeScript, como o erro de importação do React e a tipagem correta do evento onChange. No final, eles mostram o código final do componente CampoTexto, com todas as propriedades devidamente tipadas.
+
+## Aula 02 - Desconstrução e tipos - Vídeo 3
+
+Nesta aula, os instrutores discutem a importância de seguir um padrão ao utilizar props ou desconstruir as propriedades em um projeto utilizando TypeScript. Eles mostram como realizar a desconstrução de propriedades em um componente chamado CampoTexto e explicam que o VSCode combinado com TypeScript é capaz de inferir os tipos das propriedades ao realizar a desconstrução, facilitando o desenvolvimento. Eles também mencionam que o mecanismo de tipagem estática do TypeScript é mais eficiente do que o JavaScript puro. Após realizar a desconstrução, eles verificam se o compilador não apresentou erros e testam o componente CampoTexto no navegador. O próximo passo será abordar o assunto de times e como lidar com os membros, ainda dentro do contexto do TypeScript.
+
+## Aula 02 - Para saber mais: sobre os pacotes @types
+
+O que são pacotes @types?
+Pacotes dentro do escopo @types nos permitem ter acesso uma tonelada de definições de tipo super úteis, como, por exemplo, as definições de tipo do node.js que nos permitem usar require.
+
+Por exemplo, o pacote @types/node contém definições de tipo do próprio Node.js.
+
+Quando usar @types?
+Os pacotes @types contém definições dos tipos de muitas bibliotecas, como Express, Sequelize, React entre outras. Mas verifique se o pacote que você está usando já possui os tipos incluídos antes de instalar os tipos do @types.
+
+## Aula 02 - De olho nos React Hooks
+
+O que são os React Hooks e para que eles, de fato, servem?
+
+Eles permitem que você possua estado local e outros recursos do React sem escrever componentes baseados em classes.
+
+Isso aí! Exatamente! Essa veio direto da [documentação](https://legacy.reactjs.org/docs/hooks-overview.html), né? Eles resolvem vários problemas já conhecidos pelo time que mantém o projeto. Você pode entender mais a fundo sobre o assunto nesse [artigo oficial](https://legacy.reactjs.org/docs/hooks-intro.html#motivation).
+
+## Aula 02 - Nessa aula, você aprendeu como`:`
+
+Configurar o jsx no tsconfig.json;
+Configurar a tipagem de funções;
+Inferir os tipos de variáveis geradas pela desconstrução das props;
+Para que servem pacotes dentro do escopo @types.
+
