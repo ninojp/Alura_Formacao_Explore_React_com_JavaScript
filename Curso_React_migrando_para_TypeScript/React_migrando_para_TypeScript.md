@@ -104,3 +104,74 @@ Configurar a tipagem de funções;
 Inferir os tipos de variáveis geradas pela desconstrução das props;
 Para que servem pacotes dentro do escopo @types.
 
+## Aula 03 - Tipos Complexos
+
+## Aula 03 - Migrando o Time - Vídeo 1
+
+Nesta aula, os instrutores discutem a refatoração do componente "Time" em um projeto React migrado para TypeScript. Eles renomeiam o arquivo para "index.tsx" e criam a interface "TimeProps" para definir as propriedades esperadas pelo componente. Além disso, eles criam uma nova pasta chamada "compartilhado/interfaces" e um arquivo "IColaborador.ts" para definir a interface "IColaborador" com as propriedades necessárias. Eles também mencionam a importância de nomear as interfaces com o padrão "I" no início e destacam os benefícios do TypeScript na detecção de erros e na manutenibilidade do código.
+
+## Aula 03 - Refatorando a Lista Suspensa - Vídeo 2
+
+Nesta aula, os instrutores Vinicios e Paulo discutem sobre a refatoração de um componente de Lista Suspensa em um projeto React migrado para TypeScript. Eles renomeiam o arquivo para index.tsx e criam uma interface chamada ListaSuspensaProps para tipar as propriedades do componente. Eles destacam a importância de utilizar TypeScript para melhorar a legibilidade do código e ajudar as pessoas que estão entrando no projeto. Em seguida, eles verificam se as propriedades estão sendo passadas corretamente para o componente e mostram o código do componente ListaSuspensa, onde é renderizado um select com as opções dos times. Por fim, eles testam o componente e mencionam que agora podem continuar com a refatoração e adição de novas funcionalidades no projeto.
+
+## Aula 03 - Refatorando o Formulário - Vídeo 3
+
+Nesta aula, os instrutores Vinicios e Paulo discutem a refatoração de um formulário em um projeto React migrado para TypeScript. Eles lidam com problemas de tipagem implícita, ajustam interfaces e corrigem erros de propriedades ausentes nos componentes ListaSuspensa, CampoTexto e Botao. No final, eles testam o formulário no navegador e corrigem um bug relacionado ao evento onSubmit.
+
+## Aula 03 - Para saber mais: Interface vs Types
+
+Existem dois tipos principais para declarar a forma de um objeto: interfaces e tipos.
+
+Eles são bem parecidos e para a maioria dos casos funcionam da mesma forma.
+
+Ambos suportam a extensão de outras interfaces e tipos.
+
+Os tipos fazem isso através da interseção de tipos, enquanto interfaces possuem uma palavra-chave reservada.
+
+A equipe da Microsoft recomenda o uso de interfaces ao invés de tipos.
+
+Uma das maiores diferenças entre tipos e interfaces é que interfaces são abertas e tipos são fechados.
+
+Isso significa que você pode extender interfaces declarando uma segunda vez.  
+interface Cachorro {
+  adestrado: boolean;
+}
+interface Cachorro {
+  cor: string;
+}
+// isso funciona
+
+Por outro lado, esses tipos não podem ser alterados fora da própria declaração.  
+type Filhote = {
+  cor: string;
+};
+type Filhote = {
+  brinquedos: number;
+};
+// isso não funcionaCOPIAR CÓDIGO
+
+Dependendo dos seus objetivos essa diferença pode ser positiva ou negativa.
+
+Como um dos melhores recursos para ver todos os casos de uso de tipos vs interfaces, vale a pena dar uma lida nessa [thread do Stackoverflow](https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript/52682220#52682220).
+
+## Aula 03 - De olho no JSX
+
+Utilizamos JSX nos nossos componentes, mas será que sabemos descrever precisamente o que ele é?
+
+Marque a alternativa que melhor descreve o JSX:
+
+É uma extensão de sintaxe para JS utilizada para descrever como a interface do usuário deve ser.
+
+Isso aí! Exatamente! Sua memória tá afiadinha. O JSX é bastante parecido com o HTML, então o processo de escrever a estrutura dos elementos é bem mais tranquilo para pessoas desenvolvedoras que possuem uma boa base em HTML.
+
+## Aula 03 - Nessa aula, você aprendeu como`:`
+
+Criar interfaces;
+Entender a diferença entre type e Interface;
+Configurar propriedades opcionais nas interfaces;
+Tipar funções;
+Configurar o jsx no tsconfig.json.
+
+## Aula 04 - 
+
+## Aula 04 -  - Vídeo 1
