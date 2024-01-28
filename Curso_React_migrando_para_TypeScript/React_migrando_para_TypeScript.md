@@ -172,6 +172,42 @@ Configurar propriedades opcionais nas interfaces;
 Tipar funções;
 Configurar o jsx no tsconfig.json.
 
-## Aula 04 - 
+## Aula 04 - Avançando nas Tipagens
 
-## Aula 04 -  - Vídeo 1
+## Aula 04 - Tipos incompatíveis - Vídeo 1
+
+Nesta aula, os instrutores Paulo e Vinicios discutem sobre a migração de um código do JavaScript para o TypeScript. Eles mostram como utilizar o VS Code para realizar essa migração de forma mais eficiente. Durante o processo, eles resolvem problemas relacionados a tipos incompatíveis, adicionando tipagens e utilizando recursos do TypeScript. Além disso, eles destacam as vantagens de utilizar o TypeScript, como melhorar a manutenção do código e facilitar a navegação no código. No próximo vídeo, eles irão resolver um problema relacionado ao tipo "never" utilizando técnicas do TypeScript.
+
+## Aula 04 - Inferência de tipo e generics - Vídeo 2
+
+Nesta aula, os instrutores discutem sobre inferência de tipo e generics no React com TypeScript. Eles explicam como o useState pode inferir o tipo das variáveis, mas também mostram como explicitar o tipo utilizando generics. Eles destacam a importância de entender quando utilizar cada abordagem e mencionam que o uso de generics é comum em hooks do React e outras bibliotecas. Além disso, eles mencionam que a refatoração do código está quase finalizada e que irão trabalhar com um array de regras em um arquivo chamado ts.config.
+
+## Aula 04 - Meu projeto, minhas regras - Vídeo 3
+
+Nesta aula, Vinicios e Paulo discutem sobre a migração de um projeto para o TypeScript. Eles mencionam a refatoração dos arquivos, renomeando a extensão de .js para .tsx para que as regras do TypeScript sejam aplicadas. Vinicios explica como forçar o código a entender que um elemento nunca será nulo adicionando um ! ao final da linha de código. Eles também falam sobre a ativação e desativação das regras no arquivo tsconfig.json, explicando que é possível configurar e combinar as regras conforme necessário. Vinicios recomenda ativar as regras gradualmente ao migrar um projeto existente e menciona que é possível burlar a regra noImplicitAny criando um tipo chamado Any, mas é melhor configurar o tsconfig corretamente para evitar improvisações.
+
+## Aula 04 - Push e deploy - Vídeo 4
+
+Nesta aula, os instrutores discutem o processo de deploy do projeto Organo na plataforma Vercel. Eles criam um novo repositório no GitHub e o importam para a Vercel. São mencionados os passos para configurar o projeto na Vercel e realizar o deploy. Durante o processo, eles enfrentam um problema de falha de compilação causado por uma importação não utilizada do React. Para resolver, ajustam as configurações do arquivo tsconfig.json. Após testarem novamente o deploy e verificarem a construção correta do projeto, abrem a página do Organo no navegador para verificar se tudo está funcionando como esperado. É mencionado que há mais informações sobre essas ferramentas em cursos anteriores de React e GitHub.
+
+## Aula 04 - Para saber mais: regras pra que te quero
+
+Nós trabalhamos com o tsconfig.json durante o curso, mas ele é extremamente poderoso.
+
+Se você quiser customizar do seu jeito as regras do seu projeto, vou deixar aqui pra você a fonte da verdade:
+
+[tsconfig-json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+[propriedades explicadas](https://www.typescriptlang.org/tsconfig)
+
+Vale ressaltar que a documentação do TypeScript é SUPER completinha, desde explicações até guias de boas práticas.
+
+## Aula 04 - Nessa aula, você aprendeu como`:`
+
+Explicitar que uma expressão que pode ser nula tem, de fato, algum valor;
+Utilizar fragmentos React;
+Trabalhar com múltiplos tipos para uma mesma prop.
+
+## Aula 05 - Mergulhos mais fundos
+
+## Aula 05 - Novo campo: data - Vídeo 1
+
