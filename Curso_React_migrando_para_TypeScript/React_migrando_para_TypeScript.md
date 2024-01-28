@@ -211,3 +211,31 @@ Trabalhar com múltiplos tipos para uma mesma prop.
 
 ## Aula 05 - Novo campo: data - Vídeo 1
 
+Nesta aula, o professor Vinicios ensina como adicionar um novo campo para data em um formulário utilizando TypeScript. Ele mostra como criar um novo estado para a data utilizando o hook useState e adiciona um novo campo de texto no formulário, definindo que o input deve ser do tipo data. Para garantir que apenas datas válidas sejam inseridas, é utilizado o tipo opcional 'date' no componente CampoTexto. O professor também explica como passar o valor da data para o componente Colaborador e como tornar o campo de data obrigatório no formulário. No final, todas as informações são exibidas corretamente no card criado.
+
+## Aula 05 - Para saber mais: TypeScript vs JSdoc
+
+O que é JSDoc?
+Ele foi criado no ano de 1999 e é uma linguagem de marcação usada para anotar arquivos .js.
+
+Usando comentários contendo JSDoc, é possível adicionar documentação descrevendo a interfaces.
+
+Por exemplo, em TS definimos o tipo assim:
+
+const nome: string
+E no caso do JSdoc, temos:
+
+/** @type {string} */
+const nome;
+
+Curioso para saber mais? Se liga aqui na [documentação](https://jsdoc.app/).
+
+## Aula 05 - Nessa aula, você aprendeu como`:`
+
+Refatorar componentes, adicionando novas funcionalidades;
+Entender as vantagens e desvantagens do TypeScript;
+Configurar regras no tsconfig.json.
+
+## Aula 05 - Conclusão - Vídeo 2
+
+Nesta aula, Paulo e Vinicios discutem a importância de publicar projetos no GitHub após a conclusão de um curso na Alura. Eles destacam que compartilhar o projeto é fundamental para expor a evolução do aluno e conquistar novas oportunidades profissionais. Eles mencionam o Vitrine Dev, um espaço na Alura para acompanhar a evolução dos alunos e expor projetos. Paulo ressalta que publicar projetos no GitHub é interessante para o portfólio e permite acompanhar a evolução ao longo dos meses e das formações realizadas. A Alura oferece cursos completos em áreas como React avançado, Node e JavaScript para Front-end. Vinicios destaca que há muitas oportunidades para aprofundar o conhecimento em React, como testes, gerenciamento de estado e roteamento com React Router. Paulo menciona a importância de compartilhar a preferência no Fórum da Alura para discutir se vale a pena migrar para TypeScript. Vinicios destaca que a resposta sobre se o TypeScript vale a pena e se o React é melhor com TypeScript é relativa e depende dos objetivos de cada pessoa. Paulo incentiva os alunos a colocarem seus projetos no ar e discutirem sobre isso. Vinicios propõe um desafio para os alunos que já fizeram a formação em React com JavaScript: migrar as funcionalidades desenvolvidas para TypeScript. No final, eles agradecem à equipe da Alura e aos alunos pelo estudo e dedicação, destacando a importância da troca de conhecimento.

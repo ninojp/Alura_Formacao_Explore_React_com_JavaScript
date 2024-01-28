@@ -1,6 +1,16 @@
+import React from 'react';
 import Colaborador from '../Colaborador/Colaborador';
+import { IColaborador } from "../../compartilhado/interfaces/IColaborador.tsx";
 import './Time.css';
-const Time = (props) => {
+
+interface TimeProps {
+    corDestaque: string
+    corFundo: string
+    nome: string
+    colaboradores: IColaborador[]
+}
+
+const Time = (props: TimeProps) => {
     // console.log(props)
     // poderia ser feito assim: usando uma variável
     const corDeDestaque = {borderColor: props.corDestaque};
@@ -14,7 +24,8 @@ const Time = (props) => {
                     key={colaborador.nome}
                     nome={colaborador.nome} 
                     cargo={colaborador.cargo} 
-                    imagem={colaborador.imagem} 
+                    imagem={colaborador.imagem}
+                    data={colaborador.data}
                 />)}
             </div>
         </section>
