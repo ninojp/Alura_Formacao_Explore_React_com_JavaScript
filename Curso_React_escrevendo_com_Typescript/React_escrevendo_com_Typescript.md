@@ -135,6 +135,54 @@ Também criamos um componente com function component (a forma mais atual de se e
 Utilizar o método map para renderizar arrays.
 Renderizamos arrays de JSX com o método map, mostrando que assim conseguimos aproveitar parte do JSX e mudar apenas o valor de item para item, utilizando assim o princípio DRY (Don't Repeat Yourself).
 
-## Aula 03: Componetização
+## Aula 03: Usando o CSS
 
-### Aula 03 -  - Vídeo 1
+### Aula 03 - Aprendendo a estilizar - Vídeo 1
+
+Nesta aula, o instrutor aborda a estilização de componentes em React utilizando o inline style. Ele explica como criar objetos JavaScript para definir os estilos e como utilizar variáveis e expressões ternárias para estilizar condicionalmente. O instrutor também menciona outras formas de estilização no React, como o uso de arquivos CSS externos, o Sass, o CSS modules e o CSS-in-JS.
+
+### Aula 03 - Estilizando com Sass - Vídeo 2
+
+Nesta aula, o instrutor abordou a estilização de uma página web utilizando CSS e Sass. Ele explicou como instalar o Sass e mostrou como estilizar o arquivo index.css utilizando CSS puro. Em seguida, ele estilizou os componentes App.tsx, Formulario, Botao e Lista utilizando Sass, criando arquivos style.scss para cada um deles. O instrutor também mencionou a diferença entre class e className no React e destacou o uso do pacote CSS Modules para evitar conflitos de estilos em projetos maiores. Na próxima aula, será mostrado como instalar e configurar o CSS Modules.
+
+### Aula 03 - Usando CSS Modules - Vídeo 3
+
+> O professor passou uma dica interessante: caso precisa-se usar o padrão css(para nomenclatura de classes: BEM, nomeclasse__nometag-iten) dentro de um objeto-javascript{não aceita hifen}, poderia ser feito assim: {["nomeclasse__nometag-iten"]}.
+
+Nesta aula, o instrutor aborda o problema de sobreposição de classes CSS em um projeto React. Ele apresenta o pacote CSS Modules como solução para evitar a sobreposição de estilos. O instrutor demonstra como instalar e configurar o plugin typescript-plugin-css-modules no projeto. Além disso, ele mostra como utilizar o CSS Modules em cada componente, renomeando os arquivos de estilo e importando o objeto de estilos. Com o uso do CSS Modules, é possível gerar classes únicas, evitando conflitos e tornando o código mais organizado e legível.
+
+### Aula 03 - Para saber mais: Sobre CSS Modules
+
+Sobre Imports
+Para começar, o CSS Modules nos dá o CSS em formato object e os exporta como default, logo, podemos importar das seguintes formas:
+
+```React
+import style from './NomeDoComponente.module.scss';  
+import * as style from './NomeDoComponente.module.scss';  
+import { default as style } from './NomeDoComponente.module.scss';
+```
+
+Ainda seguindo em como importar um CSS Module, como ele é um export default, podemos nomeá-lo da forma como bem entendermos, por exemplo:
+
+`import Banana from './NomeDoComponente.module.scss'`
+
+Como agora sabemos que podemos nomear o objeto de formas diferentes, podemos também importar vários CSS Modules em um só componente!
+
+`import BotaoStyle from './Botao.module.scss';`
+
+`import ItemStyle from './Item.module.scss';`
+
+OBS: Todas essas formas citadas acima não são específicas de como importar um CSS Modules, e sim de como importar um export default em JS.
+
+Caso tenha alguma dúvida leia a documentação do Create React App sobre [CSS Modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/).
+
+### Aula 03 - Nessa aula, você aprendeu como`:`
+
+Usar o CSS inline;
+Aprendemos como criar o CSS inline direto no atributo, como variável JS e utilizando condicionais para mudar o estilo.
+Utilizar CSS e Sass no projeto;
+Vimos como importar CSS e SASS no projeto é fácil dentro de um projeto criado com Create React App.
+Colocar o CSS Modules em um projeto com Create React App + Typescript;
+Configuramos o projeto para aceitar CSS Modules.
+Vantagens de se utilizar CSS Modules.
+Discutimos as vantagens de se utilizar CSS Modules na aplicação.
