@@ -1,3 +1,4 @@
+// import React, { Children } from "react";
 import React from "react";
 import Botao from "../Botao";
 import styled from "styled-components";
@@ -55,8 +56,7 @@ const FormStyle = styled.form`
     }
 `;
 class Formulario extends React.Component{
-    // Essa parte do código:React.ReactNode, foi adiocionada automaticamente pelo VS CODE
-    render(): React.ReactNode {
+    render() {
         return (
             <FormStyle>
                 <div>
@@ -67,7 +67,10 @@ class Formulario extends React.Component{
                     <label htmlFor="tempo">Tempo</label>
                     <input type="time" step="1" name="tempo" id="tempo" min="00:00:00" max="01:30:00" required />
                 </div>
-                <Botao />
+                <Botao>
+                  adicionar
+                </Botao>
+
             </FormStyle>
         );
     };

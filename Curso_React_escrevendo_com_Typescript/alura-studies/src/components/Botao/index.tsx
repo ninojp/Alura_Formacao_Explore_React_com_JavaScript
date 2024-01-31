@@ -22,11 +22,12 @@ const ButtonStyle = styled.button`
     font-size: 2.25rem;
 }  
 `;
-class Botao extends React.Component {
+// O codigo abaixo usando o CHILDREN deu erro, eu corrigi usando: <{children: string}>
+class Botao extends React.Component<{children: string}> {
     render() {
         return (
             <ButtonStyle>
-                Botão
+                {this.props.children}
             </ButtonStyle>
         )
     }

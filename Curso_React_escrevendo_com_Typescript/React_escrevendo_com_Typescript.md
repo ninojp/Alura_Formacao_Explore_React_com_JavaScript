@@ -186,3 +186,38 @@ Colocar o CSS Modules em um projeto com Create React App + Typescript;
 Configuramos o projeto para aceitar CSS Modules.
 Vantagens de se utilizar CSS Modules.
 Discutimos as vantagens de se utilizar CSS Modules na aplicação.
+
+## Aula 04: Props
+
+### Aula 04 - Conhecendo Props - Vídeo 1
+
+Nesta aula, o instrutor discute sobre a customização de componentes no React utilizando props. Ele explica como adicionar uma prop chamada "texto" ao componente Botao e utiliza essa prop para exibir o texto no botão. O instrutor também menciona que é mais comum utilizar a prop "children" para renderizar elementos dentro do componente. Essa prop permite passar elementos dentro da tag do componente, como se fossem filhos desse componente. Dessa forma, é possível utilizar o componente Botao de forma mais semelhante a um botão convencional. O instrutor finaliza mencionando que no próximo vídeo será abordada a reutilização da lista e a passagem de mais propriedades para os componentes.
+
+### Aula 04 - Refatorando a lista - Vídeo 2
+
+Nesta aula, o instrutor discute a criação do componente "Item" dentro do componente "Lista" em uma aplicação React. Ele explica a importância de separar as responsabilidades dos componentes e mostra como passar informações entre eles utilizando as props. Além disso, ele menciona a importância de adicionar a propriedade "key" para identificar de forma única os elementos renderizados.
+
+### Aula 04 - Para saber mais: Sobre Keys (Chaves no React)
+
+Lembra que os componentes React são criados utilizando JSX não HTML? Então, usando o mesmo processo, o React não cria um DOM, e sim um VDOM (Virtual DOM).
+
+Para isso o React utiliza a propriedade key, que nada mais é que uma chave(AHÁ!) para linkar o item no Virtual DOM no DOM real, por isso não vemos a prop sendo passada para o componente Item, pois essa prop é algo interno no React que não tem utilidade para nós.
+
+Por isso também não é recomendado que se utilize o index do array como key, pois caso o array mude, a possibilidade de vários itens desse array serem atualizados sem necessidade é imensa!
+
+OBS: Caso você queira saber mais pode acessar à [documentação do React](https://pt-br.legacy.reactjs.org/docs/lists-and-keys.html#keys) ou o meu Alura+ sobre [performance em listas com React](https://cursos.alura.com.br/extra/alura-mais/melhore-a-performance-das-suas-listas-em-react-c1021).
+
+### Aula 04 - Criando o cronômetro - Vídeo 3
+
+Nesta aula, o instrutor desenvolve um cronômetro e um relógio utilizando React. Ele cria a estrutura básica do componente Cronômetro, adiciona o componente Relógio e o estiliza. O instrutor explica que os componentes ainda não estão dinâmicos e que na próxima aula serão adicionadas funcionalidades como adicionar itens do formulário para a lista, selecionar itens da lista e iniciar o cronômetro.
+
+### Aula 04 - Nessa aula, você aprendeu como`:`
+
+Adicionar informações externas ao componente com Props;
+Aprendemos a utilizar propriedades externas para reutilizar componentes de forma única.
+Funciona o props.children;
+Vimos que o React disponibiliza uma props padrão chamada children, que ao contrário das outras props, é escrita dentro do componente, abrindo e fechando a tag como em uma tag HTML.
+O key (chaves) é importante em arrays no React;
+Entendemos mais a fundo como o React trabalha com arrays, e como o key é importante para que ele não se perca entre os itens deste array.
+Usar spread operator de forma consciente para passar props para os componentes;
+Utilizamos o spread operator para poder passar todos os itens de um objeto como props para o componente, também pensamos como isso pode se tornar um problema.

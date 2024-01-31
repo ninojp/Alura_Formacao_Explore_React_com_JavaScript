@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Item from "./Item";
 
 const AsideStyle= styled.aside`
   grid-area: tarefas;
@@ -22,46 +23,7 @@ const AsideStyle= styled.aside`
       overflow: auto;
       max-height: 500px;
     }
-  }
-.item {
-  background-color: #4D4D4D;
-  border-radius: 8px;
-  box-shadow: 2px 4px 4px #0000009F;
-  padding: 12px;
-  margin-bottom: 8px;
-  position: relative;
-  cursor: pointer;
-  h3 {
-    margin-bottom: 8px;
-    word-break: break-all;
-  }
-  span {
-    color: #D0D0D0;
-  }
-  @media screen and (min-width:1280px) {
-    font-size: 1.8rem;
-  }
-}
-.itemSelecionado {
-  background-color: #292929;
-  box-shadow: 2px 4px 4px #0000009F inset;
-}
-.itemCompletado {
-  background-color: #566F42;
-  cursor: auto;
-  .concluido {
-    display: block;
-    background-image: url('../../assets/img/check-mark.svg');
-    background-repeat: no-repeat;
-    background-size: 38px 38px;
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    width: 42px;
-    height: 43px;
-  }
-}    
+  }  
 `;
 function Lista () {
     const tarefas = [
@@ -85,11 +47,14 @@ function Lista () {
         <AsideStyle>
             <h2>Estudo do Dia</h2>
             <ul>
-                {tarefas.map((itenTarefa) => (
-                    <li key={itenTarefa.id} className="item">
-                        <h3>{itenTarefa.tarefa}</h3>
-                        <span>{itenTarefa.tempo}</span>
-                    </li>
+                {tarefas.map((itemTarefa) => (
+                  <Item
+                    key={itemTarefa.id}
+                    // tarefa={itemTarefa.tarefa}
+                    // tempo={itemTarefa.tempo}
+                    // Poderia ser feito dessa outra forma abaixo
+                    {...itemTarefa}
+                  />
                 ))}
             </ul>
         </AsideStyle>
