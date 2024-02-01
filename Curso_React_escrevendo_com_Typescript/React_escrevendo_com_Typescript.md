@@ -221,3 +221,59 @@ O key (chaves) é importante em arrays no React;
 Entendemos mais a fundo como o React trabalha com arrays, e como o key é importante para que ele não se perca entre os itens deste array.
 Usar spread operator de forma consciente para passar props para os componentes;
 Utilizamos o spread operator para poder passar todos os itens de um objeto como props para o componente, também pensamos como isso pode se tornar um problema.
+
+## Aula 05: State
+
+### Aula 05 - Introduzindo estados - Vídeo 1
+
+Nesta aula, o instrutor ensinou como tornar a lista de tarefas do aplicativo dinâmica utilizando o conceito de estado no React. Ele explicou como substituir a constante pela função useState, que retorna um array com o estado e uma função para atualizá-lo. O instrutor mostrou como utilizar o useState para adicionar uma nova tarefa à lista quando o título for clicado. Ele também explicou que o React é reativo e só renderiza os componentes quando algo muda. No final, o instrutor mencionou que o estado será utilizado para deixar toda a aplicação dinâmica.
+
+### Aula 05 - Para saber mais: Sobre reatividade
+
+O REACT NÃO É REATIVO!!
+
+Na verdade é isso mesmo, no próprio site do React se apresenta como declarativo e não reativo.
+
+Agora você lembra em como a gente tentou mudar as tarefas no vídeo anterior e percebemos que, sem o uso do state, ele não atualiza a interface? Então, isso é um dos motivos do React não ser reativo, ele precisa de forma manual criar um estado que será "observado" por quem usa esse estado para que ele atualize a interface, e para isso você tem que declarar/se inscrever neste estado para que haja alguma mudança.
+
+Para início de conversa, Javascript não é uma linguagem reativa, logo, seus pacotes também não deveriam ser, a não ser que tenhamos uma grande mudança. Existe um pacote chamado RxJS que é uma referência em reatividade com Javascript, mas a equipe do React não demonstrou até agora nenhum interesse de deixar o pacote reativo, e eu posso explicar o porquê.
+
+React aproveita muito bem o paradigma declarativo e ele cai como uma luva em como ele gostaria que houvesse renderizações nos componentes. O React "te pede" para colocar alguma variável que necessita de uma mudança visual dentro de um estado, pois com isso, ele conseguirá ter um controle maior em quando o componente será atualizado, e isso traz um ganho de performance imenso!
+
+Imagina se a nossa aplicação reagisse a literalmente tudo que muda no código, seria MUITA renderização né? e isso com a atualização do DOM custa muito caro.
+
+Essa necessidade de se criar um estado faz com que o React tenha liberdade de criar muitas coisas por debaixo dos panos como batching e Suspense mas isso vamos deixar para outro curso.
+
+Caso queira saber mais sobre isso, veja:
+
+Caso você entenda inglês, tem essa [palestra no ReactNYC](https://www.youtube.com/watch?v=ZZoB5frlcnE) sobre isso;
+Existe também o [Manifesto Reativo](https://www.reactivemanifesto.org/pt-BR), que te permite ver o que pode ser considerado Reativo.
+
+### Aula 05 - Controlando o formulário - Vídeo 2
+
+Nesta aula, o instrutor introduziu o conceito de state no React. Ele explicou que o state é utilizado para tornar a aplicação dinâmica, permitindo que os componentes sejam atualizados com base em eventos ou interações do usuário. O instrutor mostrou como adicionar o state em um componente de classe e como criar um objeto state para armazenar os valores dos inputs de um formulário. Ele também ensinou como tornar os inputs "controlados", ou seja, vinculados ao state do componente, utilizando os atributos "value" e "onChange". O instrutor abordou o método "setState" para atualizar o state e como lidar com o evento de submit do formulário. No próximo vídeo, será mostrado como adicionar a tarefa na lista.
+
+### Aula 05 - Adicionando uma tarefa - Vídeo 3
+
+Nesta aula, o instrutor ensina como levar as tarefas criadas no formulário para dentro de uma lista. Ele destaca a diferença entre os botões do formulário e do cronômetro, e mostra como corrigir essa diferença adicionando o atributo "type" com o valor "submit" no botão do formulário. Em seguida, ele explica como resolver o problema de comunicação entre o formulário e a lista de tarefas, utilizando props para passar informações do formulário para o componente App. O instrutor também utiliza o hook useState para criar um estado "tarefas" no componente App e passa esse estado como prop para o componente Lista. No componente Formulario, ele define uma função "adicionarTarefas" que utiliza o método setTarefas para adicionar uma nova tarefa ao estado "tarefas" no componente App. Por fim, o instrutor remove o array padrão que foi passado para o useState no componente App e tipa o useState para especificar que o estado "tarefas" pode ser um array de ITarefa ou um array vazio.
+
+### Aula 05 - Atualizando a tarefa - Vídeo 4
+
+Nesta aula, o instrutor abordou a resolução de um problema relacionado ao formulário de adição de tarefas em um aplicativo React. Ele mostrou como utilizar o método setState() para resetar o formulário, definindo a string vazia para o campo "tarefa" e o valor "00:00" para o campo "tempo". Além disso, foram adicionadas duas novas variáveis booleanas, "selecionado" e "completado", dentro do objeto de tarefa. Foi utilizado o pacote UUID para gerar um ID aleatório para cada tarefa. Também foram feitas atualizações na interface de tarefas e no componente de item da lista. Com essas alterações, o formulário é resetado corretamente, as novas variáveis são adicionadas ao objeto de tarefa e um ID aleatório é gerado para cada tarefa.
+
+### Aula 05 - Nessa aula, você aprendeu como`:`
+
+- O React utiliza os estados para atualizar os componentes;  
+Aprendemos como o React guarda informações que serão importantes para uma possível nova renderização de um componente.
+Criar estados com function components e class components;  
+- Criamos estados tanto com function components quanto com class components, entendendo como se cria esses estados em cada tipo.
+- Controlar campos de um Formulário com estados;  
+Aprendemos a diferença de um formulário/input controlado e não controlado, e como podemos controlá-los para pegar/mudar seus campos como quisermos.
+- Criar interfaces e reutilizá-las;  
+Vimos como o Typescript nos dá uma forma de criar interfaces para podermos descrever tipos mais complexos, como os props dos componentes.
+- Utilizar props e para informar uma mudança de estado;  
+Utilizamos a junção de props + state para podermos passar state para outros componentes e para podermos avisar que um estado deve ser mudado.
+
+## Aula 06: Selecionando um Item
+
+### Aula 06 - Selecionando uma tarefa - Vídeo 1

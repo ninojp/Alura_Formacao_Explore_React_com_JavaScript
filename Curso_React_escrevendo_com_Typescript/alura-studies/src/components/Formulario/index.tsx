@@ -1,78 +1,63 @@
-// import React, { Children } from "react";
 import React from "react";
 import Botao from "../Botao";
-import styled from "styled-components";
+import { Itarefa } from "../../types/tarefa";
+import style from "./formulario.module.css";
+import {v4 as uuidv4} from "uuid";
 
-const FormStyle = styled.form`
-    display:flex;
-    flex-direction: column;
-    grid-area: nova-tarefa;
-    background-color: #7687A1;
-    border-radius: 10px;
-    box-shadow: 2px 4px 4px #0000009F;
-    padding: 12px;
-    div {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-bottom: 16px;
-      label {
-        margin-bottom: 8px;
-        font-size: 1.25rem;
-      }
-      input {
-        width: 100%;
-        padding: 8px 12px 4px;
-        box-sizing: border-box;
-        border: unset;
-        border-radius: 5px;
-        background-color: #5D677C;
-        box-shadow: 0px 2px 4px #2D2B2B9F inset;
-        &::placeholder {
-          color: #BFBFBF;
-        }
-      }
-    }
-    @media screen and (min-width: 1280px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      font-size: 2.25rem;
-      padding: 24px;
-      box-sizing: border-box;
-      div {
-        width: calc(60% - 12px);
-        &:last-of-type {
-          width: 40%;
-        }
-        label {
-          font-size: 2rem;
-        }
-        input {
-          height: 100%;
-          font-size: 1.75rem;
-        }
-      }
-    }
-`;
-class Formulario extends React.Component{
-    render() {
-        return (
-            <FormStyle>
-                <div>
-                    <label htmlFor="tarefa">Adicione um novo estudo</label>
-                    <input type="text" name="tarefa" id="tarefa" placeholder="O que você quer estudar" required />
-                </div>
-                <div>
-                    <label htmlFor="tempo">Tempo</label>
-                    <input type="time" step="1" name="tempo" id="tempo" min="00:00:00" max="01:30:00" required />
-                </div>
-                <Botao>
-                  adicionar
-                </Botao>
+class Formulario extends React.Component<{
+  setTarefas: React.Dispatch<React.SetStateAction<Itarefa[]>>
+}>{
+  state = {
+    tarefa: '',
+    tempo: '00:00'
+  }
+  adicionarTarefa(evento: React.FormEvent<HTMLFormElement>) {
+    evento.preventDefault()
+    this.props.setTarefas((tarefasAntigas) => [
+      ...tarefasAntigas, 
+      { ...this.state,
+        selecionado: false,
+        completado: false,
+        id: uuidv4()
+      },
+      
+    ]);
+    this.setState({tarefa: '', tempo: '00:00'});
+  }
+  render() {
+    return (
+      <form onSubmit={this.adicionarTarefa.bind(this)} className={style.formulario}>
+        <div>
+          <label htmlFor="tarefa">Adicione um novo estudo</label>
+          <input
+            type="text"
+            name="tarefa"
+            id="tarefa"
+            value={this.state.tarefa}
+            onChange={evento => this.setState({ ...this.state, tarefa: evento.target.value })}
+            placeholder="O que você quer estudar"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="tempo">Tempo</label>
+          <input type="time"
+            step="1"
+            name="tempo"
+            id="tempo"
+            value={this.state.tempo}
+            onChange={evento => this.setState({ ...this.state, tempo: evento.target.value })}
+            min="00:00:00"
+            max="01:30:00"
+            required
+          />
+        </div>
+        <Botao type="submit">
+          adicionar
+        </Botao>
 
-            </FormStyle>
-        );
-    };
+      </form>
+    );
+  };
 };
 export default Formulario;
