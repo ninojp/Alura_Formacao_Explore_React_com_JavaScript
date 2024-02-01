@@ -277,3 +277,53 @@ Utilizamos a junção de props + state para podermos passar state para outros co
 ## Aula 06: Selecionando um Item
 
 ### Aula 06 - Selecionando uma tarefa - Vídeo 1
+
+Nesta aula, o instrutor aborda a implementação da funcionalidade de seleção de tarefas em uma aplicação React com Typescript. Ele explica como criar o estado de "selecionado" utilizando o useState, como passar a função de seleção para os componentes e como utilizá-la para selecionar a tarefa quando ela for clicada. Também é mencionado que é possível melhorar o código substituindo o uso do índice numérico como chave do componente "Item" pelo id da tarefa.
+
+### Aula 06 - Mostrando a tarefa selecionada - Vídeo 2
+
+Nesta aula, o instrutor ensina como selecionar e mostrar uma tarefa em um aplicativo React. Ele explica como usar o setTarefas() para iterar sobre as tarefas e definir a propriedade selecionado como true para a tarefa selecionada. Além disso, ele mostra como adicionar uma classe CSS específica para indicar visualmente que a tarefa está selecionada. A renderização condicional do React permite que o aplicativo reaja automaticamente ao estado de seleção das tarefas. Isso será útil para tornar o cronômetro funcional nos próximos vídeos.
+
+### Aula 06 - Tempo para segundos - Vídeo 3
+
+Nesta aula, o instrutor discute sobre a implementação de um cronômetro em uma aplicação React utilizando Typescript. Ele explica como realizar a conversão do tempo para segundos, dividindo a string do tempo em horas, minutos e segundos e criando uma função utilitária para fazer essa conversão. Além disso, o instrutor aborda a organização do código, separando os estilos CSS em arquivos diferentes e criando uma pasta "common" para funções utilitárias.
+
+### Aula 06 - Para saber mais: Funções importantes dentro do React com Javascript
+
+map  
+O map é um método MUITO importante, pois como no React existe essa combinação grandiosa entre reaproveitamento de código e renderização dinâmica, o map é o método perfeito para isso, pois você consegue iterar sobre todos os itens e retornar alguma coisa no mesmo index que está sendo iterado no laço atual.
+
+Spread Operator  
+O Spread Operator é muito importante para fazer atualizações em estados, pois quando queremos atualizar estados, é comum termos parte do estado que não será alterado.
+
+ternaries  
+Ternários são bem importantes para a parte renderização condicional do React, pois ele permite que consigamos renderizar JSX de forma condicional, adicionar classes de forma condicional, mudar estados de forma condicional, entre outros.
+
+> Nesse caso dou uma menção honrosa ao operador &&, que nos permite renderizar de forma condicional também, mas sem a necessidade do :, ou seja, de um else:
+
+destructuring  
+Para finalizar, o destructuring é muito útil para podermos aproveitar estados anteriores e mudarmos alguma coisa, vamos escrever o exemplo acima:
+
+```JavaScript
+const [curso, setCurso] = useState({ nome: "React com Typescript", completado: false });
+…
+setCurso({
+  …curso,
+ completado: condicao ? true : false
+})
+```
+
+### Aula 06 - Começando o cronômetro - Vídeo 4
+
+Nesta aula, o instrutor mostra como integrar a função de conversão de tempo em um cronômetro. Ele renomeia o arquivo de funções utilitárias para time.ts e ajusta o import no arquivo index.tsx do componente Cronometro. Em seguida, ele explica que o valor selecionado é exibido com a cor cinza no arquivo App.tsx e será passado para o componente Cronometro quando uma tarefa for selecionada. Ele também mostra como tipar o selecionado no componente Cronometro e como tratar o caso em que o valor é undefined. O instrutor cria um novo estado chamado tempo no componente Cronometro para armazenar o tempo restante do cronômetro, utilizando a função useState() e a função tempoParaSegundos() para definir o valor inicial do estado. Ele explica como tratar o caso em que o valor selecionado é undefined e como tipar o estado tempo como number. No final, o instrutor exibe o valor do estado tempo na tela e menciona que ocorre um erro de renderização infinita, que será abordado no próximo vídeo.
+
+### Aula 06 - Nessa aula, você aprendeu como`:`
+
+Compartilhar valores comuns entre componentes;
+Aprendemos como criar um estado que será compartilhado entre vários componentes.
+Estender interfaces;
+Usamos a facilidade de estender uma interface dentro de outra interface para reaproveitar código.
+Adicionar classes CSS de forma condicional;
+Aprendemos a utilizar um ternário para mudar classes CSS de uma tag baseada em alguma prop com template string.
+Criar pastas utilitárias;
+Debatemos sobre formas de criar pastas com funções utilitárias compartilhadas na aplicação.
