@@ -327,3 +327,116 @@ Adicionar classes CSS de forma condicional;
 Aprendemos a utilizar um ternário para mudar classes CSS de uma tag baseada em alguma prop com template string.
 Criar pastas utilitárias;
 Debatemos sobre formas de criar pastas com funções utilitárias compartilhadas na aplicação.
+
+## Aula 07: Finalizando o Projeto
+
+### Aula 07: - Observando mudanças - Vídeo 1
+
+Nesta aula, o instrutor aborda o problema de renderização excessiva ao selecionar uma tarefa em um cronômetro. O erro "Too many re-renders" é identificado e a solução proposta é utilizar o hook "useState" e o hook "useEffect". O instrutor explica como passar a função "tempoParaSegundos" como valor padrão do estado "tempo" e como atualizar o estado quando a propriedade "selecionado" muda. O TypeScript é destacado como uma ferramenta importante para evitar erros e validar propriedades.
+
+### Aula 07: - Exercício
+
+Reagindo ao estado
+
+Precisamos reagir ao estado selecionado para fazer uma mudança no nosso componente. Qual alternativa que define a forma correta de reagir a essa mudança?
+
+>Alternativa correta
+>Usando o useEffect antes do return e colocando no array de dependências a variável selecionado.
+
+Conseguimos com o useEffect "observar" a mudança do estado e, sempre que ele mudar, executar uma função fazendo alguma alteração
+
+> O que eu entendi:  
+> O useState, cria um estado (estado atual) para o componente.  
+> O useEffect, monitora este estado atual(através de um [dependência, parametro ou variável]) e se ele mudar, executa uma função, pré determinada dentro dele(useEffect).
+
+### Aula 07 - Para saber mais: Ciclo de vida de um componente
+
+Em geral um componente tem um ciclo de vida assim:
+
+componentWillMount (antes de ser montado)
+componentDidMount (acabou de ser montado)
+componentWillUpdate (componente vai ser atualizado)
+componentWillUnmount (componente vai ser desmontado)
+
+Claro que esses não são os únicos métodos, mas são os mais importantes para que consigamos entender o ciclo de vida de forma didática, caso queira saber mais, acesse a documentação sobre [React.Component](https://pt-br.legacy.reactjs.org/docs/react-component.html).
+
+componentWillMount
+
+```JavaScript
+useLayoutEffect(() => {
+    …
+  },[])
+```
+
+Começamos com um bem pouco utilizado, o hook useLayoutEffect, ele com o array vazio atua como o componentWillMount. É usado quando você precisa mudar algo visualmente antes do componente aparecer, para que não haja aquele problema da tela piscar assim que a tela carrega, um bom exemplo disso atualmente é a mudança de temas para light/dark.
+
+componentDidMount
+
+```JavaScript
+ useEffect(() => {
+    …
+  }, [])
+```
+
+O useEffect com o array de dependências vazio atua como ocomponentDidMount, diferente do useLayoutEffect, ele executa assim que o componente é renderizado, normalmente é utilizado para fazer chamadas para o servidor ou fazer algum cálculo com props passados.
+
+componentWillUpdate
+
+```JavaScript
+ useEffect(() => {
+    …
+  }, [variavel])
+```
+
+O componentWillUpdate pode ser feito tanto pelo useLayoutEffect quanto pelo useEffect, desde que tenha uma variável no array de dependências e, à partir da primeira execução, os 2 atuarão como componentWillUpdate, sempre executando quando essa variável mudar.
+
+componentWillUnmount
+
+```JavaScript
+useEffect(() => {
+  return () => {
+    …
+  }
+},[])
+```
+
+Diferente do que muitas pessoas pensam, também existe a representação do componentWillUnmount em hooks, que é retornar uma função dentro do useEffect! dessa forma essa função dentro do return só será executada quando o componente estiver desmontando. É bastante usado para clearTimeout, clearInterval ou para enviar informações de acesso daquele componente para outro lugar.
+
+### Aula 07 - Mostrando no relógio - Vídeo 2
+
+Nesta aula, o instrutor ensina como utilizar o useEffect para atualizar o cronômetro de acordo com a tarefa selecionada. Ele também mostra como tipar corretamente a propriedade tempo no componente Relógio utilizando TypeScript. Além disso, o instrutor explica como obter os minutos e segundos separadamente e exibi-los corretamente no relógio. Ele também aborda como resolver um erro de iteração sobre strings no TypeScript. Por fim, o instrutor utiliza a função padStart() para adicionar zeros à esquerda dos minutos e segundos e atualiza as tags span do componente Relógio.
+
+### Aula 07 - Regressiva - Vídeo 3
+
+Nesta aula, o instrutor finaliza a implementação de uma aplicação em React utilizando Typescript. Ele adiciona um evento de clique em um botão personalizado e explica a necessidade de tipar o evento onClick para o TypeScript reconhecer corretamente. Em seguida, ele implementa uma contagem regressiva utilizando a função setTimeout do JavaScript. Ao clicar no botão, o contador começa a decrementar a cada segundo até chegar a zero.
+
+### Aula 07 - Finalizando a tarefa - Vídeo 4
+
+Nesta aula, finalizamos a implementação de uma aplicação que possui um temporizador e uma lista de tarefas. Implementamos a função finalizarTarefa() que é responsável por finalizar a tarefa selecionada. Também adicionamos a função finalizarTarefa() no componente "Cronometro" e adicionamos uma renderização condicional para o estilo do item na lista de tarefas. Por fim, adicionamos uma condição para evitar que tarefas já finalizadas sejam selecionadas novamente. Com essas implementações, conseguimos finalizar a aplicação, onde as tarefas são finalizadas automaticamente quando o temporizador chega a zero e não podem mais ser selecionadas.
+
+### Aula 07 - Refatorando Class Components - Vídeo 5
+
+Nesta aula, o instrutor discute a refatoração de componentes de classe para componentes de função no React. Ele mostra como refatorar os componentes "Botao" e "Formulario" e destaca os benefícios dessa refatoração, como código mais enxuto e legível. A refatoração para componentes de função evita o uso de "bind" e o gerenciamento de um estado gigantesco com "setState". No final, o projeto está completo e o curso está perto de ser finalizado.
+
+### Aula 07 - Nessa aula, você aprendeu como`:`
+
+- Funciona o ciclo de vida de um componente;
+Entendemos como o ciclo de vida de um componente funciona, desde o seu nascimento até a sua morte.
+- Utilizar o useEffect;
+Utilizamos o useEffect para resolver um problema que tivemos e vimos como esse hook é importante no ecossistema React.
+- Desestruturar strings;
+Aprendemos que podemos desestruturar strings e que podemos colocar a opção downLevelIteration para que possamos fazer essa desestruturação.
+- Utilizar função recursiva;
+Criamos uma função recursiva para resolver o problema da contagem regressiva.
+- Refatorar um class component para um function component;
+Aprendemos como refatorar um class component para function component.
+
+### Aula 07 - Conclusão do Curso - Vídeo 6
+
+Nesta aula de conclusão do curso de React com TypeScript, aprendemos diversos conceitos e técnicas para a criação de projetos utilizando o React App. Exploramos a criação de projetos do zero, utilização de componentes de classe e de função, e o uso de classes com CSS e CSS-modules para evitar a sobreposição de estilos.
+
+Um dos principais tópicos abordados foi a comunicação entre componentes utilizando props e o funcionamento do state. Aprendemos como um componente renderiza automaticamente quando há uma alteração no state e como passar o state entre diferentes componentes. Também compreendemos que o React é unidirecional e reativo, e aprendemos a lidar com essas características.
+
+Ao longo do curso, deixamos o projeto dinâmico utilizando CSS, props e state. Foi possível criar uma tarefa no Alura-Studies, selecionar a tarefa e definir o tempo. Além disso, foram propostos exercícios para fixação do conteúdo e o "Para Saber Mais" trouxe conteúdos adicionais para aprofundamento.
+
+O instrutor incentivou a participação no fórum para tirar dúvidas e ajudar outros alunos, e encorajou o feedback sobre o curso. No geral, o curso foi bem estruturado e abordou de forma clara e prática os conceitos essenciais do React com TypeScript. Espero que tenham gostado do curso e que possam aplicar os conhecimentos adquiridos em seus projetos futuros. Até a próxima!
