@@ -46,3 +46,40 @@ Nós utilizamos o hook useSetRecoilState para adicionar novos itens à lista de 
 ## Aula 02 - Manipulando os eventos
 
 ### Aula 02 - Deletando eventos - Vídeo 1
+
+Nesta aula, o instrutor ensinou como implementar a funcionalidade de exclusão de eventos em um componente de lista usando o Recoil. Ele mostrou como criar a função excluirEvento e usar o useSetRecoilState para atualizar o estado da lista de eventos. A função de exclusão remove o evento da lista usando o método filter. O instrutor também fez algumas alterações nos arquivos relacionados para remover props e callbacks desnecessários. A funcionalidade de exclusão foi testada e está funcionando corretamente. No próximo vídeo, o instrutor irá abordar a implementação da funcionalidade de atualização dos eventos quando o usuário interagir com um checkbox.
+
+### Aula 02 - Atualizando o evento - Vídeo 2
+
+Nesta aula, o instrutor discute a implementação de uma funcionalidade de atualização de eventos em um aplicativo utilizando a biblioteca Recoil. Ele mostra como fazer essa atualização substituindo o antigo método de passar o estado através de props. É criada uma função chamada "alterarStatus" que é executada quando o evento é clicado, e essa função atualiza o estado da lista de eventos. O instrutor também menciona a existência de um bug relacionado à atualização da lista de eventos quando o usuário arrasta um evento no calendário.
+
+### Aula 02 - Corrigindo o bug - Vídeo 3
+
+Nesta aula, o instrutor discute a correção de um bug em um calendário. Ele encontra um comportamento inesperado e utiliza um callback chamado "onEventDragFinish" para corrigi-lo. O instrutor copia um exemplo de código da documentação, faz algumas modificações e atualiza o estado do evento no componente de checkbox. Ele destaca a preocupação com a duplicação de código e a falta de reutilização, e menciona que a próxima etapa será extrair essa rotina de atualização do evento para um código reaproveitável.
+
+### Aula 02 - Refatorando código duplicado - Vídeo 4
+
+Nesta aula, o instrutor discute a importância de evitar o uso de "copy and paste" no código e a necessidade de criar código reaproveitável. Ele propõe a criação de um hook chamado "useAtualizarEvento.ts" que terá acesso ao estado do Recoil e retornará uma função que atualiza o evento. O instrutor demonstra como utilizar esse hook em diferentes partes do código, como no calendário e no checkbox do evento. Ele destaca a importância de encapsular o Recoil em hooks para deixar o código mais organizado e as responsabilidades bem definidas. O princípio "DRY" (Don't Repeat Yourself) é mencionado, enfatizando a importância de evitar código duplicado. Por fim, o instrutor ressalta a necessidade de expandir essa abordagem para o restante da aplicação, encapsulando em hooks os métodos de adicionar, excluir e alterar, para que não fiquem acoplados ao Recoil.
+
+### Aula 02 - Para saber mais: SOLID e Clean Code
+
+Durante essa aula, nós vimos um princípio chamado DRY, acrônimo para “não se repita”. Esses termos normalmente são relacionados ao backend, mas também são muito importantes na arquitetura dos projetos de frontend. Um bom embasamento de orientação a objetos, padrões de projetos e boas práticas vai te ajudar no dia a dia da profissão.
+
+Apesar de estar focado no backend, você consegue entender os conceitos mais a fundo neste [artigo](https://www.alura.com.br/artigos/o-que-e-clean-code).
+
+### Aula 02 - Nessa aula, você aprendeu como`:`
+
+- Remover eventos do estado  
+  Existem várias formas de operar listas, e nós removemos utilizando o método filter. Se quiser se aprofundar mais nesses tipos de algoritmos, vale a pena conhecer os seguintes métodos:
+  - indexOf: para obter um determinado índice de um elemento num array.
+  - slice: para obter, a partir de um índice ou intervalo, uma quantidade N de elementos.
+
+- Atualizar um evento específico  
+  Vimos que a lista que recebemos é imutável, mas podemos definir uma nova lista reposicionando o evento alterado.
+
+- Hook customizado  
+Criamos um hook reaproveitável e responsável por atualizar um evento, inclusive encapsulando o recoil.
+
+## Aula 03 - 
+
+### Aula 03 -  - Vídeo 1
