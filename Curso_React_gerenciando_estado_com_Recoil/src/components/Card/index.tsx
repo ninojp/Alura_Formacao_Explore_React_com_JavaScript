@@ -6,5 +6,4 @@ const Card: React.FC = ({ children }) => {
     {children}
   </div>)
 }
-
 export default Card

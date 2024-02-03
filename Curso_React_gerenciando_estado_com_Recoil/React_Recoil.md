@@ -80,6 +80,26 @@ Apesar de estar focado no backend, você consegue entender os conceitos mais a f
 - Hook customizado  
 Criamos um hook reaproveitável e responsável por atualizar um evento, inclusive encapsulando o recoil.
 
-## Aula 03 - 
+## Aula 03 - Acoplamento e Coesão
 
-### Aula 03 -  - Vídeo 1
+### Aula 03 - Encapsulando a adição de eventos - Vídeo 1
+
+Nesta aula, o instrutor discute a importância de evitar gargalos técnicos ao escalar uma aplicação. Ele propõe a criação de um hook personalizado chamado "useAdicionarEvento" para encapsular a lógica de validação de eventos com data retroativa. O hook adiciona o ID do evento antes de adicioná-lo à lista e valida que a data de início não pode ser menor que a data atual. O instrutor mostra como utilizar o hook no código do formulário, substituindo a chamada para o método "setListaDeEventos". Ele destaca a importância de ter um código reaproveitável e dividir as responsabilidades adequadamente. Isso facilita a manutenção e escalabilidade da aplicação.
+
+### Aula 03 - Lista de eventos via hook - Vídeo 2
+
+Nesta aula, o instrutor finaliza a implementação de um Hook personalizado chamado "useListaDeEventos" para encapsular o uso do Recoil, uma biblioteca de gerenciamento de estado para React. Esse Hook retorna a lista de eventos armazenada no átomo "listaDeEventosState". Com a substituição do uso do "useRecoilValue" pelo "useListaDeEventos" nos componentes "Calendário" e "ListaDeEventos", o código fica mais limpo e coeso, pois os componentes não precisam conhecer o Recoil diretamente. A separação de responsabilidades resulta em uma aplicação mais enxuta e melhora a manutenibilidade do código. O instrutor destaca a importância dos princípios de baixo acoplamento e alta coesão no desenvolvimento de software.
+
+### Aula 03 - Boas práticas - Vídeo 3
+
+Nesta aula, o instrutor discute a importância de extrair a lógica de acesso ao Recoil para hooks customizados. Isso traz benefícios como uma melhor definição das responsabilidades dos componentes e uma maior coesão. Agora, a responsabilidade do formulário é transformar os inputs do usuário em um objeto de evento e chamar o hook correspondente. Já o hook useAdicionarEventos é responsável por receber e validar o evento, adicionando-o ao estado se estiver válido. O instrutor destaca a importância da alta coesão, onde os componentes têm responsabilidades bem definidas. Em relação ao acoplamento, o Recoil está encapsulado, o que significa que se houver a necessidade de trocar a ferramenta utilizada, como o Jotai, Redux ou Context API, será preciso mexer apenas nos hooks e não nos componentes. O objetivo é diminuir o acoplamento entre os componentes e as ferramentas utilizadas. Por fim, o instrutor menciona que ainda falta implementar o filtro na aplicação e que isso será abordado na próxima aula.
+
+### Aula 03 - Nessa aula, você aprendeu como`:`
+
+Diminuir o acoplamento da aplicação
+
+Ao extrair a comunicação com o recoil em hooks, estamos desacoplados da lib em si. Se trocarmos por qualquer outra solução, estaremos prontos. Só precisamos alterar os hooks, e não os componentes.
+Aumentar a coesão
+
+Ao remover a responsabilidade de alterar o estado para os hooks, nossos componentes ficam mais coesos e não precisam se preocupar com as implementações relacionadas a manipular o estado.
+
