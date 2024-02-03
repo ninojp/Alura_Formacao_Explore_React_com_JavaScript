@@ -103,3 +103,31 @@ Aumentar a coesão
 
 Ao remover a responsabilidade de alterar o estado para os hooks, nossos componentes ficam mais coesos e não precisam se preocupar com as implementações relacionadas a manipular o estado.
 
+## Aula 04 - Filtrando Eventos
+
+### Aula 04 - Um átomo para a todos filtrar - Vídeo 1
+
+Nesta aula, o instrutor explica como implementar um filtro em uma aplicação utilizando o Recoil. Ele começa mostrando o componente de formulário pronto para submeter o filtro. Em seguida, cria uma interface chamada "IFiltroDeEventos" que representa o filtro de eventos, com uma propriedade opcional chamada "data" do tipo "Date".
+
+Utilizando o Recoil, o instrutor cria um átomo chamado "filtroDeEventos" do tipo "IFiltroDeEventos" com valor padrão vazio. No componente de formulário, utiliza o hook "useSetRecoilState" para obter a função "setFiltroDeEvento" que permite alterar o valor do átomo.
+
+Ele substitui a chamada do método "aoFiltroAplicado" pelo "setFiltroDeEvento" e cria a constante "filtro" que é um objeto do tipo "IFiltroDeEventos". Verifica se o campo de data foi preenchido e, se sim, atribui o valor ao filtro, caso contrário, atribui nulo. Por fim, chama a função "setFiltroDeEvento" passando o filtro como argumento para atualizar o estado do átomo.
+
+O instrutor também faz correções nos componentes relacionados ao filtro e menciona a necessidade de implementar a lógica de filtragem na lista de eventos.
+
+### Aula 04 - Aplicando o filtro - Vídeo 2
+
+Nesta aula, o instrutor discute a implementação de um filtro para eventos em uma lista. Ele explica como obter o valor do filtro usando o hook "useRecoilValue" e utiliza o método "filter" para filtrar os eventos com base na data. O instrutor testa o filtro aplicando diferentes valores de data e verifica se a lista de eventos reage corretamente. No entanto, ele menciona que o filtro não está sendo aplicado ao calendário e sugere copiar o código para o arquivo do calendário, mas ressalta que essa não é a melhor abordagem. Ele menciona que na próxima aula será abordada a melhor forma de aplicar o filtro sem replicar código.
+
+### Aula 04 - Filtrando com seletores - Vídeo 3
+
+Nesta aula, o instrutor aborda a criação de um estado derivado no Recoil, uma biblioteca de gerenciamento de estado para React. Ele mostra como criar um seletor utilizando a função "selector" do Recoil, que permite acessar os valores do Recoil, como a lista de eventos e o filtro. O instrutor também destaca a importância de manter a coesão e o baixo acoplamento ao utilizar um hook que retorna os eventos filtrados em vez de retornar a lista completa. Ele demonstra como modificar o hook existente para retornar apenas os eventos filtrados e como utilizar esse novo hook na aplicação. Por fim, o instrutor menciona que ensinará como inicializar a lista de eventos com valores padrões obtidos do servidor no próximo trecho do vídeo.
+
+### Aula 04 - Nessa aula, você aprendeu como`:`
+
+Derivar estados com seletores
+
+Mantendo assim a responsabilidade bem definida para cada parte do sistema.
+Adicionar funcionalidades de forma incremental
+
+Primeiro, colocamos o filtro para funcionar. Na sequência, melhoramos a implementação e extraímos a lógica.

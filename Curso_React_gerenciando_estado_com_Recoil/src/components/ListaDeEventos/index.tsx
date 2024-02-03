@@ -4,10 +4,12 @@ import Filtro from '../Filtro';
 import style from './ListaDeEventos.module.scss';
 import useListaDeEventos from '../../state/hooks/useListaDeEventos';
 
-const ListaDeEventos: React.FC<{aoFiltroAplicado: (data: Date | null) => void }> = ({aoFiltroAplicado}) => {
+const ListaDeEventos: React.FC = () => {
   const eventos = useListaDeEventos();
+  // const filtro = useRecoilValue<IFiltroDeEventos>(filtroDeEventos);
+
   return (<section>
-    <Filtro aoFiltroAplicado={aoFiltroAplicado} />
+    <Filtro />
     <div className={style.Scroll}>
       {eventos.map(evento => (
         <Evento evento={evento} key={evento.id} />
@@ -15,4 +17,4 @@ const ListaDeEventos: React.FC<{aoFiltroAplicado: (data: Date | null) => void }>
     </div>
   </section>)
 }
-export default ListaDeEventos
+export default ListaDeEventos;
