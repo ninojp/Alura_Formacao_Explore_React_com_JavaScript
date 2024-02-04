@@ -4,6 +4,8 @@ import Formulario from './components/Formulario';
 import Calendario from './components/Calendario';
 import ListaDeEventos from './components/ListaDeEventos';
 import { RecoilRoot } from 'recoil';
+import { Suspense } from 'react';
+import DebugObserver from './components/DebugObserver';
 
 function App() {
   // const [eventos, setEventos] = useState<IEvento[]>([
@@ -25,18 +27,18 @@ function App() {
   // const [filtro, setFiltro] = useState<Date | null>()
   // const adicionarEvento = (evento: IEvento) => {
   //   evento.id = Math.round((new Date()).getTime() / 1000)
-    // eventos.push(evento)
-    // setEventos([...eventos])
+  // eventos.push(evento)
+  // setEventos([...eventos])
   // }
   // const alterarStatusEvento = (id: number) => {
-    // const evento = eventos.find(evento => evento.id === id)
-    // if (evento) {
-    //   evento.completo = !evento.completo
-    // }
-    // setEventos([...eventos])
+  // const evento = eventos.find(evento => evento.id === id)
+  // if (evento) {
+  //   evento.completo = !evento.completo
+  // }
+  // setEventos([...eventos])
   // }
   // const deletarEvento = (id: number) => {
-    // setEventos([...eventos.filter(evento => evento.id !== id)])
+  // setEventos([...eventos.filter(evento => evento.id !== id)])
   // }
   // const aplicarFiltro = (data: Date | null) => {
   //   setFiltro(data)
@@ -48,20 +50,24 @@ function App() {
   //   );
   return (
     <RecoilRoot>
-      <div className={style.App}>
-        <div className={style.Coluna}>
-          <Card>
-            <Formulario />
-          </Card>
-          <hr />
-          <Card>
-            <ListaDeEventos />
-          </Card>
+      <DebugObserver />
+      <Suspense fallback={"Está carregando..."}>
+        <div className={style.App}>
+          <div className={style.Coluna}>
+            <Card>
+              <Formulario />
+            </Card>
+            <hr />
+            <Card>
+              <ListaDeEventos />
+            </Card>
+          </div>
+          <div className={style.Coluna}>
+            <Calendario />
+          </div>
         </div>
-        <div className={style.Coluna}>
-          <Calendario />
-        </div>
-      </div>
+      </Suspense>
+
     </RecoilRoot>
   );
 }

@@ -131,3 +131,36 @@ Mantendo assim a responsabilidade bem definida para cada parte do sistema.
 Adicionar funcionalidades de forma incremental
 
 Primeiro, colocamos o filtro para funcionar. Na sequência, melhoramos a implementação e extraímos a lógica.
+
+## Aula 05 - Seletores Async e Depuração
+
+### Aula 05 - Criando um seletor assíncrono - Vídeo 1
+
+Nesta aula, o instrutor explica como fazer uma requisição HTTP para uma API utilizando o Json Server. Ele mostra como instalar o Json Server globalmente e criar um arquivo "db.json" com os eventos desejados. Em seguida, ele inicia o servidor e verifica se os eventos são retornados corretamente. Por fim, menciona que agora vão implementar a lógica para trazer esses eventos para a aplicação quando ela iniciar.
+
+### Aula 05 - Valores padrões para o átomo - Vídeo 2
+
+Nesta aula do curso "React: gerenciando estado com Recoil", o instrutor Vinicios Neves explica como conectar uma aplicação React a uma API falsa usando o Json Server. Ele mostra como criar um seletor assíncrono para obter os eventos da API, fazendo uma requisição assíncrona usando a função fetch do JavaScript. O instrutor também ensina a aguardar a resposta da requisição e transformá-la em JSON, além de percorrer a lista de eventos e converter os campos de data de string para objetos Date usando o método map. Ele também aborda a definição de um valor padrão para o seletor e a utilização do componente suspense para exibir um fallback enquanto a requisição está sendo feita. Por fim, o instrutor destaca a importância do debug no gerenciamento de estado e promete abordar essa questão no próximo vídeo.
+
+### Aula 05 - Observando alterações no estado - Vídeo 3
+
+No GoogleChrome, no DevTools, console eu tive que selecionar em All Level - Verbose, para exibir no cosole do devtools as mudanças de estado.  
+No firefox todo foi exibido automaticamente, e como sempre de forma mais completa.
+
+Nesta aula, o instrutor discute a importância de entender e gerenciar o estado em desenvolvimento front-end. Ele apresenta o Recoil, uma biblioteca de gerenciamento de estado para React, e explora as ferramentas disponíveis na documentação do Recoil. O instrutor decide usar a opção de observar todas as mudanças no estado e mostra como implementar o componente DebugObserver para isso. Ele também aborda um erro de compilação relacionado ao TypeScript e faz as alterações necessárias. Ao importar e usar o DebugObserver no arquivo App.tsx, ele demonstra como o console exibe as alterações no estado conforme ele é modificado. O instrutor destaca a importância dessa ferramenta de debug e como ela pode ser um fator decisivo na escolha de uma biblioteca de gerenciamento de estado. Ele conclui afirmando que o Event Tracker está pronto para evoluir, com o estado devidamente encapsulado e preparado para receber novas funcionalidades de forma organizada.
+
+### Aula 05 - Nessa aula, você aprendeu como`:`
+
+- Criar seletores assíncronos
+
+  - Integrando assim o recoil com uma API REST.
+    - Definir um valor inicial dinâmico para o átomo  
+  - Ao definir o seletor async como valor padrão para o átomo, todos os eventos iniciais passam a vir da API.
+
+- Criar uma ferramenta de depuração
+
+  - Agora fica mais simples de entender as mudanças no estado, uma vez que implementamos um componente que faz log cada vez que o estado é manipulado.
+
+### Aula 05 - Conclusão - Vídeo 4
+
+Nesta aula do curso "React: gerenciando estado com Recoil", foi abordado o uso de seletores assíncronos e técnicas de depuração. Durante o curso, foram realizadas refatorações de código para tornar a aplicação mais escalável, eliminando o Prop Drilling. Foram criados hooks customizados para adicionar, atualizar e deletar eventos. Além disso, foi discutido o encapsulamento do acesso ao Recoil, facilitando a substituição por outras ferramentas. Também foi abordado o uso de ferramentas de debug, como um componente de log. Com essas melhorias, a aplicação está pronta para crescer e proporcionar uma boa experiência aos desenvolvedores. Parabéns por concluir o curso e sucesso em sua jornada como desenvolvedor!
