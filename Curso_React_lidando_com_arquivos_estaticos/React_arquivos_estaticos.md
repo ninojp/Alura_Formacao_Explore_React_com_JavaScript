@@ -41,7 +41,7 @@ Aplicamos estilos escritos em Sass via CSS Modules e adicionamos a capacidade do
 
 ### Aula 02 - Tentando importar o svg - Vídeo 1
 
-> Arquivos estáticos(normalmento colocados na pasta ASSETS) são: Imagens, SVG...
+> Arquivos estáticos(normalmento colocados na pasta ASSETS) são: Imagens, SVG, fonts, files...
 
 Nesta aula, o instrutor aborda a utilização do CSS Modules em um projeto de site. Ele mostra os arquivos que serão abordados, como index.tsx, Cardapio/index.tsx, Cardapio/Cardapio.module.scss e logo.svg. O instrutor ensina como utilizar o CSS Modules no arquivo Cardapio.module.scss, adicionando um estilo de padding para a classe .menu. Em seguida, ele mostra como importar a logo do Aluroni, criando uma pasta assets e colocando o arquivo logo.svg dentro dela. No entanto, ao atualizar a página, a imagem não é exibida corretamente. O instrutor menciona que irá abordar esse problema com mais detalhes no próximo vídeo.
 
@@ -82,6 +82,33 @@ Utilizar a biblioteca reset css para resetar o css;
 
 - Resetamos os estilos da nossa página utilizando uma biblioteca chamada reset.css que nos ajuda a limpar os estilos padrões de cada elemento de acordo com cada navegador.
 
-## Aula 03 -
+## Aula 03 - Header e Buscador
 
-### Aula 03 -  - Vídeo 1
+### Aula 03 - Adicionando fontes e normalize - Vídeo 1
+
+> A importação dentro do index.css via @import-normalize; Não funcionou como o prof explicou. então foi feito via comando: npm install normalize.css
+
+Nesta aula, o instrutor abordou a importação de fontes e a atualização do arquivo "Reset.css" em uma aplicação React. Ele mostrou como importar uma fonte do Google e explicou duas formas de fazer isso: via link no HTML ou via @import no CSS. O instrutor também falou sobre a importância de utilizar o arquivo "index.css" para importar a fonte, pois assim ela estará disponível para todos os estilos do projeto. Além disso, ele mencionou o "Reset.css" e mostrou uma alternativa utilizando o "normalize.css", que normaliza os estilos entre diferentes navegadores.
+
+### Aula 03 - Criando o header - Vídeo 2
+
+Nesta aula, o instrutor mostra como criar o cabeçalho de um cardápio em um projeto React. Ele utiliza CSS Modules, o padrão BEM e boas práticas de organização de código. O instrutor também ensina como importar imagens e utilizar variáveis no Sass, aproveitando as funcionalidades do Create React App.
+
+>"Então vou fazer o seguinte, dentro de “src”, eu vou criar uma nova pasta chamada “styles”, e dentro dessa pasta eu vou criar um novo arquivo chamado “_variaveis.scss”. Esse underline antes é só uma boa prática, em alguns compiladores funciona que permite que você ignore esses arquivos."
+
+### Aula 03 - Criando o buscador - Vídeo 3
+
+Nesta aula, o instrutor explica como criar a seção de cardápio em um projeto React. Ele mostra os arquivos relevantes que serão utilizados, como package-lock.json, package.json, Cardapio.module.scss, index.tsx, Buscador.module.scss, _breakpoints.scss e _variaveis.scss. O instrutor utiliza a prática do BEM para nomear as classes CSS e cria um componente de buscador em um novo arquivo chamado index.tsx. Ele explica como passar o estado de busca para o componente acima (Cardapio) para que ele possa ser reutilizado em outros lugares. O instrutor também mostra o código CSS necessário para estilizar o buscador, utilizando variáveis e breakpoints. Por fim, ele adiciona um ícone de busca ao componente de buscador. No próximo vídeo, serão criados os filtros para o cardápio.
+
+### Aula 03 - Nessa aula, você aprendeu como`:`
+
+- Importar fontes externas
+  - Aprendemos como importar fontes externas no nosso projeto utilizando o google fonts.
+- Utilizar o normalize.css
+  - Utilizamos o normalize.css para padronizar os estilos da página html em cada navegador.
+- Utilizar ícones
+  - Aprendemos como é fácil utilizar ícones com a biblioteca react-icons.
+- Ignorar arquivos para build
+  - Vimos como ignorar arquivos no momentos de build para que sejam utilizados apenas quando os chamar.
+- Criar variáveis css
+  - Criamos variáveis css para nos auxiliar na padronização dos estilos da página, evitando repetição e facilitando na manutenção de código.
