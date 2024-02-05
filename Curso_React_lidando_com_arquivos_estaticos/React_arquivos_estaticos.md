@@ -27,3 +27,16 @@ Como qualquer um pode criar seu template, é possível criar vários projetos pe
 Dessa forma, pesquisando por [cra-template-* no site do npm](https://www.npmjs.com/search?q=cra-template-*) podemos encontrar vários templates criados pela comunidade. O padrão adotado é sempre cra-template- seguido do nome do template.
 
 ### Aula 01 - Configurando pacotes - Vídeo 3
+
+Nesta aula, o instrutor inicia a implementação de um projeto React. Ele cria uma nova pasta chamada "pages" dentro de "src" e dentro dela, uma subpasta chamada "Cardápio". Em seguida, ele cria um arquivo chamado "index.tsx" dentro da subpasta "Cardápio" e exporta um componente de função chamado "Cardapio". O instrutor começa a escrever o código JSX dentro desse componente, criando uma tag `<main>` e dentro dela, um `<nav>` com a classe "menu". Ele menciona que o projeto utilizará CSS Modules e Sass e mostra como instalar as dependências necessárias. Além disso, ele cria um arquivo "Cardapio.module.scss" para armazenar os estilos Sass e importa esse arquivo como um objeto no arquivo "index.tsx". No próximo vídeo, o instrutor começará a estilizar o menu.
+
+### Aula 01 - Nessa aula, você aprendeu como`:`
+
+Criar projetos usando Create React App;
+Vimos como podemos usar templates, como typescript para criar projetos com CRA e depois removemos o que não será utilizado neste projeto;
+Usar CSS Modules com TypeScript e Sass;
+Aplicamos estilos escritos em Sass via CSS Modules e adicionamos a capacidade do Visual Studio Code oferecer autocomplete dos módulos de estilos com typescript-plugin-css-modules.
+
+## Aula 02 -
+
+### Aula 02 -  - Vídeo 1
