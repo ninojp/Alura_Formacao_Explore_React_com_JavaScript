@@ -37,6 +37,51 @@ Vimos como podemos usar templates, como typescript para criar projetos com CRA e
 Usar CSS Modules com TypeScript e Sass;
 Aplicamos estilos escritos em Sass via CSS Modules e adicionamos a capacidade do Visual Studio Code oferecer autocomplete dos módulos de estilos com typescript-plugin-css-modules.
 
-## Aula 02 -
+## Aula 02 - Assets
 
-### Aula 02 -  - Vídeo 1
+### Aula 02 - Tentando importar o svg - Vídeo 1
+
+> Arquivos estáticos(normalmento colocados na pasta ASSETS) são: Imagens, SVG...
+
+Nesta aula, o instrutor aborda a utilização do CSS Modules em um projeto de site. Ele mostra os arquivos que serão abordados, como index.tsx, Cardapio/index.tsx, Cardapio/Cardapio.module.scss e logo.svg. O instrutor ensina como utilizar o CSS Modules no arquivo Cardapio.module.scss, adicionando um estilo de padding para a classe .menu. Em seguida, ele mostra como importar a logo do Aluroni, criando uma pasta assets e colocando o arquivo logo.svg dentro dela. No entanto, ao atualizar a página, a imagem não é exibida corretamente. O instrutor menciona que irá abordar esse problema com mais detalhes no próximo vídeo.
+
+### Aula 02 - Importando a logo - Vídeo 2
+
+> npm run build  
+> Este comando serve para gerar uma pasta com o projeto PRONTO, ou seja com o projeto pronto para fazer o DEPLOY(colocar no ar).
+
+[npm run build](https://create-react-app.dev/docs/deployment/), cria um diretório BUILD com uma versão de produção do seu aplicativo.
+
+Nesta aula, o instrutor aborda um problema em que o arquivo "logo.svg" não está sendo reconhecido durante a execução do projeto. Ele explica que o Webpack, responsável por gerar o "build", não reconhece que o caminho do arquivo é estático. Para resolver esse problema, o instrutor mostra duas soluções: importar o arquivo SVG no código e utilizar a variável de importação como o caminho do arquivo, ou utilizar o pacote SVGR para converter o SVG em um componente React. Ambas as soluções resolvem o problema e permitem que o projeto prossiga para a próxima etapa.
+
+### Aula 02 - Absolute imports e reset do css - Vídeo 3
+
+> Importação RELATIVA é quando usamos ../../../diretorio/arquivo.js (ou seja caminho relativo a arigem).  
+> Importação ABSOLUTA é quando definimos (no caso do Typescript) no arquivo TSCONFIG.JSON, dentro de "compilerOptions": {..., "baseUrl": "src"}, ou seja definimos uma URL base para todas as importações.
+
+Nesta aula, o instrutor aborda diversos arquivos relacionados ao projeto Aluroni. Ele menciona o arquivo "tsconfig.json" para configurar o TypeScript e define opções de compilação. Em seguida, destaca a importância de utilizar importação absoluta ao invés de relativa para evitar muitos "../". Também explica como configurar o "tsconfig.json" para definir uma URL base para importações.
+
+O instrutor menciona a necessidade de utilizar um arquivo "reset.css" para resetar o CSS padrão do navegador e evitar problemas de estilos indesejados. Mostra como copiar o código de um arquivo "reset.css" padrão da internet e adicioná-lo ao arquivo "index.css" do projeto Aluroni.
+
+Além disso, destaca a importância de definir um fundo adequado para a página, utilizando a cor "#f6f6f6" para criar um estilo mais agradável. Também menciona a propriedade "box-sizing: border-box" para calcular o tamanho do elemento considerando as bordas e o padding.
+
+No próximo vídeo, será abordada a criação do header do projeto, incluindo a importação de uma foto e a mudança da fonte utilizada.
+
+### Aula 02 - Nessa aula, você aprendeu como`:`
+
+- Importar um svg;
+
+Vimos como o webpack entende aquela string que fornecemos ao src da tag img e porque não funciona, então, aprendemos como importar um svg da forma correta.
+Utilizar um svg como componente;
+
+- Melhoramos a nossa logo alterando a tag img por um componente que se torna um svg no final.
+Imports absolutos;
+
+Aprendemos como configurar e utilizar os imports absolutos para evitar voltar muitas pastas ao importar um arquivo.
+Utilizar a biblioteca reset css para resetar o css;
+
+- Resetamos os estilos da nossa página utilizando uma biblioteca chamada reset.css que nos ajuda a limpar os estilos padrões de cada elemento de acordo com cada navegador.
+
+## Aula 03 -
+
+### Aula 03 -  - Vídeo 1
