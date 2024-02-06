@@ -112,3 +112,43 @@ Nesta aula, o instrutor explica como criar a seção de cardápio em um projeto 
   - Vimos como ignorar arquivos no momentos de build para que sejam utilizados apenas quando os chamar.
 - Criar variáveis css
   - Criamos variáveis css para nos auxiliar na padronização dos estilos da página, evitando repetição e facilitando na manutenção de código.
+
+## Aula 04 - Ordenação e Filtros
+
+### Aula 04 - Criando os filtros - Vídeo 1
+
+Nesta aula, o instrutor explica como criar filtros para um cardápio em um projeto utilizando o VS Code. Ele mostra os arquivos utilizados para implementar os filtros, como o arquivo de estilos (.scss) e o arquivo de configuração dos filtros (.json). Em seguida, ele cria a estrutura básica para os filtros, utilizando uma div e um mapeamento dos filtros presentes no arquivo .json. O instrutor também explica a diferença entre utilizar o tipo "type" e a interface para definir o tipo das opções dos filtros. Ele mostra como utilizar o tipo "type" de forma mais simples e reutilizável, e também como utilizar uma interface para definir o tipo das opções. Por fim, ele mostra como aplicar estilos aos filtros utilizando classes CSS e o conceito de BEM (Block Element Modifier). No próximo vídeo, será abordado como criar o estado dos filtros e aplicar estilos quando um filtro estiver ativo.
+
+### Aula 04 - Fazendo os filtros funcionarem - Vídeo 2
+
+> Como javasript não aceita a sintaxe com -hifem para variaveis, foi usado: styles['filtros__filtro--ativo'] ao invés de: styles.filtros__filtro--ativo  
+> Para podermos usar as classes condicionais do scss, vamos instalar o pacote: npm install classnames
+
+Nesta aula, o instrutor trabalhou no desenvolvimento de filtros para um cardápio. Ele criou um estado de filtro dentro do componente "Cardapio" e definiu o estado inicial como nulo. Utilizou o useState para criar o estado de filtro, especificando que o tipo pode ser um número ou nulo. Passou o estado de filtro e a função setFiltro como props para o componente "Filtros". Para resolver um problema de reconhecimento de props pelo TypeScript, criou uma interface Props no arquivo "index.tsx" do componente "Filtros". Também mostrou como utilizar o classNames para aplicar classes condicionais no JSX, evitando a concatenação de strings. Utilizou o classNames para aplicar a classe "filtros__filtro--ativo" quando o filtro é igual ao ID da opção selecionada. Por fim, mencionou que no próximo vídeo será desenvolvido o ordenador.
+
+### Aula 04 - Criando o ordenador - Vídeo 3
+
+Nesta aula, o instrutor aborda a criação do componente "Ordenador" no projeto React. Ele explica que o objetivo desse componente é criar um seletor personalizado para ordenar os itens da lista. O instrutor utiliza HTML e CSS para criar a estrutura do componente e também cria um arquivo JSON com as opções de ordenação. Em seguida, ele importa as opções de ordenação no componente e utiliza a função map para renderizar cada opção como uma div. Após finalizar a implementação do componente, o instrutor adiciona-o na página do cardápio e disponibiliza o CSS para uso dos espectadores. No próximo vídeo, ele irá adicionar um estado interno para controlar a abertura e fechamento do seletor, além de implementar a funcionalidade de selecionar uma opção de ordenação.
+
+### Aula 04 - Fazendo o ordenador funcionar - Vídeo 4
+
+Nesta aula, o instrutor trabalhou na implementação da funcionalidade de ordenação em um cardápio. Ele criou um estado para controlar se as opções de ordenação estão visíveis ou não e adicionou eventos de clique e desfoco para abrir e fechar as opções. Também adicionou um ícone de seta e estilizou o botão de ordenação. Em seguida, implementou a funcionalidade de ordenação, criando um estado no componente pai e passando-o como prop para o componente de ordenação. Por fim, exibiu a opção de ordenação selecionada no botão. Agora ele seguirá para a próxima etapa, que é criar os itens do cardápio e fazer com que os filtros de ordenação funcionem nesses itens.
+
+### Aula 04 - Para saber mais: Objetos em JavaScript
+
+No vídeo anterior, vimos como manipular objetos de maneira complexa em conjunto com a biblioteca classnames. Acesse a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#objetos_e_propriedades) para entender melhor sobre objetos e suas propriedades.
+
+- Adição condicional de classes de forma facilitada.
+  - Alternativa correta! A adição condicional de classes pode ser facilmente feita por você mesmo com operadores ternários, porém é possível que a parte do código responsável pela estilização contenha mais lógica do que a estilização em si. O classnames fornece uma maneira simples de realizar esse processo através de objetos JavaScript.
+
+- Formatação automática.
+  - Alternativa correta! Além de lidar com a lógica de adição de classes CSS, também precisamos nos preocupar em adicionar um espaço entre cada condição. A utilização do classnames não é mais necessária, pois ele realiza essa etapa por você.
+
+### Aula 04 - Nessa aula, você aprendeu como`:`
+
+- Inferir o tipo de um objeto
+  - O operador typeof nos permite inferir a tipagem de um objeto sem a necessidade de criar uma interface.
+- Manipulação de objetos
+  - Utilizamos [] em volta do nome da chave de um objeto quando o valor da chave é dinâmico.
+- Biblioteca classnames
+  - Essa biblioteca nos permite concatenar classes CSS utilizando sintaxe de objetos.
