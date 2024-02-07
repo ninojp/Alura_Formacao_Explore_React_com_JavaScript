@@ -7,6 +7,7 @@ import styles from './Cardapio.module.scss';
 import {ReactComponent as Logo} from 'assets/logo.svg';
 import Filtros from './Filtros/Filtros';
 import Ordenador from './Ordenador/Ordenador';
+import Itens from './Itens/Itens';
 // Acima foi usado um caminho ABSOLUTO("baseUrl": "src"), definido no tsconfig.json
 
 export default function Cardapio() {
@@ -32,6 +33,7 @@ export default function Cardapio() {
                     <Filtros filtro={filtro} setFiltro={setFiltro} />
                     <Ordenador ordenador={ordenador} setOrdenador={setOrdenador} />
                 </div>
+                <Itens />
             </section>
         </main>
     );

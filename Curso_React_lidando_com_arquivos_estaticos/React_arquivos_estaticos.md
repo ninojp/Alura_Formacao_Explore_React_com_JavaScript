@@ -141,6 +141,8 @@ No vídeo anterior, vimos como manipular objetos de maneira complexa em conjunto
 - Adição condicional de classes de forma facilitada.
   - Alternativa correta! A adição condicional de classes pode ser facilmente feita por você mesmo com operadores ternários, porém é possível que a parte do código responsável pela estilização contenha mais lógica do que a estilização em si. O classnames fornece uma maneira simples de realizar esse processo através de objetos JavaScript.
 
+[documentação do classnames](https://github.com/JedWatson/classnames)
+
 - Formatação automática.
   - Alternativa correta! Além de lidar com a lógica de adição de classes CSS, também precisamos nos preocupar em adicionar um espaço entre cada condição. A utilização do classnames não é mais necessária, pois ele realiza essa etapa por você.
 
@@ -152,3 +154,30 @@ No vídeo anterior, vimos como manipular objetos de maneira complexa em conjunto
   - Utilizamos [] em volta do nome da chave de um objeto quando o valor da chave é dinâmico.
 - Biblioteca classnames
   - Essa biblioteca nos permite concatenar classes CSS utilizando sintaxe de objetos.
+
+## Aula 05 - Lista de Itens
+
+### Aula 05 - Criando os itens - Vídeo 1
+
+Nesta aula, o instrutor finaliza um projeto criando os itens do cardápio. Ele cria a pasta "itens" e dentro dela um arquivo "index.tsx". Em seguida, exporta a função "Itens" que mapeia os itens do cardápio. Um arquivo JSON chamado "itens.json" é criado com as informações dos itens e importado no arquivo "index.tsx". O instrutor também cria o componente "Item" para renderizar cada item do cardápio. São criados arquivos CSS para estilizar os componentes e o HTML é estruturado para exibir as informações dos itens. Nos próximos vídeos, serão abordados como popular os itens com os dados do JSON e importar as imagens de forma dinâmica.
+
+### Aula 05 - Populando cada item - Vídeo 2
+
+Nesta aula, o instrutor discute sobre a população dos itens do cardápio. Ele mostra como passar os itens via props, utilizando uma chave diretamente no item e fazendo um spread. Além disso, ele ensina como tipar as props do componente Item e utiliza o destructuring para extrair as propriedades necessárias. No final, ele menciona que ainda é necessário mudar a cor de acordo com o tipo do item e importar as imagens, tarefas que serão abordadas no próximo vídeo.
+
+### Aula 05 - Atualizando os tipos - Vídeo 3
+
+Nesta aula, o instrutor aborda a importância de adicionar estilos e imagens dinamicamente em um projeto React. Ele mostra como alterar as cores dos itens de um cardápio, utilizando o arquivo item.module.scss para definir as cores de cada tipo de item. Além disso, ele utiliza a biblioteca classnames para facilitar a adição dinâmica de classes CSS no componente Item. O instrutor também menciona a necessidade de ajustar as categorias dos itens para que sejam exibidas corretamente, em letras minúsculas, e mostra como fazer isso utilizando o arquivo Itens.json. Por fim, ele demonstra como importar imagens de forma dinâmica em um componente React, ressaltando a necessidade de resolver um problema relacionado ao caminho das imagens durante o processo de build. Essas técnicas são importantes para estilizar componentes e proporcionar uma melhor experiência visual para o usuário.
+
+### Aula 05 - Imports dinâmicos - Vídeo 4
+
+Nesta aula, o instrutor discute sobre como importar imagens de forma dinâmica em um projeto React. Ele menciona que é possível utilizar a pasta "public" para esse propósito e explica como mover a pasta de imagens para lá. O instrutor também destaca a importância de utilizar o comando npm run build para verificar se os arquivos estão sendo corretamente incluídos na pasta "build". Por fim, ele menciona que ainda falta implementar a funcionalidade dos filtros no projeto.
+
+### Aula 05 - Nessa aula você aprendeu a`:`
+
+Renderizar uma lista de componentes
+Podemos utilizar o spread operator para não precisar passar as props manualmente quando temos total controle do componente.
+Utilizar a pasta public
+Arquivos estáticos que devem ser referenciados dinamicamente precisam estar dentro dessa pasta.
+Gerar os arquivos utilizados em produção
+Com o comando ***npm run build*** podemos verificar quais arquivos estarão presentes no ambiente de produção.
