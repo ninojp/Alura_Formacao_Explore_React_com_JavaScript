@@ -181,3 +181,34 @@ Utilizar a pasta public
 Arquivos estáticos que devem ser referenciados dinamicamente precisam estar dentro dessa pasta.
 Gerar os arquivos utilizados em produção
 Com o comando ***npm run build*** podemos verificar quais arquivos estarão presentes no ambiente de produção.
+
+## Aula 06 - Finalizando o Projeto
+
+### Aula 06 - Buscador e filtros - Vídeo 1
+
+Nesta aula, o instrutor finaliza o design do projeto e aborda a correção dos filtros aplicados aos itens do cardápio. Ele mostra como passar os filtros como props para o componente "Itens" e utiliza o useState para criar um estado interno. O useEffect é utilizado para atualizar a lista de itens sempre que os filtros são modificados. O instrutor também explica como criar funções de teste para a busca e o filtro, utilizando expressões regulares e comparando os valores com os itens do cardápio. No próximo vídeo, será abordada a implementação do ordenador.
+
+### Aula 06 - Ordenador - Vídeo 2
+
+Nesta aula, o instrutor está finalizando um projeto e focando na funcionalidade do ordenador. Ele mostra o código do arquivo "Itens" e explica como implementar a ordenação da lista de itens de acordo com diferentes critérios, como porção, quantidade de pessoas e preço.
+
+O instrutor utiliza a estrutura de controle switch case para determinar o tipo de ordenação e utiliza o método sort para realizar a ordenação. Ele também menciona a importância de atualizar a lista sempre que o ordenador for alterado.
+
+Ao final, o instrutor testa a funcionalidade do ordenador no navegador e verifica se a ordenação está funcionando corretamente.
+
+Além disso, o projeto abordado no vídeo é uma tela com vários filtros e importação de imagens SVG.
+
+Espero que esse resumo seja útil! Se você tiver mais alguma dúvida, estou aqui para ajudar.
+
+### Aula 06 - Nessa aula você aprendeu a`:`
+
+- Buscar com expressão regular
+  - Utilizar expressões regulares em buscas de textos.
+- Manipular elementos de uma lista
+  - Alterar a quantidade ou ordenar os elementos de uma lista com métodos filter e sort.
+- Tipar o useState
+  - Escrever useState`<Tipo>` para tipar o state e o setState.
+
+### Aula 06 - Conclusão - Vídeo 2
+
+Nesta aula de React com TypeScript, aprendemos sobre o conceito de "normalize" para redefinir o CSS padrão dos navegadores, como fazer "absolute imports" com TypeScript, o uso de arquivos estáticos no React, o propósito da pasta "public" e como utilizá-la, o pacote "classnames" para facilitar a manipulação de classes CSS, a importância de realizar os exercícios propostos e explorar os materiais extras, e a importância de fornecer feedback ao final do curso.
