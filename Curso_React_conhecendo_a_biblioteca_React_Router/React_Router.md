@@ -1,4 +1,4 @@
-# Alura React: conhecendo a biblioteca React Router
+# Curso Alura React: conhecendo a biblioteca React Router
 
 ## Aula 01 - O que é SPA
 
@@ -66,3 +66,32 @@ BrowserRouter e HashRouter;
 Diferença entre BrowserRouter e HashRouter.
 Routes;
 Utilizar o routes para alternar entre rotas.
+
+## Aula 03 - Criando as Rotas
+
+## Aula 03 - Reaproveitando o Menu - Vídeo 1
+
+Nesta aula, o instrutor ensina como reaproveitar componentes em um projeto React. Ele mostra como criar uma pasta "components" para armazenar componentes que serão utilizados em várias páginas. Em seguida, ele cria a pasta "Menu" dentro de "components" e define a função Menu que retorna o código HTML do menu. Ele também importa a logo e os estilos do menu. Por fim, ele mostra como importar o menu nas páginas "Cardapio" e "Inicio" para evitar duplicação de código.
+
+## Aula 03 - Reaproveitando com react-router - Vídeo 2
+
+Nesta aula, o instrutor discute sobre a reutilização do componente de menu em diferentes rotas de um aplicativo React. Ele explica como remover o componente de menu dos elementos main e section das rotas e colocá-lo entre as tags Router e Routes no arquivo routes.js. Além disso, o instrutor mostra como implementar links para as diferentes rotas no componente de menu e como estilizar o menu utilizando classes CSS. No próximo vídeo, ele abordará como evitar o recarregamento da página ao clicar nos links do menu.
+
+## Aula 03 - Trocando a Tag a - Vídeo 3
+
+Nesta aula, o instrutor aborda o problema de atualização completa da página ao mudar as rotas em uma aplicação React utilizando a tag `<a>`. Ele recomenda a instalação da extensão "React Developer Tools" para facilitar a identificação de problemas no código React. O instrutor mostra como ativar a opção "Highlight updates when components render" para visualizar os componentes renderizados novamente. Em seguida, ele substitui a tag `<a>` por `<Link>` do react-router-dom, explicando como fazer essa alteração. Agora, ao clicar nas rotas, os componentes são reaproveitados e a página não é atualizada completamente. No próximo vídeo, será abordado como reaproveitar o Header e construir a página "Início".
+
+## Aula 03 - Reaproveitando o Header - Vídeo 4
+
+Nesta aula, o instrutor aborda a reutilização do componente Header em diferentes rotas do aplicativo. Ele mostra como mover o código do Header para o componente Routes, menciona a criação de um arquivo de estilos e identifica dois problemas que precisam ser resolvidos: o Header sendo renderizado em rotas inexistentes e o estilo do Header não estar no componente correto. O instrutor finaliza mencionando que no próximo vídeo será feita uma refatoração para resolver esses problemas adequadamente.
+
+## Aula 03 - Página padrão - Vídeo 5
+
+Nesta aula, o instrutor aborda a criação de rotas no React Router. Para resolver problemas de reaproveitamento de componentes e evitar código repetido, é criado um novo componente chamado "PaginaPadrao". Esse componente é utilizado como uma página padrão, onde o componente "Header" é extraído do componente "Routes". Além disso, é explicado o conceito de "children" do React e como utilizá-lo no componente "PaginaPadrao". Também é abordado o uso de rotas absolutas e relativas no React Router. Com essas modificações, é possível reaproveitar o componente Header em diferentes rotas e evitar a repetição de código.
+
+## Aula 03 - Nessa aula, você aprendeu`:`
+
+- Reutilizar o menu;
+  - Reaproveitar o header utilizando o react-router-dom;
+- Utilizar o componente Link;
+  - Fazer a página padrão.
