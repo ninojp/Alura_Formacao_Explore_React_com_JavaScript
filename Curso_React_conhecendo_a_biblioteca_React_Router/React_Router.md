@@ -95,3 +95,52 @@ Nesta aula, o instrutor aborda a criação de rotas no React Router. Para resolv
   - Reaproveitar o header utilizando o react-router-dom;
 - Utilizar o componente Link;
   - Fazer a página padrão.
+
+## Aula 04 - Router DOM Hooks
+
+## Aula 04 - Estilo tema - Vídeo 1
+
+Nesta aula, o instrutor discute sobre a criação de um tema para reutilização de estilos em diferentes componentes de uma aplicação React. Ele propõe a criação de um módulo de estilos chamado "Tema.module.scss" e mostra como utilizá-lo nos componentes existentes. Com essas alterações, os estilos são reaproveitados corretamente e a aplicação funciona como esperado.
+
+## Aula 04 - Terminando a tela Início - Vídeo 2
+
+Nesta aula, o instrutor finaliza a tela inicial de um projeto utilizando React. Ele adiciona elementos HTML, como título, imagem e endereço, e explica como importar e utilizar a imagem no código. Em seguida, ele estiliza o título com uma classe CSS. Depois, o instrutor cria a página "Sobre", criando uma nova pasta e arquivos para ela. Ele adiciona uma rota para a página "Sobre" no arquivo de rotas e testa as funcionalidades no navegador. Com isso, ele finaliza a implementação da tela inicial e da página "Sobre" do projeto.
+
+## Aula 04 - Terminando a tela Sobre - Vídeo 3
+
+Nesta aula, aprendemos a finalizar a tela "Sobre" em um projeto React utilizando a biblioteca React Router. Foi apresentado o código CSS do arquivo Sobre.module.scss, que define estilos para os elementos da tela, como formatação de texto, espaçamento e tamanho de imagens. Também foram adicionados textos descritivos sobre o negócio Aluroni, uma seção vazia com o título "Sobre", uma imagem e um texto descritivo dentro de uma div, e duas imagens renderizadas utilizando um mapeamento do array imagens. Além disso, foi mencionado a importância de importar as imagens e a fonte "Josefin Sans" para o projeto.
+
+## Aula 04 - Criando o NotFound - Vídeo 4
+
+Nesta aula, o instrutor abordou a criação do rodapé (Footer) e da tela de "Not Found" em um projeto React. Ele mostrou como criar a pasta "Footer" dentro da pasta "components" e criar os arquivos necessários. Em seguida, ele escreveu o código para o componente Footer, importando o arquivo de estilos e a logo do projeto. O Footer foi incluído no arquivo "routes.js" para ser renderizado corretamente. Depois disso, o instrutor criou a tela de "Not Found", explicando como combinar classes de estilos usando a biblioteca classNames. Ele adicionou o componente NotFound no código do arquivo "routes.js" e fez ajustes para centralizá-lo na tela. Por fim, ele verificou no navegador se as alterações foram aplicadas corretamente.
+
+## Aula 04 - Voltando para outra tela - Vídeo 5
+
+Nesta aula, o instrutor aborda a resolução de dois problemas na tela "Not Found". O primeiro problema é relacionado ao posicionamento do footer, que não estava no final da página como desejado. Para resolver esse problema, o instrutor faz ajustes no código CSS utilizando a classe "container" com as propriedades "display: flex" e "flex-direction: column". Isso faz com que o menu seja posicionado no topo, seguido pelo container e, por fim, o footer. Além disso, é definida uma altura mínima para o container utilizando a unidade de medida "vh", garantindo que o footer fique no final da página.
+
+O segundo problema a ser resolvido é a inclusão de um botão de voltar independente da página em que o usuário esteja. Para isso, é adicionado um código no arquivo "index.tsx" da tela "Not Found", criando uma div com a classe "voltar" e um botão com o texto "Voltar". É utilizado o react router para voltar para a página anterior, utilizando o hook "useNavigate" do pacote "react-router-dom". Ao testar a funcionalidade no navegador, é possível observar que o botão de voltar retorna para a página anterior, de acordo com o histórico de navegação.
+
+## Aula 04 - Navegar entre rotas
+
+useNavigate
+
+useNavegate() Esse é o hook provido pelo react-router-dom e podemos utilizá-lo para navegar entre as rotas. O uso dele é bem simples, veja:
+
+const navigate = useNavigate()
+E então, no componente devemos substituir “?” pela função que o hook retorna, e passar como parâmetro o valor -1 que como mostrado na aula, representa voltar para a página anterior:
+
+```JavaScript
+function BotaoVoltar() {
+ const navigate = useNavigate()
+ return (
+   <button onClick={() => navigate(-1)}>{'< Voltar'}</button>
+ )
+}
+```
+
+## Aula 04 - Nessa aula, você aprendeu`:`
+
+Desenvolver um tema para a aplicação;
+Aplicar o componente Outlet do react-router-dom;
+Utilizar o hook useNavigate para navegar entre rotas;
+Criar uma tela not found para páginas não encontradas.
