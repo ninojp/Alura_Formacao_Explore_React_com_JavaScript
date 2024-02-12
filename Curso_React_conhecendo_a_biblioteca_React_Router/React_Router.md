@@ -144,3 +144,56 @@ Desenvolver um tema para a aplicação;
 Aplicar o componente Outlet do react-router-dom;
 Utilizar o hook useNavigate para navegar entre rotas;
 Criar uma tela not found para páginas não encontradas.
+
+## Aula 05 - Finalizando o Projeto
+
+## Aula 05 - Criando a rota Prato - Vídeo 1
+
+> useParams()
+
+Nesta aula, o instrutor aborda o uso do pacote react-router-dom no projeto em React. Ele explica o conceito de pilha de navegação e como o hook useNavigate funciona. O useNavigate permite navegar entre as páginas utilizando números negativos para voltar para páginas anteriores. Em seguida, o instrutor mostra como criar uma nova página chamada "Prato" utilizando o react-router-dom. Ele também mostra como adicionar a rota para a página Prato no arquivo routes.js. Ele apresenta duas soluções para lidar com rotas dinâmicas: utilizar um asterisco (*) no path da rota ou utilizar um parâmetro nomeado na rota. No próximo vídeo, será abordado o uso do hook useLocation e mais detalhes sobre o histórico da pilha do react-router-dom.
+
+## Aula 05 - useLocation e state - Vídeo 2
+
+> useLocation()
+
+Nesta aula, o instrutor abordou o uso do hook "useLocation" no React Router. Ele explicou que o "useLocation" é utilizado para obter informações sobre a localização atual da página, como o pathname, hash, key e search (query params). O instrutor também mostrou como utilizar o hook "useNavigate" para navegar entre as telas. Ele criou uma função chamada "redirecionarParaDetalhes" que recebe um prato como parâmetro e utilizou o "navigate" para redirecionar para a tela de detalhes do prato, passando o ID do prato como parâmetro na URL. Além disso, ele utilizou o "state" para passar informações adicionais sobre o prato. O instrutor também explicou o conceito de "replace" no "navigate", que é utilizado para substituir a entrada atual no histórico do navegador. Por fim, destacou a colaboração entre o React Router e o navegador, mostrando que é possível utilizar os botões de "Ir" e "Voltar" do navegador para navegar entre as rotas definidas no React Router.
+
+> useNavigate({state: {objeto}, replace: true|false})  
+> replace: true  
+> Substituir a última rota do histórico pela rota passada como primeiro parâmetro para a função.
+
+## Aula 05 - Detalhes do Prato - Vídeo 3
+
+Nesta aula, o instrutor finaliza o projeto desenvolvendo a funcionalidade de exibir os detalhes de um prato. Ele importa o arquivo de estilos do prato, faz modificações no arquivo "index.tsx" e adiciona o HTML para exibir os detalhes do prato. O instrutor também utiliza classes de estilo importadas e a biblioteca classNames para estilizar os elementos condicionalmente. Ele menciona um problema relacionado ao tipo do prato e importa o arquivo "cardapio.json" para resolver esse problema. No final, o instrutor menciona um erro que ocorre ao acessar diretamente a página de detalhes de um prato e propõe uma solução utilizando o ID do prato através do hook useParams.
+
+## Aula 05 - Usando o useParams - Vídeo 4
+
+Nesta aula, o instrutor abordou a resolução de um problema relacionado à exibição de detalhes de um prato em uma página independente da sua origem. Foi feita uma alteração no código para buscar o prato pelo seu ID, utilizando a função find() do array cardapio. Também foi adicionada uma verificação para o caso em que o prato não é encontrado, retornando uma string vazia.
+
+O instrutor também mencionou a necessidade de corrigir o botão de "Voltar", que não estava funcionando corretamente. Para isso, foi utilizado o hook useNavigate para obter a função de navegação, que é chamada no evento onClick do botão para voltar para a tela anterior.
+
+Outro ponto abordado foi a organização do código, destacando a importância de manter as pastas e arquivos bem organizados. Foi sugerida a criação de uma pasta "types" para armazenar os tipos utilizados no projeto, centralizando a definição dos tipos em um único local. Além disso, o instrutor mostrou como reutilizar o código das tags e do header em diferentes partes do projeto, tornando o código mais limpo e legível.
+
+No próximo vídeo, será abordado o reaproveitamento do código do header.
+
+## Aula 05 - Refatorando tags - Vídeo 4
+
+Nesta aula, o professor abordou duas pendências do site. A primeira é a falta de reutilização do header nos detalhes do prato, e a segunda é a semelhança da parte de tags com o cardápio. Para resolver essas questões, foram realizados os seguintes passos:
+
+Foi criado um novo componente chamado "TagsPrato" dentro da pasta "components", onde foi colado o código referente às tags e feitas as devidas alterações para utilizar as props.
+
+O componente "Item" foi substituído pelo componente "TagsPrato" nos arquivos "Item/index.tsx" e "Prato/index.tsx", passando as props do prato via spread operator.
+
+Foram feitas alterações nos arquivos de estilos para remover as classes referentes às tags.
+
+Após essas alterações, o site passou a reutilizar o header nos detalhes do prato e as tags foram estilizadas corretamente. No entanto, surgiram dois problemas: a falta da tela de "Not Found" quando um prato inexistente é acessado e a persistência do header mesmo nos detalhes do prato. Esses problemas serão abordados no próximo vídeo.
+
+## Aula 05 - Nessa aula, você aprendeu como`:`
+
+- Criar a rota pratos;
+- Passar parâmetros na rota;
+- Criar detalhes do prato;
+- Utilizar o hook useLocation;
+- Passar estados entre rotas;
+- Refatorar tags.
