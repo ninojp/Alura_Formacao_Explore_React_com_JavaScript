@@ -197,3 +197,23 @@ Após essas alterações, o site passou a reutilizar o header nos detalhes do pr
 - Utilizar o hook useLocation;
 - Passar estados entre rotas;
 - Refatorar tags.
+
+## Aula 06 - Ajustes NotFound e Header
+
+## Aula 06 - NotFound na tela de detalhes - Vídeo 1
+
+Nesta aula, o instrutor discute o código CSS utilizado para estilizar o componente "Item" na tela de detalhes de um prato. Ele mostra como corrigir a lógica de exibição da página "Not Found" e explica a diferença entre os componentes "Navigate" e "NotFound" para redirecionar o usuário quando não há um prato válido. O instrutor também adiciona estilos ao componente "Item" na página de cardápio, explicando as alterações feitas no código CSS. Por fim, ele mostra como adicionar um evento de clique ao componente "Item" para navegar para a página de detalhes do prato correspondente.
+
+## Aula 06 - Resolvendo o Header - Vídeo 2
+
+Nesta aula, o instrutor aborda um problema em que o cabeçalho está aparecendo na página "not found" nos detalhes do prato. Ele apresenta duas formas de resolver esse problema, uma utilizando o react-router-dom e outra sem utilizá-lo. A primeira forma é movendo a rota da página padrão para a parte inferior, removendo-a do route principal. A segunda forma é utilizando o conceito de high order component e o children do React. Após realizar as alterações, o instrutor verifica que o cabeçalho não aparece mais na página "not found" e que o problema foi resolvido tanto com o react-router-dom quanto sem utilizá-lo.
+
+## Aula 06 - Nessa aula, você aprendeu como`:`
+
+- Acrescentar a tela NotFound na tela de detalhes;
+- Utilizar o componente Navigate;
+- Resolver o header.
+
+## Aula 06 - Conclusão - Vídeo 3
+
+Nesta aula do curso de React: conhecendo a biblioteca React Router, foram feitos ajustes nas páginas NotFound e Header. Foi ensinado como criar rotas em uma aplicação utilizando o react-router-dom, além de utilizar links e o hook useNavigate para navegar entre as páginas. Também foi abordado o uso do ESLint para garantir um código mais conciso e foram realizadas algumas refatorações. No final, foi recomendado explorar as atividades propostas e utilizar o fórum do curso para tirar dúvidas.

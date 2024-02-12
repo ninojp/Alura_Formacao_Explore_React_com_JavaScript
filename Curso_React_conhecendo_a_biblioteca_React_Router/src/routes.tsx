@@ -20,8 +20,8 @@ export default function appRoutes() {
                         <Route path='cardapio' element={<Cardapio />} />
                         <Route path='listaPratos' element={<ListaPratos />} />
                         <Route path='sobre' element={<Sobre />} />
-                        <Route path='prato/:id' element={<Prato />} />
                     </Route>
+                    <Route path='prato/:id' element={<Prato />} />
                     <Route path='*' element={<NotFound />} />
                 </Routes>
                 <Footer />
