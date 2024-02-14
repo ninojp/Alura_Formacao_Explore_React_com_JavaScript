@@ -82,3 +82,67 @@ Nesta aula, o instrutor ensina como criar um formulário para cadastrar restaura
 - Instalamos e utilizamos a biblioteca MUI;
 - Implementamos a listagem de restaurantes realizando uma requisição GET;
 - Criamos a rotina de cadastro de restaurantes com o verbo HTTP POST.
+
+## Aula 03 - Aquela sobre PUT e DELETE
+
+### Aula 03 - Editando restaurantes - Vídeo 1
+
+Nesta aula, o instrutor ensina como implementar a funcionalidade de edição de restaurantes em um sistema utilizando React. Ele mostra como criar um link para um formulário específico de um restaurante, com base no seu ID, utilizando a biblioteca react-router-dom. O instrutor também explica como capturar o ID da URL usando o useParams e fazer uma requisição GET para obter os dados do restaurante correspondente utilizando o Axios. Em seguida, ele mostra como implementar a funcionalidade de atualização do restaurante utilizando o método PUT da API, verificando se o ID está presente nos parâmetros da URL. Ele também ensina como enviar os dados do restaurante no corpo da requisição e exibir uma mensagem de sucesso após a atualização.
+
+### Aula 03 - Deletando restaurantesa - Vídeo 2
+
+Nesta aula, o instrutor ensina como implementar a funcionalidade de exclusão de restaurantes em uma API utilizando React. Ele mostra como adicionar um botão "Excluir" em uma tabela, fazer a requisição de exclusão utilizando o Axios e atualizar a lista de restaurantes após a exclusão. O instrutor também menciona que ocorreu um erro de CORS, mas foi corrigido. Além disso, ele destaca que o ciclo completo do CRUD de restaurantes foi implementado e que serão feitas melhorias no formulário de cadastro.
+
+### Aula 03 - Para saber mais: verbos HTTP
+
+Agora, nós fechamos o ciclo da administração de restaurantes:
+
+LISTA (GET)
+DETALHE (GET por id)
+CADASTRO (POST)
+EDIÇÃO (PUT)
+DELEÇÃO (DELETE)
+Tudo isso usando o protocolo HTTP, que é uma das bases para internet como a gente conhece. Pensando no perfil Dev em T e em mergulhos mais profundos, fica aqui o link para o [curso sobre HTTP](https://cursos.alura.com.br/course/http-fundamentos).
+
+Se você já conhece o protocolo e quer saber ainda mais, estou contigo porque eu também sou muito curioso! Fica [aqui um link](https://www.alura.com.br/artigos/rest-principios-e-boas-praticas) para um artigo sobre o padrão REST, que é o utilizado na API atual.
+
+E não é só isso! Nós fizemos a leitura da API utilizando o [Swagger, e aqui](https://cursos.alura.com.br/course/swagger-documentando-apis) você consegue entender como ele funciona por debaixo dos panos.
+
+### Aula 03 - Para saber mais: parâmetros em requisições GET
+
+Quando cadastramos ou editamos um restaurante, enviamos dados do front-end para o back-end dessa forma:
+
+```JavaScript
+...codigo omitido
+if (parametros.id) {
+    axios.put(`http://localhost:8000/api/v2/restaurantes/${parametros.id}/`, {
+        nome: nomeRestaurante
+    })
+```
+
+O axios recebe como primeiro parâmetro o endereço para onde faremos a requisição. Já o segundo argumento é um objeto literal que será transformado em json e enviado no corpo da requisição.
+
+Na listagem de restaurantes (v1), podemos passar como parâmetro um campo chamado search, para realizar uma busca e um outro campo chamado ordering para indicarmos qual propriedade queremos utilizar para ordenar a lista (no caso de restaurantes, podemos fazer isto utilizando o campo id ou o campo nome).
+
+E como fazer isso com o axios?
+
+Bom, podemos fazer isso de duas formas. Podemos concatenar direto na url, dessa forma;
+
+```JavaScript
+axios.get<IPaginacao<IRestaurante>>('http://localhost:8000/api/v1/restaurantes/?ordering=nome&search=neo')
+
+Ou, de uma forma mais elegante:
+
+axios.get<IPaginacao<IRestaurante>>('http://localhost:8000/api/v1/restaurantes/', {
+    params: {
+    ordering: 'nome',
+    search: 'neo'
+    }
+})
+```
+
+### Aula 03 - O que aprendemos nesta aula`:`
+
+- Realizamos requisições utilizando os verbos PUT e DELETE;
+- Enviamos parâmetros em requisições GET;
+- Montamos um formulário de busca de restaurantes.
