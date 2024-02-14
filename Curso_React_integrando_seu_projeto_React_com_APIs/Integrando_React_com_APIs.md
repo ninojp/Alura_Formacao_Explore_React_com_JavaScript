@@ -58,3 +58,27 @@ Componentes são funções JavaScript e, por isso, quando um componente é atual
 - Utilizamos o swagger para entender como a nova API funciona;
 - Instalamos e preparamos o axios;
 - Fizemos requisições GET, para listar pratos e restaurantes.
+
+## Aula 02 - Aquela sobre o Admin Alfood
+
+### Aula 02 - Preparando a administração - Vídeo 1
+
+Comando para instalação da biblioteca [MUI](https://mui.com/material-ui/getting-started/) (Material UI):
+
+> npm install @mui/material @emotion/react @emotion/styled
+
+Nesta aula, o instrutor explica sobre a necessidade de desenvolver uma área administrativa para o projeto Alfood, onde o usuário poderá cadastrar, editar e deletar restaurantes e pratos. Ele sugere o uso da biblioteca MUI para facilitar o desenvolvimento da interface do usuário e fornece as instruções para instalação e configuração do MUI no projeto.
+
+### Aula 02 - Listando restaurantes - Vídeo 2
+
+Nesta aula, o instrutor ensina como construir uma área administrativa para um aplicativo utilizando o MUI (Material-UI) no VS Code. Ele cria um novo caminho e um novo componente chamado "AdministracaoRestaurantes.tsx". Utilizando os componentes do MUI, ele cria uma tabela de restaurantes com os componentes TableContainer, Table, TableHead, TableBody, TableRow e TableCell. Ele também faz uma requisição utilizando o axios para obter a lista de restaurantes da API e exibe essa lista na tabela. O próximo passo será adicionar a opção de editar ou excluir um restaurante existente e permitir a adição de novos restaurantes.
+
+### Aula 02 - Cadastrando restaurantes - Vídeo 3
+
+Nesta aula, o instrutor ensina como criar um formulário para cadastrar restaurantes em uma lista. Ele mostra como capturar o evento de submissão do formulário, utilizar o hook useState para armazenar o valor digitado no campo de texto e fazer uma requisição POST para uma API utilizando a biblioteca axios. Além disso, ele menciona a necessidade de implementar as operações de edição e exclusão dos restaurantes.
+
+### Aula 02 O que aprendemos nesta aula`:`
+
+- Instalamos e utilizamos a biblioteca MUI;
+- Implementamos a listagem de restaurantes realizando uma requisição GET;
+- Criamos a rotina de cadastro de restaurantes com o verbo HTTP POST.
