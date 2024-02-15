@@ -146,3 +146,38 @@ axios.get<IPaginacao<IRestaurante>>('http://localhost:8000/api/v1/restaurantes/'
 - Realizamos requisições utilizando os verbos PUT e DELETE;
 - Enviamos parâmetros em requisições GET;
 - Montamos um formulário de busca de restaurantes.
+
+## Aula 04 - Aquela sobre Refatoração
+
+### Aula 04 - Layout na régua - Vídeo 1
+
+Nesta aula, o instrutor ensina como melhorar o layout de um formulário utilizando o VS Code e o Material-UI. Ele utiliza o componente Typography para adicionar um título ao formulário e o componente Box para criar um layout mais agradável, alinhando os elementos no centro da página. O instrutor também menciona a utilização do componente Box como um formulário, permitindo a captura do evento Submit. Ele faz alterações nos componentes input e button, adicionando propriedades como fullWidth e sx. O instrutor destaca a importância da validação HTML, marcando o TextField como required. Por fim, ele menciona a repetição de URLs ao utilizar o pacote Axios e propõe refatorar o código para configurar uma instância do Axios com as configurações comuns a todas as requisições.
+
+### Aula 04 - Refatorando o axios - Vídeo 2
+
+Nesta aula, o instrutor discute a importância de melhorar a experiência do usuário e dos desenvolvedores front-end. Ele implementa a validação do formulário para evitar o cadastro de restaurantes com nome em branco. Além disso, ele refatora o código do Axios, criando uma instância única com configurações padrão em um arquivo separado. Essa refatoração permite que a URL base seja facilmente alterada no futuro, sem a necessidade de corrigir em vários lugares diferentes. O instrutor destaca que ainda há muito mais a ser feito em relação à área administrativa do projeto.
+
+### Aula 04 - Para saber mais: componentes MUI
+
+Existem vários componentes incríveis disponíveis no [MUI](https://mui.com/material-ui/all-components/), e vamos olhar alguns mais de perto para matar a curiosidade de como eles funcionam:
+
+Tipografia
+A tipografia apresenta o seu conteúdo da forma mais clara e eficiente possível.
+
+Links
+O componente Link nos permite personalizar elementos de âncora (tags a). E até mesmo podemos utilizar em conjunto com o do react-router-dom.
+
+Paper
+Nesse componente do Material Design, as propriedades físicas de um papel são traduzidas para a tela.
+
+Container
+É o elemento de layout mais básico, que centraliza seu conteúdo horizontalmente.
+
+Box
+O componente Box serve como um componente encapsulador (wrapper) para auxiliar na maioria das necessidades de uso com CSS.
+
+### Aula 04 - O que aprendemos nesta aula`:`
+
+- Organizamos o layout com elementos do MUI;
+- Organizamos o nosso código, centralizando a criação de um cliente do axios;
+- Utilizamos a ordenação de restaurantes da API.
