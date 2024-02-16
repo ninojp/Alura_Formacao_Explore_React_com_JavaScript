@@ -181,3 +181,20 @@ O componente Box serve como um componente encapsulador (wrapper) para auxiliar n
 - Organizamos o layout com elementos do MUI;
 - Organizamos o nosso código, centralizando a criação de um cliente do axios;
 - Utilizamos a ordenação de restaurantes da API.
+
+## Aula 05 - Aquela sobre layout
+
+### Aula 05 - Upgrade na administração - Vídeo 1
+
+Nesta aula, o instrutor discute sobre a melhoria da experiência do usuário em um sistema de administração de restaurantes. Ele propõe a criação de uma barra de navegação e um container para o conteúdo da página. Utilizando componentes do Material-UI e do react-router-dom, ele implementa essas melhorias e verifica se estão funcionando corretamente no navegador. Além disso, o instrutor menciona a possibilidade de criar uma view base para reaproveitar o código em todas as páginas do sistema.
+
+### Aula 05 - Extraindo o layout base - Vídeo 2
+
+Nesta aula, o instrutor ensina como organizar a página base da área administrativa de um projeto React utilizando o VS Code e o react-router-dom. Ele sugere agrupar todas as rotas relacionadas à administração em uma única rota e cria um elemento chamado "PaginaBaseAdmin" para ser comum a todas as rotas filhas. O instrutor também utiliza o componente "Outlet" do react-router-dom para indicar onde as rotas filhas devem ser renderizadas. Após fazer algumas alterações nos arquivos para remover conteúdo duplicado, ele verifica no navegador se a página está funcionando corretamente. Ele destaca a vantagem de ter um código reaproveitável e menciona que o próximo passo é implementar a administração dos restaurantes.
+
+### Aula 05 - O que aprendemos nesta aula`:`
+
+- Aninhamos as rotas da área administrativa;
+- Organizamos o layout utilizando o `<Outlet />`;
+- Descobrimos que podemos usar async e await para trabalhar com promessas.
+

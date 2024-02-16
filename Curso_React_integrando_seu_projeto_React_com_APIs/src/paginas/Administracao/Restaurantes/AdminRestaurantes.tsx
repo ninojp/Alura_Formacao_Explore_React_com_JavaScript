@@ -21,7 +21,7 @@ const AdminRestaurantes = () => {
     }
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ width: 850 }} aria-label="Tabela de restaurantes">
+            <Table aria-label="Tabela de restaurantes">
                 <TableHead>
                     <TableRow>
                         <TableCell>Nome</TableCell>
