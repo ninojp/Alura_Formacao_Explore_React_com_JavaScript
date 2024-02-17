@@ -198,3 +198,32 @@ Nesta aula, o instrutor ensina como organizar a página base da área administra
 - Organizamos o layout utilizando o `<Outlet />`;
 - Descobrimos que podemos usar async e await para trabalhar com promessas.
 
+## Aula 06 - Aquela sobre o FormData
+
+### Aula 06 - Exibindo os pratos - Vídeo 1
+
+Nesta aula, o instrutor discute sobre a administração dos pratos em um sistema de restaurantes. Ele mostra como implementar a funcionalidade de listagem de pratos, substituindo as referências a "restaurantes" por "pratos". Além disso, ele menciona a possibilidade de adicionar campos adicionais na tabela de pratos, como nome, descrição, tag e imagem. O instrutor também mostra como criar um link para abrir a imagem do prato em uma nova aba. Por fim, ele menciona a necessidade de criar um formulário para cadastrar novos pratos.
+
+### Aula 06 - Formulário de pratos - Vídeo 2
+
+Nesta aula, o instrutor ensina como criar um formulário para adicionar pratos em um sistema de administração de restaurantes. Ele mostra como adicionar campos de texto para o nome e descrição do prato, utilizando o estado para armazenar os valores. Em seguida, ele adiciona campos de seleção para a tag e o restaurante do prato, utilizando a API para obter as opções disponíveis. O instrutor também adiciona um campo de arquivo para a imagem do prato, utilizando o estado para armazenar o arquivo selecionado pelo usuário. No próximo vídeo, será ensinado como enviar os dados do formulário para a API.
+
+### Aula 06 - Enviando pratos para a API - Vídeo 3
+
+Nesta aula, o instrutor aborda o envio de um formulário para uma API, com destaque para o envio de um arquivo binário. Ele explica como montar o objeto FormData, realizar o POST para enviar o formulário e tratar a resposta da requisição. O instrutor também demonstra como corrigir um erro relacionado à tag do prato e como limpar o formulário após o envio bem-sucedido.
+
+### Aula 06 - JSON e upload de arquivos
+
+- Quando enviamos a imagem do prato para a API, utilizamos o [FormData](https://developer.mozilla.org/pt-BR/docs/Web/API/FormData).
+
+- Outra forma de se enviar o arquivo para a API, por exemplo, [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
+
+### Aula 06 - O que aprendemos nesta aula`:`
+
+- Enviamos um arquivo para a api utilizando o FormData;
+- Utilizamos inputs mais complexos do MUI, como por exemplo o Select;
+- Fizemos requisições adicionais necessárias para o formulário de pratos.
+
+### Aula 06 - Conclusão - Vídeo 4
+
+Nesta aula, o palestrante discute o desenvolvimento de um site estático para um site dinâmico com um mini CMS. Agora, o próprio usuário pode fazer a administração do site. O site obtém os dados de uma API usando o Axios para fazer uma requisição GET. Além disso, foi criada uma área administrativa com links de navegação e um formulário para adicionar pratos, que incluiu uma lista de tags de restaurantes e um input para selecionar uma imagem. O palestrante também aborda a obtenção da lista de restaurantes, a exclusão de um restaurante por ID e a atualização do estado local. O site Alfood passou de estático para dinâmico, com um mini CMS que permite ao proprietário alimentar a base de dados.
