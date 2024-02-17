@@ -14,4 +14,37 @@ Nesta aula, o instrutor inicia um projeto de sorteio de amigo secreto utilizando
 
 Nesta aula, o instrutor ensina como escrever o primeiro teste para um formulário de edição em uma aplicação React. Ele explica a importância das bibliotecas React Testing Library, testing-library e Jest para realizar asserções e fazer os testes. O objetivo do teste é verificar se, quando o input do formulário está vazio, novos participantes não podem ser adicionados. O instrutor mostra como encontrar o input e o botão no DOM, garantir que o input esteja no documento e que o botão esteja desabilitado. No final, ele menciona que o teste falhou porque o componente "formulario" ainda não foi implementado, mas isso será abordado no próximo vídeo.
 
-### Aula 01 - Buscando elementos na tela - Vídeo 3
+### Aula 01 - Fazendo o teste passar - Vídeo 4
+
+Esse fluxo, essa técnica chama-se **desenvolvimento orientado a testes** ou do inglês ***test driven development, TDD***. Essa é a técnica, é uma forma de escrever código orientado ao teste, primeiro fazemos o teste, o teste falha, fazemos o teste passar, ele fica verde, podemos aplicar alguma refatoração, desde que ele continue verde.
+
+Nesta aula, o instrutor discute a importância dos testes como forma de documentação do código. Ele implementa um formulário em um novo arquivo chamado "Formulario.tsx", com um input e um botão desabilitado. O instrutor destaca a abordagem de desenvolvimento conhecida como Test Driven Development (TDD), onde o código é escrito orientado ao teste. No próximo vídeo, serão abordados conceitos relacionados aos tipos de testes.
+
+### Aula 01 - TDD e a pirâmide de testes - Vídeo 5
+
+Nesta aula do curso "React: testando os seus componentes", o instrutor aborda os conceitos de testes baseados na pirâmide de testes. Ele explica que na base da pirâmide estão os testes de unidade, mais rápidos e baratos de serem feitos. No meio da pirâmide estão os testes de serviços ou de integração, onde são testados os componentes em conjunto. No topo da pirâmide estão os testes de interface, mais lentos e caros. O instrutor enfatiza o desenvolvimento guiado por testes, onde primeiro é escrito o teste, que falha, em seguida é feita a refatoração. Ele destaca a importância da acessibilidade e de escrever código HTML mais acessível. O objetivo é ter uma aplicação completa, com todos os testes passando e acessível.
+
+### Aula 01 - Para saber mais: um padrão para organizar os testes
+
+Vimos durante a aula que, para adicionar um novo teste, basta criar uma função com essa estrutura:
+
+```JavaScript
+test('um nome que descreve o que vamos testar', () => {
+    // arrumamos o cenário (por exemplo, renderizar um componente, buscamos componentes)
+    // agimos (realizamos clicks, definimos valores)
+    // afirmamos o que queremos (onde realizamos as expectativas)
+})
+```
+
+Esse padrão de organização do teste é conhecido como AAA (Arrange, Act and Assert em inglês).
+
+Aqui no nosso sorteador, nós utilizamos a função test em todos os nossos testes, mas ela não é a única.
+
+### Aula 01 - O que aprendemos nessa aula`:`
+
+- Rodamos o script que executa os testes implementados;
+- Encontramos elementos na tela usando a @testing-library/react;
+- Analisamos a saída o script de testes;
+- Diferenciamos os tipos testes existentes;
+- Desenvolvemos um componente utilizando TDD.
+
