@@ -1,11 +1,18 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
+import Formulario from './components/Formulario';
 
 function App() {
   return (
-    <>
-      <h1>Sorteador de Amigo Secreto</h1>
-    </>
+    <BrowserRouter>
+      <RecoilRoot>
+        <Routes>
+          <Route path='/' element={<Formulario />} />
+        </Routes>
+      </RecoilRoot>
+    </BrowserRouter>
   );
 }
 export default App;
