@@ -93,3 +93,37 @@ WAI-ARIA quer dizer Accessible Rich Internet Applications (Aplicações Ricas pa
 - Utilizamos o useRef para interagir com o DOM e definir foco a um input;
 - Executamos código assíncrono com o setTimeout;
 - Lidamos com temporizadores nos testes com Jest.
+
+## Aula 03 - Finaliazndo a Configuração
+
+### Aula 03 - Lista de participantes - Vídeo 1
+
+Nesta aula, o instrutor discute a implementação de um componente de lista de participantes em um formulário utilizando a abordagem de TDD (Test-Driven Development). Ele mostra como descrever cenários de teste, criar testes, renderizar o componente e buscar elementos na tela. O objetivo é verificar se a lista de participantes está vazia inicialmente. O instrutor também explica como criar um hook para obter a lista de participantes e simular seu comportamento nos testes. Após corrigir o teste, o instrutor destaca que o componente renderiza corretamente a lista de participantes e menciona os próximos passos do projeto.
+
+### Aula 03 - Hora de iniciar a brincadeira - Vídeo 2
+
+Nesta aula, o instrutor discute a implementação de um rodapé em um componente React. Ele destaca a importância de seguir o fluxo do TDD e começa criando um teste para verificar se o botão no rodapé está desabilitado quando a lista de participantes tem menos de três elementos. Em seguida, ele mostra como renderizar o componente e validar se o botão está desabilitado usando a biblioteca de testes "@testing-library/react". Após verificar que o teste falha, o instrutor implementa o componente do rodapé, adicionando um botão com o texto "Iniciar brincadeira" e um atributo "disabled" que depende do tamanho da lista de participantes. Ele refatora o código para usar a função "useListaDeParticipantes" e garante que o teste passe. No final, ele menciona que a próxima etapa será implementar a funcionalidade de navegação quando o botão for clicado.
+
+### Aula 03 - Navegando entre rotas - Vídeo 3
+
+Nesta aula, o instrutor finaliza a configuração do projeto e explica como navegar entre rotas no React. Ele implementa um cenário de teste para verificar se o botão de iniciar a brincadeira está habilitado quando existem participantes suficientes. Para isso, é necessário "mockar" a lista de participantes e o React Router. O instrutor mostra como verificar se o método de navegação foi chamado corretamente e como corrigir um erro ao "mockar" o useNavigate. Por fim, ele explica que o componente Rodape está pronto e que é necessário criar uma página com todos os elementos para avançar para a lógica de sorteio.
+
+### Aula 03 - Fotografando componentes - Vídeo 4
+
+Nesta aula, o instrutor ensina como criar uma página de configuração em um projeto React. Ele explica sobre o teste de Snapshot, que consiste em tirar uma "foto" da renderização da página e compará-la com uma foto anteriormente salva. O instrutor mostra o código do teste de Snapshot para a página de configuração e explica como corrigir um erro relacionado ao uso do método "useNavigate" do React Router. Ele também menciona que é hora de implementar a funcionalidade de sorteio na página de configuração.
+
+### Aula 03 - Para saber mais: React Router e Recoil
+
+Durante o desenvolvimento, utilizamos algumas bibliotecas para nos ajudar a alcançar o resultado desejado. Essas ferramentas são tão poderosas que você possui um curso dedicado para cada uma delas.
+
+Quer aprender a gerenciar o estado com Recoil? Se liga [aqui](https://cursos.alura.com.br/course/react-gerenciando-estado-recoil).
+
+E se quiser usar todo o poder do React Router Dom, cola [aqui](https://cursos.alura.com.br/course/react-biblioteca-react-router).
+
+### Aula 03 - O que aprendemos nessa aula`:`
+
+- Preparamos o mock de um hook customizado;
+- Validamos se métodos são chamados pelo componente testado;
+- Lidamos com a navegação do react router dom durante os testes;
+- Realizamos testes de snapshot.
+
