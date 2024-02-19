@@ -163,3 +163,98 @@ E tenha em mente que, se o teste está muito grande ou difícil demais de ser im
 - Testamos se o fluxo da aplicação está sendo executado como o esperado;
 - Refatoramos código para facilitar a escrita de testes;
 - Escrevemos html acessível utilizando o conceito de roles.
+
+## Aula 05 - Dá sua máquina para o Mundo
+
+### Aula 05 - Finalmente rodando o projeto - Vídeo 1
+
+Nesta aula, o instrutor comenta sobre a importância de testar o código antes de colocá-lo em produção. Ele mostra a satisfação ao ver os testes passando e decide rodar o projeto no navegador para verificar o layout responsivo e funcional. Durante os testes, ele identifica um bug no botão de sorteio e o corrige no código. Após a correção, ele verifica se os testes continuam passando e menciona que irá subir o projeto para o GitHub para que todos possam acessá-lo na plataforma Vercel.
+
+### Aula 05 - Subindo o projeto para o GitHub - Vídeo 2
+
+Nesta aula, o instrutor explica como iniciar um projeto no GitHub. Ele cria um novo repositório chamado "amigos-secretos" e adiciona todos os arquivos ao repositório usando os comandos "git add ." e "git status". Em seguida, ele faz o commit dos arquivos e renomeia a branch principal para "main". Depois, ele adiciona a origem remota e faz o push dos arquivos para o repositório remoto. O instrutor sugere que os espectadores criem uma conta no GitHub e menciona que há um curso específico na Alura para aprender mais sobre o Git.
+
+### Aula 05 - Configurando o projeto na Vercel - Vídeo 3
+
+Nesta aula, o instrutor demonstrou o processo de implantação de um projeto React na plataforma Vercel. Ele explicou como fazer o login na conta da Vercel e vinculá-la ao repositório no GitHub. Em seguida, ele mostrou como implantar o projeto clicando no botão "Deploy". Depois da implantação, ele mostrou a "dashboard" da Vercel e visitou o domínio criado automaticamente para o projeto. Ele também demonstrou como adicionar os nomes dos participantes do "amigo-secreto" e verificou se o ciclo de troca de presentes foi formado corretamente. Por fim, o instrutor mencionou a ideia de executar testes automatizados durante o processo de implantação, deixando isso como um gancho para o próximo vídeo.
+
+### Aula 05 - Testando antes de publicar - Vídeo 4
+
+Nesta aula, o instrutor aborda a importância de realizar testes antes de publicar uma versão em um projeto hospedado na plataforma Vercel. Ele explica como configurar a Vercel para executar um script de teste antes do build do projeto, evitando assim a publicação de versões com bugs conhecidos. O instrutor destaca que essa prática aumenta a segurança e confiabilidade do projeto, garantindo que a aplicação publicada esteja funcionando corretamente. Ele também mostra como identificar e rodar o script de teste localmente, demonstrando o funcionamento do processo. Caso o teste falhe, o build é abortado e a versão não é publicada. Por fim, o instrutor mostra como corrigir o teste e realizar o push novamente, verificando que o build é bem-sucedido e a versão é publicada.
+
+### Aula 05 - Etapas do TDD
+
+Aprendemos o conceito do TDD (Test Driven Development) e vimos que ele pode ser útil em várias situações. Ele se divide em 3 etapas principais: vermelha, verde e azul.
+
+O que elas significam, respectivamente?
+
+Alternativa correta
+Teste falha, teste passa, refatoração.
+
+- Fase vermelha: escrever um teste.
+- Fase verde: fazer o teste passar, escrevendo o código que ele protege.
+- Fase azul: refatorar.
+Desenvolvimento orientado a teste é um processo no qual você escreve o teste antes de escrever o código. E quando todos os testes estão passando você arruma sua casa: você melhora o código.
+
+### Aula 05 - Para saber mais: outras formas de buscar elementos
+
+No decorrer do curso, nós focamos nas boas práticas da React Testing Library e utilizamos roles para buscar os elementos HTML. Porém, essa não é a única forma de realizar buscas no DOM.
+
+Vou organizar aqui algumas que você pode precisar, mas não deixe de conferir a [documentação](https://testing-library.com/docs/queries/about/) se precisa de algo mais específico.
+
+Esse são os tipos de consultas (em inglês, queries) disponíveis, de acordo com a quantidade de elementos que você espera:
+
+Buscando elementos únicos:
+
+- getBy
+- queryBy
+- findBy
+
+Buscando múltiplos elementos:
+
+- getAllBy
+- queryAllBy
+- findAllBy
+
+E, aqui, você consegue ver as consultas específicas:
+
+ByRole
+getByRole, queryByRole, getAllByRole, queryAllByRole, findByRole, findAllByRole
+
+Essa query você já conhece bem, pois foi a que mais utilizamos durante o curso. Quando conseguimos encontrar elementos por sua role, significa que leitores de tela também serão capazes, e a aplicação estará acessível.
+
+ByLabelText
+getByLabelText, queryByLabelText, getAllByLabelText, queryAllByLabelText, findByLabelText, findAllByLabelText
+
+ByPlaceholderText
+getByPlaceholderText, queryByPlaceholderText, getAllByPlaceholderText, queryAllByPlaceholderText, findByPlaceholderText, findAllByPlaceholderText
+
+ByText
+getByText, queryByText, getAllByText, queryAllByText, findByText, findAllByText
+
+ByDisplayValue
+getByDisplayValue, queryByDisplayValue, getAllByDisplayValue, queryAllByDisplayValue, findByDisplayValue, findAllByDisplayValue
+
+Podemos utilizar essa query para encontrar elementos do tipo input, textarea, ou select.
+
+O “display value” é o valor em si do elemento.
+
+ByTestId
+getByTestId, queryByTestId, getAllByTestId, queryAllByTestId, findByTestId, findAllByTestId
+
+Quando tudo mais falhar, podemos definir um atributo data-testid no elemento e utilizar esse tipo de query para encontrá-lo:
+
+ByTestId
+getByTestId, queryByTestId, getAllByTestId, queryAllByTestId, findByTestId, findAllByTestId
+
+Quando tudo mais falhar, podemos definir um atributo data-testid no elemento e utilizar esse tipo de query para encontrá-lo:
+
+### Aula 05 - O que aprendemos nessa aula`:`
+
+- Subimos o projeto para o github;
+- Configuramos a publicação na Vercel;
+- Rodamos os testes para não publicar versões com testes falhando.
+
+### Aula 05 - Conclusão - Vídeo 5
+
+Nesta aula, o palestrante discutiu o desenvolvimento de uma aplicação utilizando TDD (Test Driven Development), ou seja, o desenvolvimento orientado a testes. O desafio proposto foi trabalhar sem visualizar o layout funcionando, testando apenas os componentes no VS Code e no Terminal. Foram realizados diversos testes, como testes de Snapshot para uma página sem comportamento, teste de um formulário e teste de uma lista de participantes. Foi destacada a importância de utilizar mocks para testar hooks customizados, facilitando a simulação de comportamentos específicos. O palestrante ressaltou a importância de minimizar as alterações nos testes conforme as refatorações são realizadas. No total, foram criados 13 testes em 6 grupos diferentes. A aplicação foi enviada para o GitHub e integrada com a Vercel, onde a rotina de testes é executada no deploy. Caso algum teste falhe, a aplicação não é publicada, evitando a subida de bugs para a produção. O palestrante recomendou aprofundamento no Jest, Jest Dom e React Testing Library, disponibilizando documentos adicionais para consulta.
