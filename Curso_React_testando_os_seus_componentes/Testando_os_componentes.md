@@ -127,3 +127,39 @@ E se quiser usar todo o poder do React Router Dom, cola [aqui](https://cursos.al
 - Lidamos com a navegação do react router dom durante os testes;
 - Realizamos testes de snapshot.
 
+## Aula 04 - Sorteando amigos secretos
+
+### Aula 04 - Página de sorteio - Vídeo 1
+
+Nesta aula do curso "React: testando os seus componentes", o instrutor discute o conceito de TDD (Test-Driven Development) e inicia a implementação de testes para a página de sorteio de um projeto. Ele cria um novo arquivo de teste chamado "Sorteio.test.tsx" e o objetivo inicial é verificar se todos os participantes podem exibir o seu amigo secreto. Para isso, é necessário ter um select com opções para cada participante. O instrutor utiliza a função render para renderizar a página de sorteio e a função screen.queryAllByRole para buscar as opções dentro do select. Ele menciona a necessidade de "mockar" o hook useListaDeparticipantes para retornar os participantes corretos durante o teste. Em seguida, ele implementa a página de sorteio, criando um formulário com um select e as opções correspondentes aos participantes. A lógica de sorteio será abordada no próximo vídeo.
+
+### Aula 04 - Um hook para a todos sortear - Vídeo 2
+
+Nesta aula, o instrutor implementa a lógica de sorteio para um amigo secreto em um projeto React. Ele cria um novo hook chamado "useSorteador.ts" que será responsável por sortear os participantes. O instrutor utiliza o hook "useListaParticipantes()" para obter a lista de participantes e, em seguida, embaralha essa lista utilizando a biblioteca "just-shuffle". Depois, ele define quem cada participante sorteou, formando assim o par de amigos, e armazena esse resultado em um atom do Recoil. O próximo passo será testar essa lógica de sorteio utilizando uma função pura.
+
+### Aula 04 - Extraindo a regra de negócio - Vídeo 3
+
+Nesta aula, o instrutor explica como extrair um teste para uma função pura que possa ser testada de forma simples, sem estar atrelada a um hook. Ele cria uma nova pasta chamada "helpers" para armazenar as funções auxiliares. O objetivo é criar uma função que realiza um sorteio de amigo secreto, onde cada participante não sorteie o próprio nome. O instrutor descreve o cenário de teste e define uma constante chamada "participantes" com os nomes dos participantes. Em seguida, ele chama a função "realizarSorteio" passando a lista de participantes e atribui o resultado a uma constante chamada "sorteio". O instrutor utiliza um loop "forEach" para percorrer cada participante e obter o amigo secreto correspondente através do método "get" do objeto "sorteio". Ele então utiliza a função "expect" para verificar se o amigo secreto não é igual ao próprio participante. Em seguida, o instrutor implementa a função "realizarSorteio" que recebe a lista de participantes como parâmetro e retorna o resultado. Ele utiliza a função "shuffle" para embaralhar a lista de participantes e retorna o resultado. O instrutor faz o import da função "realizarSorteio" no arquivo de teste e verifica se o teste passa. Por fim, ele menciona que a lógica do sorteio pode ser removida do hook e substituída pela chamada da função "realizarSorteio". Ele destaca a importância de ter as regras de negócio em funções puras, pois são mais fáceis de testar.
+
+### Aula 04 - Validando o sorteio - Vídeo 4
+
+Nesta aula do curso "React: testando os seus componentes", o instrutor discute a implementação de um hook de sorteio e a importância de garantir que ele seja chamado corretamente. É proposto a criação de um mock do sorteio para verificar se ele foi chamado uma vez. No componente "Rodape", é adicionada a linha const sortear = useSorteador() para utilizar o hook de sorteio. Após implementar essa funcionalidade, será necessário exibir o resultado do sorteio, o que será abordado no próximo vídeo.
+
+### Aula 04 - Exibindo o amigo secreto - Vídeo 5
+
+Nesta aula, o instrutor ensina como testar a exibição do amigo secreto em um componente de sorteio no React. Ele cria um novo caso de teste, renderiza o componente e realiza a seleção do participante. Em seguida, ele implementa o botão de sorteio e a função onSubmit para evitar o carregamento da página. Também adiciona um hook chamado useResultadoSorteio para obter o resultado do sorteio e atualizar o estado do amigo secreto. Após implementar essas alterações, o instrutor realiza novamente o teste e verifica que o amigo secreto é exibido corretamente. Ele também menciona a importância de implementar o mock do resultado do sorteio. No final, são deixados desafios para implementar testes adicionais e a próxima aula será sobre a publicação do projeto na internet.
+
+### Aula 04 - Para saber mais: expectativas do Jest
+
+O Jest é uma biblioteca muito conhecida no mundo dos testes e nos oferece várias expectativas já prontinhas para serem utilizadas. Nós já vimos algumas durante nossos testes, mas [confira aqui](https://jestjs.io/pt-BR/docs/expect) a lista na íntegra.
+
+Além dessas, você tem também todo o complemento do [jest-dom](https://github.com/testing-library/jest-dom), como por exemplo o toBeInTheDocument que utilizamos em aula.
+
+E tenha em mente que, se o teste está muito grande ou difícil demais de ser implementado, talvez exista espaço para refatorar o código atual e decompor o componente em componentes menores.
+
+### Aula 04 - O que aprendemos nessa aula`:`
+
+- Buscamos elementos `<option>` pela role;
+- Testamos se o fluxo da aplicação está sendo executado como o esperado;
+- Refatoramos código para facilitar a escrita de testes;
+- Escrevemos html acessível utilizando o conceito de roles.
