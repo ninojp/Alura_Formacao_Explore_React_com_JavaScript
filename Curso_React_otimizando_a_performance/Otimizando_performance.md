@@ -38,3 +38,53 @@ Nesta aula, o instrutor explicou como o React é performático ao atualizar apen
 - Como o React transforma os códigos JSX em objetos;
 - O que é Virtual DOM;
 - Como funciona uma estrutura React.
+
+## Aula 02 - Memoização
+
+### Aula 02 - Reconciliação - Vídeo 1
+
+Nesta aula, o instrutor explica sobre o conceito de Virtual DOM no React. Ele menciona que o Virtual DOM é responsável por fazer a verificação do estado atual do React e realizar a reconciliação com o estado anterior. A reconciliação é o processo de comparar o Virtual DOM com o estado atual e fazer as atualizações necessárias no DOM real do navegador. O instrutor também mostra um exemplo prático no código, utilizando um console.log condicional para mostrar o título de um item do cardápio apenas quando o ID for igual a 1.
+
+### Aula 02 - Para saber mais: imutabilidade
+
+Vamos começar pelo processo de estruturação e renderização do React:
+
+Estruturação
+
+Podemos definir a estrutura de componentes do React literalmente como uma árvore, assim como o DOM faz.
+
+No final das contas, a estrutura(html, DOM) é bem parecida! Só que, no React, temos este meio de campo da div com id root (que, utilizando create-react-app, você não precisa se preocupar, mas ela está dentro do arquivo html dentro de public/index.html) e do ReactDOM.render! Após isto, na prática, o código é bem parecido!
+
+O React foi criado de uma forma que seja ao mesmo tempo fácil de desenvolver e performática para o navegador (por isto ele é tão utilizado). A facilidade de desenvolver tem a ver com a gente não se preocupar em ter que selecionar um elemento para mudar algo dentro dele (aquele famoso document.querySelector(...), e para isto, a cada renderização, ele faz uma comparação entre um DOM Virtual (em memória) e o DOM real, mudando exatamente o que deve ser mudado. Mas, não se engane! Se o React tem controle de tudo que o elemento tem o tempo todo, na verdade, a gente dá alguns “pontos” que o React pode mudar, e estes pontos são os states!
+
+A gente basicamente fala: “Olha React, este ponto aqui poderá ser mudado em algum momento, então, fica de olho e, sempre que atualizar o ponto, atualiza a tela para mim”, e estes pontos são estados, e eles são imutáveis!
+
+Aí que nos enganamos! Imutabilidade não significa que o estado não muda, significa que o estado sempre é trocado por um estado novo.
+
+>let [estado, setEstado] = useState(‘Olá aluno!’);
+>…
+>estado = ‘Hello World!’;
+Mesmo utilizando o estado, estamos mudando o estado diretamente, de forma mutável, logo, o React não renderizará a tela, mas e se fizermos assim?
+>const [estado, setEstado] = useState(‘Olá aluno!’);
+>…
+>setEstado(‘Hello World!’);
+Neste caso, estamos mudando o estado estado com a função setEstado, e ela “destrói” completamente o estado anterior e cria um estado totalmente novo. Isto é imutabilidade! E é aí que o React é avisado que este ponto precisa mudar e ele entra fazendo a comparação do Virtual DOM com o DOM Real, e esta comparação é feita em TODA A ESTRUTURA REACT A PARTIR DO ESTADO MUDADO.
+
+E por que é feita uma comparação em toda a estrutura ao invés de ser só no componente?
+
+Porque a gente, já conhecendo que esta estrutura é de cima para baixo, sabemos que um estado mudado no componente pai pode causar uma reação em componente filho, certo? Como por exemplo, sempre que o estado mudar, o filho pode fazer uma animação, diminuir, desaparecer etc.
+
+### Aula 02 - React.memo - Vídeo 2
+
+Nesta aula, o instrutor aborda o problema da renderização desnecessária de componentes no React e como utilizar o Memo para evitar esse problema. Ele explica que o React não faz uma comparação profunda das propriedades dos componentes para determinar se eles precisam ser renderizados novamente. Para resolver esse problema, ele introduz o conceito de Memo, que é uma função fornecida pelo React. O Memo é recomendado principalmente quando se lida com listas ou quando se trabalha com renderização condicional. O instrutor mostra como utilizar o Memo, exportando o componente com a função Memo ao invés de exportá-lo diretamente. Ele ressalta que o Memo deve ser utilizado com sabedoria, pois pode impactar a performance da aplicação. Em resumo, a renderização condicional e o uso do Memo são técnicas importantes para otimizar a performance de aplicações React, evitando renderizações desnecessárias de componentes.
+
+### Aula 02 - Detalhes do memo - Vídeo 3
+
+Nesta aula, o instrutor explicou sobre o uso do React Memo. Ele mostrou que o Memo aceita uma função que retorna o JSX e uma função que recebe as props anteriores e as próximas props. O Memo compara as props anteriores com as próximas props para determinar se o componente precisa ser renderizado novamente. O Memo utiliza a reconciliação do Virtual DOM para realizar essa comparação. O instrutor também falou sobre como controlar a performance do Memo, definindo quando o componente deve ser atualizado ou não. No próximo vídeo, ele irá explicar mais detalhes sobre o uso do atributo "key" e como isso afeta o desempenho do Memo.
+
+### Aula 02 - O que aprendemos nessa aula`:`
+
+- O que é Reconciliation;
+- O que é Imutabilidade e o que isto tem a ver com React;
+- O que é memoização e como utilizar o React.memo;
+- Como controlar com memo quando um componente deve atualizar ou não.
