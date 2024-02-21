@@ -1,20 +1,20 @@
 import Footer from 'components/Footer';
 import Menu from 'components/Menu';
-import PaginaPadrao from 'components/PaginaPadrao';
-import Cardapio from 'pages/Cardapio';
-import Inicio from 'pages/Inicio';
-import NotFound from 'pages/NotFound';
-import Prato from 'pages/Prato';
-import Sobre from 'pages/Sobre';
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import PaginaPadrao from 'components/PaginaPadrao';
+// import Cardapio from 'pages/Cardapio';
+// import Inicio from 'pages/Inicio';
+// import NotFound from 'pages/NotFound';
+// import Prato from 'pages/Prato';
+// import Sobre from 'pages/Sobre';
 
-// const Cardapio = lazy(() => import('pages/Cardapio'));
-// const PaginaPadrao = lazy(() => import('components/PaginaPadrao'));
-// const Inicio = lazy(() => import('pages/Inicio'));
-// const NotFound = lazy(() => import('pages/NotFound'));
-// const Prato = lazy(() => import('pages/Prato'));
-// const Sobre = lazy(() => import('pages/Sobre'));
+const Cardapio = lazy(() => import('pages/Cardapio'));
+const PaginaPadrao = lazy(() => import('components/PaginaPadrao'));
+const Inicio = lazy(() => import('pages/Inicio'));
+const NotFound = lazy(() => import('pages/NotFound'));
+const Prato = lazy(() => import('pages/Prato'));
+const Sobre = lazy(() => import('pages/Sobre'));
 
 export default function AppRouter() {
   // (Cardapio);

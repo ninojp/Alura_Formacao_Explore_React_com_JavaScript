@@ -160,3 +160,47 @@ Nesta aula, o instrutor demonstrou como utilizar o React Developer Tools para an
 - Como analisar se um componente deve ser memoizado;
 - A diferença entre memo e useMemo.
 
+## Aula 05 - Performance entre telas
+
+### Aula 05 - Olhando para o Router - Vídeo 1
+
+Nesta aula, o instrutor aborda o problema de performance entre as telas de um projeto React. Ele mostra que todas as estilizações CSS de todas as telas estão sendo carregadas de uma vez só, o que é um problema de performance. Além disso, ao gerar a pasta de produção do projeto, todos os arquivos são transformados em apenas dois arquivos, o que não aproveita o esforço de criar várias páginas e reaproveitar componentes. O instrutor ressalta que esse problema seria ainda mais grave em projetos com muitas páginas. No próximo vídeo, ele irá mostrar como resolver esse problema, explicando uma estratégia para carregar o CSS de cada tela de forma separada e melhorar a performance do projeto.
+
+### Aula 05 - React.lazy - Vídeo 2
+
+Atualmente todos os nossos import são de forma síncrona, ou seja quando carregar a pagina faça todos os imports listados.
+
+Quando damos o npm run build, ele está gerando um arquivo (main.css e main.js) só e queremos separar esses arquivos, porque sabemos que são arquivos diferentes. O nome dessa separação de código, nós chamamos de code-spliting, “separação de código” em inglês.
+
+A primeira coisa que precisamos fazer é o code-spliting. Para isso, precisamos dizer para o React que são coisas diferentes. Para conseguirmos dizer isso, precisamos importar de uma forma dinâmica. Para conseguirmos importar de forma dinâmica, para o React entender que ele só precisa importar quando ele for usar, porque vamos dizer para o React que esse componente não é usado 100% do tempo, o nome desse termo se chama dynamic import.
+
+E o nome desse import preguiçoso se chama lazy import, que é quando importamos de forma preguiçosa, lazy é “Preguiçoso” em inglês.
+
+Nesta aula, o instrutor abordou o conceito de importação síncrona e apresentou uma solução para evitar a importação de todos os componentes de uma vez só, chamada de importação dinâmica ou lazy import. Ele explicou como fazer o code-spliting utilizando o lazy import do React, mostrando como importar de forma dinâmica um componente específico. Também foi explicada a necessidade de utilizar o componente Suspense do React quando se trabalha com dynamic imports e code-spliting, e como verificar o funcionamento do code-spliting e do lazy loading no navegador. Por fim, o instrutor mencionou que o React já realiza o code-spliting automaticamente durante o build da aplicação.
+
+### Aula 05 - Para saber mais: sobre o componente Suspense
+
+O componente `<Suspense />` foi um coadjuvante aqui, mas ele pode facilmente se tornar um protagonista se soubermos utilizá-lo totalmente!
+
+Com a evolução do React, o Suspense está evoluindo para ser usado em qualquer chamada assíncrona, seja ela uma importação ou para uma api, por exemplo!
+
+Caso você queira saber mais sobre isto, o React criou uma [documentação](https://17.reactjs.org/docs/concurrent-mode-suspense.html) com o Suspense sendo usado para busca de dados.
+
+### Aula 05 - Usando React.lazy - Vídeo 3
+
+Nesta aula, o instrutor aborda a importância do React Lazy, dynamic import e code-splitting no desenvolvimento de aplicações React. O objetivo é renderizar as páginas de forma dinâmica, importando apenas os componentes necessários em cada rota. O instrutor mostra como importar o componente "PaginaPadrao" de forma dinâmica em todas as páginas, exceto na página "prato". Ele também menciona que o menu e o footer são utilizados em todas as páginas e, portanto, não precisam ser importados de forma dinâmica. O instrutor verifica no navegador as tags style importadas dinamicamente e observa que apenas os estilos necessários são importados para cada página. Ele também menciona um problema de renderização no componente "NotFound" e promete abordar a solução no próximo vídeo. O instrutor finaliza mencionando que irá abordar a questão do build e as renderizações no próximo vídeo.
+
+### Aula 05 - React.lazy no prato - Vídeo 4
+
+Nesta aula, o instrutor aborda várias questões relacionadas à performance em uma aplicação web. Ele mostra como filtrar as chamadas de importação no navegador, limitar a conexão de internet para simular uma conexão lenta e observar o carregamento da página. O instrutor destaca a importância de colocar o menu e o rodapé fora do componente de suspensão (Suspense) para evitar que sejam afetados pelo carregamento dinâmico. Ele também explora o conceito de "code-splitting", que consiste em dividir o código em arquivos separados com base nas páginas, tornando a aplicação mais rápida e eficiente. Por fim, o instrutor aborda a importação dinâmica de estilos CSS e sugere uma solução alternativa para lidar com as rotas e importar os estilos. No geral, o vídeo oferece várias técnicas e estratégias para melhorar a performance de uma aplicação web.
+
+### Aula 05 - O que aprendemos nessa aula`:`
+
+- O que é Lazy Loading;
+- O que é Dynamic import;
+- O que é Code splitting;
+- Como utilizar o React.lazy.
+
+### Aula 05 - Conclusão - Vídeo 5
+
+Nesta aula do curso de React com performance, aprendemos a utilizar o Memo e o useMemo para resolver problemas de renderização desnecessária. Também discutimos conceitos como Virtual DOM, reconciliation e imutabilidade. Abordamos a importância da prop "key" nas listas e como utilizá-la corretamente. Além disso, aprendemos a otimizar o desempenho entre componentes, permitindo que o React importe um componente apenas quando necessário. O curso prepara os alunos para criar interfaces bonitas e performáticas no mercado de trabalho. Foi incentivado o feedback e o uso do fórum para esclarecer dúvidas. Recomendamos assistir aos "Para saber mais" e realizar os exercícios para fixar o conteúdo e explorar documentações adicionais.
