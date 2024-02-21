@@ -88,3 +88,37 @@ Nesta aula, o instrutor explicou sobre o uso do React Memo. Ele mostrou que o Me
 - O que é Imutabilidade e o que isto tem a ver com React;
 - O que é memoização e como utilizar o React.memo;
 - Como controlar com memo quando um componente deve atualizar ou não.
+
+## Aula 03 - Memo em listas
+
+### Aula 03 - Explicando a prop key - Vídeo 1
+
+Nesta aula, o instrutor aborda o conceito de "key" no React e explica sua importância na renderização de listas. Ele mostra um problema que ocorreu ao mudar a propriedade "key" de um componente React e explica como o React precisa fazer comparações entre o Virtual DOM e o DOM real para renderizar corretamente os componentes. O uso da propriedade "key" estabelece essa ligação entre o Virtual DOM e o DOM real. O instrutor também mostra na prática como utilizar o "key" em um exemplo de renderização de itens de um cardápio. Ele destaca a importância de utilizar uma chave única que represente a identidade do componente, especialmente em casos de listas que podem ser filtradas. O vídeo conclui destacando a importância de entender o ciclo de vida dos componentes e a necessidade de utilizar corretamente o "key" para evitar problemas de renderização desnecessária.
+
+### Aula 03 - Para saber mais: ref e key
+
+A prop ref, assim como a prop key, é uma prop que não é reconhecida como prop no componente filho, e ela pode ser usada em qualquer elemento. Ao contrário do key, ela não é uma prop obrigatória, e sim uma prop opcional que pode ser utilizada a qualquer momento.
+
+A palavra ref é uma abreviação de reference, ou referência em português, e ela serve exatamente para isso: fazer uma referência ao elemento real. Isso mesmo! Com o ref, você consegue acessar todos os atributos do DOM real dentro do React, como se estivesse utilizando o document.querySelector ou seletores parecidos!
+
+Ref é uma arma poderosíssima para acessar o elemento diretamente, mas ela não é recomendada! O objetivo do React é abstrair o DOM e fazer tudo de forma declarativa, e o ref faz o exato oposto, agindo de forma imperativa.
+
+Por que ele existe e por que eu usaria? Aí que está! Existem momentos em que ele é necessário, como por exemplo:
+
+- Quando precisamos dar foco a um elemento input;
+- Quando precisamos executar algo imperativo como forçar uma animação etc;
+- Quando precisamos reproduzir uma mídia ou um vídeo ou algo relacionado a isto (como o Picture-in-picture por exemplo);
+- Quando precisamos integrar o React com alguma biblioteca de terceiros e esta biblioteca exige imperatividade.
+
+### Aula 03 - React Developer Tools - Vídeo 2
+
+Nesta aula, o instrutor aborda a otimização de renderização desnecessária de componentes no React utilizando a função memo e o React Developer Tools. Ele explica como identificar os componentes que estão sendo renderizados desnecessariamente e como utilizar a função memo para evitar essa renderização desnecessária, melhorando assim a performance da aplicação. Os componentes "Filtros" e "Ordenador" são exemplos de componentes que são memorizados com o memo para evitar renderizações desnecessárias. No entanto, ainda existem outros componentes que serão abordados nos próximos vídeos.
+
+### Aula 03 - O que aprendemos nessa aula`:`
+
+- O que é e para que serve a prop key;
+- O que é a extensão React Developer Tools;
+- Como utilizar a aba components da extensão;
+- Como utilizar a aba profiler da extensão;
+- Como avaliar se um componente está renderizando ou não utilizando a extensão.
+

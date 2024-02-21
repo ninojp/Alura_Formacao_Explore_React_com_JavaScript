@@ -17,7 +17,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // const Sobre = lazy(() => import('pages/Sobre'));
 
 export default function AppRouter() {
-  // console.log(Cardapio);
+  // (Cardapio);
   // console.log(<Cardapio />);
   // console.log(Cardapio());
   return (
