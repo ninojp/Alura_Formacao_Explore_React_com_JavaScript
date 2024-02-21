@@ -122,3 +122,41 @@ Nesta aula, o instrutor aborda a otimização de renderização desnecessária d
 - Como utilizar a aba profiler da extensão;
 - Como avaliar se um componente está renderizando ou não utilizando a extensão.
 
+## Aula 04 - Analizando o Cardápio
+
+### Aula 04 - Buscador - Vídeo 1
+
+Nesta aula, o instrutor aborda dois problemas na tela do aplicativo. O primeiro problema é que o buscador não está sendo memorizado, o que pode ser facilmente resolvido utilizando a função memo do React. O segundo problema está relacionado ao ícone de busca, que está sendo renderizado desnecessariamente. O instrutor introduz o conceito de useMemo, um hook do React, para memorizar o ícone e evitar renderizações desnecessárias. Ele explica como utilizar o useMemo e demonstra como resolver o problema. No próximo vídeo, será abordado o problema relacionado ao ícone de ordenação.
+
+### Aula 04 - Memoizando pacotes externos
+
+Qual forma consegue memoizar um componente de um pacote externo?
+
+> const componenteExterno = useMemo(() => `<ComponenteExterno />`,[]);
+
+O useMemo dentro do componente memoizaria o componente externo!
+
+### Aula 04 - Para saber mais: memo vs useMemo
+
+Então… Na verdade, eles servem para a mesma coisa, mas o truque para entender a diferença é que o memo retorna um componente e o useMemo retorna uma variável, ou seja, a maior diferença entre os dois está no return! Mas, obviamente, não é só isso, né? Então, vamos entrar um pouco neste assunto!
+
+Na verdade, o memo não foi inventado para ser usado dentro de um componente e, por isso, ele é usado em exports, mas, se você colocar ele fora do componente, ele irá funcionar normalmente:
+
+Na verdade, neste caso, não existe muita diferença entre utilizar o memo e o useMemo, pois seria uma questão de gosto. Eu, pessoalmente, não gosto de ter mais de um componente no mesmo arquivo, porque pode deixar o código difícil de entender no futuro. Utilizando o useMemo, você não está criando um novo componente, apenas está armazenando um componente dentro de uma variável, e esta variável sim será memoizada! Então, se o caso era de memoizar um componente que já existe, não precisaria criar um componente só para memoizar outro componente, certo?
+
+Para finalizar, o useMemo deve ser usado dentro de um componente, então, memoizando uma variável você a utiliza dentro do componente que você estiver, e terá no array de dependências os states/props necessários para que aquela variável atualize. Utilizar os states/props para atualizar também é possível no memo, mas, ao invés do array de dependências, teríamos que utilizar a função para comparar as props, e ela não é tão intuitiva quanto o useMemo.
+
+### Aula 04 - Ordenador - Vídeo 2
+
+Nesta aula, o instrutor discute a otimização de desempenho em um componente chamado "Ordenador". Ele explica que o componente está enfrentando um problema com os ícones e propõe uma solução utilizando o useMemo. No entanto, ele ressalta que o uso do useMemo requer cuidado, pois pode fazer um esforço adicional para armazenar e memorizar a variável, o que pode não ser necessário em todos os casos. O instrutor também aborda a questão do ícone do Ordenador e propõe utilizar o CSS para rotacionar o ícone em vez de destruir e reconstruir o componente. Ele destaca a importância de analisar a necessidade de utilizar o useMemo em cada caso e buscar soluções que melhorem a performance dos componentes.
+
+### Aula 04 - Menu cardápio - Vídeo 3
+
+Nesta aula, o instrutor demonstrou como utilizar o React Developer Tools para analisar a performance de uma aplicação React. Ele mostrou como inspecionar a tela de cardápio e verificar as atualizações destacadas em verde. Também foi mostrado como fazer um profiling da aplicação e analisar os resultados no "Ranked chart" e no "Flamegraph chart". O instrutor ensinou como inspecionar os componentes da aplicação, ver suas props e visualizar o rastreamento de renderização. Por fim, ele explorou o contexto do React Router DOM e como verificar informações de localização.
+
+### Aula 04 - O que aprendemos nessa aula`:`
+
+- Como memoizar componentes de pacotes externos;
+- Como analisar se um componente deve ser memoizado;
+- A diferença entre memo e useMemo.
+
