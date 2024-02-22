@@ -1,0 +1,15 @@
+.div__container{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 2rem;
+    background-color: aquamarine;
+}
+.div__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 400px;
+}
